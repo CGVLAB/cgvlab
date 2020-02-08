@@ -1,0 +1,16 @@
+#- name:
+#  photo: rock.jpg
+#  info:
+#  email:
+#  number_educ:
+#  education1:
+#  education2:
+#  education3:
+#  education4:
+
+- name: XXX name XXX
+  photo: bio-photo.jpg
+  info: XXX info XXX
+  email: XXX email XXX
+  number_educ: 0
+  education1:

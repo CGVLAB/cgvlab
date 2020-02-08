@@ -1,0 +1,30 @@
+- title: "XXX title of publication"
+  image: dummy.png
+  description: XXX description XXX
+  authors: XXX authors XXX
+  link:
+    url: http://example.com/
+    display:  XXX link text XXX
+  highlight: 1
+  news1: XXX some news XXX
+  news2: XXX additional news XXX
+
+- title: "XXX title of publication"
+  image: dummy.png
+  description: XXX description XXX
+  authors: XXX authors XXX
+  link:
+    url: http://example.com/
+    display:  XXX link text XXX
+  highlight: 1
+  news2:
+
+- title: "XXX title of publication"
+  image: dummy.png
+  description: XXX description XXX
+  authors: XXX authors XXX
+  link:
+    url: http://example.com/
+    display:  XXX link text XXX
+  highlight: 0
+  news2: XXX additional news XXX
