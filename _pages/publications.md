@@ -13,8 +13,10 @@ permalink: /publications/
 
 (For a full list see [below](#full-list).
 
+{% assign year_sorted_pubs = (site.data.publist | sort: 'year') | reverse %}
+
 {% assign number_printed = 0 %}
-{% for publi in site.data.publist %}
+{% for publi in year_sorted_pubs %}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 {% if publi.highlight == 1 %}
@@ -25,7 +27,7 @@ permalink: /publications/
 
 <div class="col-sm-6 clearfix">
  <div class="well">
-  <pubtit>{{ publi.title }}</pubtit>
+  <pubtit>{{ publi.title }} ({{ publi.year }}) </pubtit>
   <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="33%" style="float: left" />
   <p>{{ publi.description }}</p>
   <p><em>{{ publi.authors }}</em></p>
@@ -58,7 +60,6 @@ permalink: /publications/
 
 <div class="col-sm-6 clearfix">
 <h4>By year:</h4>
-{% assign year_sorted_pubs = (site.data.publist | sort: 'year') | reverse %}
 {% for publi in year_sorted_pubs %}
   {{ publi.title }} ({{ publi.year }}) <br />
   <em>{{ publi.authors }} </em><br /><a href="{{ publi.link.url }}">{{ publi.link.display }}</a>
