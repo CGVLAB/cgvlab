@@ -1,4 +1,5 @@
-- title: "XXX title of publication"
+- title: "ABC XXX title of publication"
+  year: 1970
   image: dummy.png
   description: XXX description XXX
   authors: XXX authors XXX
@@ -9,7 +10,8 @@
   news1: XXX some news XXX
   news2: XXX additional news XXX
 
-- title: "XXX title of publication"
+- title: "GHI XXX title of publication"
+  year: 2001
   image: dummy.png
   description: XXX description XXX
   authors: XXX authors XXX
@@ -19,7 +21,8 @@
   highlight: 1
   news2:
 
-- title: "XXX title of publication"
+- title: "DEF XXX title of publication"
+  year: 1900
   image: dummy.png
   description: XXX description XXX
   authors: XXX authors XXX
