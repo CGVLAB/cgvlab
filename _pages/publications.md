@@ -6,6 +6,11 @@ sitemap: false
 permalink: /publications/
 ---
 
+# Testing bibtex
+
+{% bibliography --file my_test_bib_file %}
+
+
 
 # Publications
 

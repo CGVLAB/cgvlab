@@ -1,0 +1,46 @@
+---
+---
+<div class="text-justify">{{reference}}</div>
+
+{% if entry.owner %}
+ <img src="{{ entry.owner}}" width="70" align="middle" />
+{% endif %}
+
+
+{% if entry.note %}
+    <strong>{{entry.note}}</strong>
+{% endif %}
+
+<button class="button0"  onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
+
+{% if entry.doi %}
+    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="doi" /></a>
+{% endif %}
+ 
+{% if entry.pdf %}
+    <a href="{{ entry.pdf}}"  target="_blank"><input class="button2" type="button" value="PDF" /></a>
+{% endif %}
+ 
+{% if entry.link %}
+    <a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+{% endif %}
+ 
+{% if entry.code %}
+    <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+{% endif %}
+
+
+
+<div id="a{{entry.key}}" style="display: none;">
+<pre>{{entry.bibtex}}</pre>
+</div>
+<script>
+function toggleBibtex{{entry.key}}(parameter) {
+    var x= document.getElementById('a{{entry.key}}');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
