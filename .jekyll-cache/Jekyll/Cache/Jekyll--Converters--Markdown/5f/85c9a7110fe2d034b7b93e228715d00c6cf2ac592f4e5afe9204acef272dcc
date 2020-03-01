@@ -1,0 +1,974 @@
+I"�f<h1 id="publications">Publications</h1>
+
+<h2 id="highlights">Highlights</h2>
+
+<p>(For a full list see <a href="#full-list">below</a>.</p>
+
+<div id="pubgrid">
+  <ul class="bibliography"><li><div class="row">
+
+<div class="col-sm-12 clearfix">
+ <div class="well">
+  <pubtit>Augmented Visual Instruction for Surgical Practice and Training (Andersen et al. 2018) </pubtit>
+
+  
+
+  <img src="http://localhost:4000/images/pubpic/dummy.png" class="img-responsive" width="20%" style="float: left" />
+
+  <p><em><span id="andersen2018augmented">Andersen, D., Lin, C., Popescu, V., Munoz, E. R., Cabrera, M. E., Mullis, B., Zarzaur, B., Marley, S., &amp; Wachs, J. (2018). Augmented Visual Instruction for Surgical Practice and Training. <i>2018 IEEE Workshop on Augmented and Virtual Realities for Good (VAR4Good)</i>, 1–5.</span></em></p>
+  <p><strong><a href=""></a></strong></p>
+
+  
+
+  
+
+  <button class="button0" onclick="toggleBibtexandersen2018augmented()">Bibtex</button>
+
+  
+   
+  
+   
+  
+   
+  
+
+
+
+  <div id="aandersen2018augmented" style="display: none;">
+  <pre>@inproceedings{andersen2018augmented,
+  title = {Augmented Visual Instruction for Surgical Practice and Training},
+  author = {Andersen, Daniel and Lin, Chengyuan and Popescu, Voicu and Munoz, Edgar Rojas and Cabrera, Maria Eugenia and Mullis, Brian and Zarzaur, Ben and Marley, Sherri and Wachs, Juan},
+  booktitle = {2018 IEEE Workshop on Augmented and Virtual Realities for Good (VAR4Good)},
+  pages = {1--5},
+  year = {2018},
+  organization = {IEEE}
+}
+</pre>
+  </div>
+  <script>
+  function toggleBibtexandersen2018augmented(parameter) {
+      var x= document.getElementById('aandersen2018augmented');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+  }
+  </script>
+
+  <div style="clear:both"></div>
+ </div>
+</div>
+
+</div></li>
+<li><div class="row">
+
+<div class="col-sm-12 clearfix">
+ <div class="well">
+  <pubtit>An AR-guided system for fast image-based modeling of indoor scenes (Andersen et al. 2018) </pubtit>
+
+  
+
+  <img src="http://localhost:4000/images/pubpic/dummy.png" class="img-responsive" width="20%" style="float: left" />
+
+  <p><em><span id="andersen2018ar">Andersen, D., &amp; Popescu, V. (2018). An AR-guided system for fast image-based modeling of indoor scenes. <i>2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)</i>, 501–502.</span></em></p>
+  <p><strong><a href=""></a></strong></p>
+
+  
+
+  
+
+  <button class="button0" onclick="toggleBibtexandersen2018ar()">Bibtex</button>
+
+  
+   
+  
+   
+  
+   
+  
+
+
+
+  <div id="aandersen2018ar" style="display: none;">
+  <pre>@inproceedings{andersen2018ar,
+  title = {An AR-guided system for fast image-based modeling of indoor scenes},
+  author = {Andersen, Daniel and Popescu, Voicu},
+  booktitle = {2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)},
+  pages = {501--502},
+  year = {2018},
+  organization = {IEEE}
+}
+</pre>
+  </div>
+  <script>
+  function toggleBibtexandersen2018ar(parameter) {
+      var x= document.getElementById('aandersen2018ar');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+  }
+  </script>
+
+  <div style="clear:both"></div>
+ </div>
+</div>
+
+</div></li>
+<li><div class="row">
+
+<div class="col-sm-12 clearfix">
+ <div class="well">
+  <pubtit>HMD-guided image-based modeling and rendering of indoor scenes (Andersen et al. 2018) </pubtit>
+
+  
+
+  <img src="http://localhost:4000/images/pubpic/dummy.png" class="img-responsive" width="20%" style="float: left" />
+
+  <p><em><span id="andersen2018hmd">Andersen, D., &amp; Popescu, V. (2018). HMD-guided image-based modeling and rendering of indoor scenes. <i>International Conference on Virtual Reality and Augmented Reality</i>, 73–93.</span></em></p>
+  <p><strong><a href=""></a></strong></p>
+
+  
+
+  
+
+  <button class="button0" onclick="toggleBibtexandersen2018hmd()">Bibtex</button>
+
+  
+   
+  
+   
+  
+   
+  
+
+
+
+  <div id="aandersen2018hmd" style="display: none;">
+  <pre>@inproceedings{andersen2018hmd,
+  title = {HMD-guided image-based modeling and rendering of indoor scenes},
+  author = {Andersen, Daniel and Popescu, Voicu},
+  booktitle = {International Conference on Virtual Reality and Augmented Reality},
+  pages = {73--93},
+  year = {2018},
+  organization = {Springer}
+}
+</pre>
+  </div>
+  <script>
+  function toggleBibtexandersen2018hmd(parameter) {
+      var x= document.getElementById('aandersen2018hmd');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+  }
+  </script>
+
+  <div style="clear:both"></div>
+ </div>
+</div>
+
+</div></li>
+<li><div class="row">
+
+<div class="col-sm-12 clearfix">
+ <div class="well">
+  <pubtit>Surgical telementoring without encumbrance: a comparative study of see-through augmented reality-based approaches (Rojas-Muñoz et al. 2019) </pubtit>
+
+  
+
+  <img src="http://localhost:4000/images/pubpic/dummy.png" class="img-responsive" width="20%" style="float: left" />
+
+  <p><em><span id="rojas2019surgical">Rojas-Muñoz, E., Cabrera, M. E., Andersen, D., Popescu, V., Marley, S., Mullis, B., Zarzaur, B., &amp; Wachs, J. (2019). Surgical telementoring without encumbrance: a comparative study of see-through augmented reality-based approaches. <i>Annals of Surgery</i>, <i>270</i>(2), 384–389.</span></em></p>
+  <p><strong><a href=""></a></strong></p>
+
+  
+
+  
+
+  <button class="button0" onclick="toggleBibtexrojas2019surgical()">Bibtex</button>
+
+  
+   
+  
+   
+  
+   
+  
+
+
+
+  <div id="arojas2019surgical" style="display: none;">
+  <pre>@article{rojas2019surgical,
+  title = {Surgical telementoring without encumbrance: a comparative study of see-through augmented reality-based approaches},
+  author = {Rojas-Mu{\~n}oz, Edgar and Cabrera, Maria Eugenia and Andersen, Daniel and Popescu, Voicu and Marley, Sherri and Mullis, Brian and Zarzaur, Ben and Wachs, Juan},
+  journal = {Annals of surgery},
+  volume = {270},
+  number = {2},
+  pages = {384--389},
+  year = {2019},
+  publisher = {LWW}
+}
+</pre>
+  </div>
+  <script>
+  function toggleBibtexrojas2019surgical(parameter) {
+      var x= document.getElementById('arojas2019surgical');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+  }
+  </script>
+
+  <div style="clear:both"></div>
+ </div>
+</div>
+
+</div></li></ul>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-6 clearfix">
+    <div class="well">
+      <pubtit>GHI XXX title of publication (2001) </pubtit>
+      <p><img src="http://localhost:4000/images/pubpic/dummy.png" class="img-responsive" width="33%" style="float: left" /></p>
+      <p>XXX description XXX</p>
+      <p><em>XXX authors XXX</em></p>
+      <p><strong><a href="http://example.com/">XXX link text XXX</a></strong></p>
+      <p class="text-danger"><strong> </strong></p>
+      <p> </p>
+    </div>
+  </div>
+
+  <div class="col-sm-6 clearfix">
+    <div class="well">
+      <pubtit>ABC XXX title of publication (1970) </pubtit>
+      <p><img src="http://localhost:4000/images/pubpic/dummy.png" class="img-responsive" width="33%" style="float: left" /></p>
+      <p>XXX description XXX</p>
+      <p><em>XXX authors XXX</em></p>
+      <p><strong><a href="http://example.com/">XXX link text XXX</a></strong></p>
+      <p class="text-danger"><strong> XXX some news XXX</strong></p>
+      <p> XXX additional news XXX</p>
+    </div>
+  </div>
+
+</div>
+
+<p>   </p>
+
+<h2 id="full-list">Full List</h2>
+
+<p><strong>2020</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2019</strong></p>
+<ul class="bibliography"><li><div class="text-justify"><span id="bejarano2019generalized">Bejarano, A., &amp; Hoffmann, C. (2019). A generalized framework for designing topological interlocking configurations. <i>International Journal of Architectural Computing</i>, <i>17</i>(1), 53–73.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexbejarano2019generalized()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="abejarano2019generalized" style="display: none;">
+<pre>@article{bejarano2019generalized,
+  title = {A generalized framework for designing topological interlocking configurations},
+  author = {Bejarano, Andres and Hoffmann, Christoph},
+  journal = {International Journal of Architectural Computing},
+  volume = {17},
+  number = {1},
+  pages = {53--73},
+  year = {2019},
+  publisher = {SAGE Publications Sage UK: London, England}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexbejarano2019generalized(parameter) {
+    var x= document.getElementById('abejarano2019generalized');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="wu2019rgbd">Wu, M.-L., &amp; Popescu, V. (2019). RGBD temporal resampling for real-time occlusion removal. <i>Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games</i>, 1–9.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexwu2019rgbd()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="awu2019rgbd" style="display: none;">
+<pre>@inproceedings{wu2019rgbd,
+  title = {RGBD temporal resampling for real-time occlusion removal},
+  author = {Wu, Meng-Lin and Popescu, Voicu},
+  booktitle = {Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games},
+  pages = {1--9},
+  year = {2019}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexwu2019rgbd(parameter) {
+    var x= document.getElementById('awu2019rgbd');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="mathew2019urban">Mathew, C. D. T., Knob, P. R., Musse, S. R., &amp; Aliaga, D. G. (2019). Urban Walkability Design Using Virtual Population Simulation. <i>Computer Graphics Forum</i>, <i>38</i>(1), 455–469.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexmathew2019urban()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="amathew2019urban" style="display: none;">
+<pre>@inproceedings{mathew2019urban,
+  title = {Urban Walkability Design Using Virtual Population Simulation},
+  author = {Mathew, CD Tharindu and Knob, Paulo R and Musse, Soraia Raupp and Aliaga, Daniel G},
+  booktitle = {Computer Graphics Forum},
+  volume = {38},
+  number = {1},
+  pages = {455--469},
+  year = {2019},
+  organization = {Wiley Online Library}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexmathew2019urban(parameter) {
+    var x= document.getElementById('amathew2019urban');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="rojas2019surgical">Rojas-Muñoz, E., Cabrera, M. E., Andersen, D., Popescu, V., Marley, S., Mullis, B., Zarzaur, B., &amp; Wachs, J. (2019). Surgical telementoring without encumbrance: a comparative study of see-through augmented reality-based approaches. <i>Annals of Surgery</i>, <i>270</i>(2), 384–389.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexrojas2019surgical()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="arojas2019surgical" style="display: none;">
+<pre>@article{rojas2019surgical,
+  title = {Surgical telementoring without encumbrance: a comparative study of see-through augmented reality-based approaches},
+  author = {Rojas-Mu{\~n}oz, Edgar and Cabrera, Maria Eugenia and Andersen, Daniel and Popescu, Voicu and Marley, Sherri and Mullis, Brian and Zarzaur, Ben and Wachs, Juan},
+  journal = {Annals of surgery},
+  volume = {270},
+  number = {2},
+  pages = {384--389},
+  year = {2019},
+  publisher = {LWW}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexrojas2019surgical(parameter) {
+    var x= document.getElementById('arojas2019surgical');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li></ul>
+
+<p><strong>2018</strong></p>
+<ul class="bibliography"><li><div class="text-justify"><span id="andersen2018augmented">Andersen, D., Lin, C., Popescu, V., Munoz, E. R., Cabrera, M. E., Mullis, B., Zarzaur, B., Marley, S., &amp; Wachs, J. (2018). Augmented Visual Instruction for Surgical Practice and Training. <i>2018 IEEE Workshop on Augmented and Virtual Realities for Good (VAR4Good)</i>, 1–5.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexandersen2018augmented()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="aandersen2018augmented" style="display: none;">
+<pre>@inproceedings{andersen2018augmented,
+  title = {Augmented Visual Instruction for Surgical Practice and Training},
+  author = {Andersen, Daniel and Lin, Chengyuan and Popescu, Voicu and Munoz, Edgar Rojas and Cabrera, Maria Eugenia and Mullis, Brian and Zarzaur, Ben and Marley, Sherri and Wachs, Juan},
+  booktitle = {2018 IEEE Workshop on Augmented and Virtual Realities for Good (VAR4Good)},
+  pages = {1--5},
+  year = {2018},
+  organization = {IEEE}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexandersen2018augmented(parameter) {
+    var x= document.getElementById('aandersen2018augmented');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="andersen2018ar">Andersen, D., &amp; Popescu, V. (2018). An AR-guided system for fast image-based modeling of indoor scenes. <i>2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)</i>, 501–502.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexandersen2018ar()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="aandersen2018ar" style="display: none;">
+<pre>@inproceedings{andersen2018ar,
+  title = {An AR-guided system for fast image-based modeling of indoor scenes},
+  author = {Andersen, Daniel and Popescu, Voicu},
+  booktitle = {2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)},
+  pages = {501--502},
+  year = {2018},
+  organization = {IEEE}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexandersen2018ar(parameter) {
+    var x= document.getElementById('aandersen2018ar');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="andersen2018hmd">Andersen, D., &amp; Popescu, V. (2018). HMD-guided image-based modeling and rendering of indoor scenes. <i>International Conference on Virtual Reality and Augmented Reality</i>, 73–93.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexandersen2018hmd()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="aandersen2018hmd" style="display: none;">
+<pre>@inproceedings{andersen2018hmd,
+  title = {HMD-guided image-based modeling and rendering of indoor scenes},
+  author = {Andersen, Daniel and Popescu, Voicu},
+  booktitle = {International Conference on Virtual Reality and Augmented Reality},
+  pages = {73--93},
+  year = {2018},
+  organization = {Springer}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexandersen2018hmd(parameter) {
+    var x= document.getElementById('aandersen2018hmd');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="bejarano2018topological">Bejarano, A., &amp; Hoffmann, C. (2018). <i>Topological Interlocking Cylinder Configurations: A Geometric Approach</i>.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexbejarano2018topological()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="abejarano2018topological" style="display: none;">
+<pre>@article{bejarano2018topological,
+  title = {Topological Interlocking Cylinder Configurations: A Geometric Approach},
+  author = {Bejarano, Andres and Hoffmann, Christoph},
+  year = {2018}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexbejarano2018topological(parameter) {
+    var x= document.getElementById('abejarano2018topological');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="bruwier2018influence">Bruwier, M., Mustafa, A., Aliaga, D. G., Archambeau, P., Erpicum, S., Nishida, G., Zhang, X., Pirotton, M., Teller, J., &amp; Dewals, B. (2018). Influence of urban pattern on inundation flow in floodplains of lowland rivers. <i>Science of the Total Environment</i>, <i>622</i>, 446–458.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexbruwier2018influence()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="abruwier2018influence" style="display: none;">
+<pre>@article{bruwier2018influence,
+  title = {Influence of urban pattern on inundation flow in floodplains of lowland rivers},
+  author = {Bruwier, Martin and Mustafa, A and Aliaga, Daniel G and Archambeau, Pierre and Erpicum, S{\'e}bastien and Nishida, Gen and Zhang, Xiao and Pirotton, Michel and Teller, Jacques and Dewals, Benjamin},
+  journal = {Science of the Total Environment},
+  volume = {622},
+  pages = {446--458},
+  year = {2018},
+  publisher = {Elsevier}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexbruwier2018influence(parameter) {
+    var x= document.getElementById('abruwier2018influence');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="ching2018wudapt">Ching, J., Mills, G., Bechtel, B., See, L., Feddema, J., Wang, X., Ren, C., Brousse, O., Martilli, A., Neophytou, M., &amp; others. (2018). WUDAPT: An urban weather, climate, and environmental modeling infrastructure for the anthropocene. <i>Bulletin of the American Meteorological Society</i>, <i>99</i>(9), 1907–1924.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexching2018wudapt()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="aching2018wudapt" style="display: none;">
+<pre>@article{ching2018wudapt,
+  title = {WUDAPT: An urban weather, climate, and environmental modeling infrastructure for the anthropocene},
+  author = {Ching, Jason and Mills, Gerald and Bechtel, Benjamin and See, L and Feddema, J and Wang, X and Ren, C and Brousse, O and Martilli, A and Neophytou, M and others},
+  journal = {Bulletin of the American Meteorological Society},
+  volume = {99},
+  number = {9},
+  pages = {1907--1924},
+  year = {2018}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexching2018wudapt(parameter) {
+    var x= document.getElementById('aching2018wudapt');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="demir2018guided">Demir, I., &amp; Aliaga, D. G. (2018). Guided proceduralization: Optimizing geometry processing and grammar extraction for architectural models. <i>Computers &amp; Graphics</i>, <i>74</i>, 257–267.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexdemir2018guided()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="ademir2018guided" style="display: none;">
+<pre>@article{demir2018guided,
+  title = {Guided proceduralization: Optimizing geometry processing and grammar extraction for architectural models},
+  author = {Demir, Ilke and Aliaga, Daniel G},
+  journal = {Computers \&amp; Graphics},
+  volume = {74},
+  pages = {257--267},
+  year = {2018},
+  publisher = {Elsevier}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexdemir2018guided(parameter) {
+    var x= document.getElementById('ademir2018guided');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="demir2018near">Demir, İ., Aliaga, D. G., &amp; Benes, B. (2018). Near-convex decomposition and layering for efficient 3D printing. <i>Additive Manufacturing</i>, <i>21</i>, 383–394.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexdemir2018near()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="ademir2018near" style="display: none;">
+<pre>@article{demir2018near,
+  title = {Near-convex decomposition and layering for efficient 3D printing},
+  author = {Demir, {\.I}lke and Aliaga, Daniel G and Benes, Bedrich},
+  journal = {Additive Manufacturing},
+  volume = {21},
+  pages = {383--394},
+  year = {2018},
+  publisher = {Elsevier}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexdemir2018near(parameter) {
+    var x= document.getElementById('ademir2018near');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="mustafa2018procedural">Mustafa, A., Wei Zhang, X., Aliaga, D. G., Bruwier, M., Nishida, G., Dewals, B., Erpicum, S., Archambeau, P., Pirotton, M., &amp; Teller, J. (2018). Procedural generation of flood-sensitive urban layouts. <i>Environment and Planning B: Urban Analytics and City Science</i>, 2399808318812458.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexmustafa2018procedural()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="amustafa2018procedural" style="display: none;">
+<pre>@article{mustafa2018procedural,
+  title = {Procedural generation of flood-sensitive urban layouts},
+  author = {Mustafa, Ahmed and Wei Zhang, Xiao and Aliaga, Daniel G and Bruwier, Martin and Nishida, Gen and Dewals, Benjamin and Erpicum, S{\'e}bastian and Archambeau, Pierre and Pirotton, Michel and Teller, Jacques},
+  journal = {Environment and Planning B: Urban Analytics and City Science},
+  pages = {2399808318812458},
+  year = {2018},
+  publisher = {SAGE Publications Sage UK: London, England}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexmustafa2018procedural(parameter) {
+    var x= document.getElementById('amustafa2018procedural');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="nishida2018procedural">Nishida, G., Bousseau, A., &amp; Aliaga, D. G. (2018). Procedural modeling of a building from a single image. <i>Computer Graphics Forum</i>, <i>37</i>(2), 415–429.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexnishida2018procedural()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="anishida2018procedural" style="display: none;">
+<pre>@inproceedings{nishida2018procedural,
+  title = {Procedural modeling of a building from a single image},
+  author = {Nishida, Gen and Bousseau, Adrien and Aliaga, Daniel G},
+  booktitle = {Computer Graphics Forum},
+  volume = {37},
+  number = {2},
+  pages = {415--429},
+  year = {2018},
+  organization = {Wiley Online Library}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexnishida2018procedural(parameter) {
+    var x= document.getElementById('anishida2018procedural');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="waddell2018architecture">Waddell, P., Garcia-Dorado, I., Maurer, S. M., Boeing, G., Gardner, M., Porter, E., &amp; Aliaga, D. (2018). Architecture for modular microsimulation of real estate markets and transportation. <i>ArXiv Preprint ArXiv:1807.01148</i>.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexwaddell2018architecture()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="awaddell2018architecture" style="display: none;">
+<pre>@article{waddell2018architecture,
+  title = {Architecture for modular microsimulation of real estate markets and transportation},
+  author = {Waddell, Paul and Garcia-Dorado, Ignacio and Maurer, Samuel M and Boeing, Geoff and Gardner, Max and Porter, Emily and Aliaga, Daniel},
+  journal = {arXiv preprint arXiv:1807.01148},
+  year = {2018}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexwaddell2018architecture(parameter) {
+    var x= document.getElementById('awaddell2018architecture');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li>
+<li><div class="text-justify"><span id="wu2018anchored">Wu, M.-L., &amp; Popescu, V. (2018). Anchored multiperspective visualization for efficient vr navigation. <i>International Conference on Virtual Reality and Augmented Reality</i>, 240–259.</span></div>
+
+
+
+
+
+
+<button class="button0" onclick="toggleBibtexwu2018anchored()">Bibtex</button>
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+<div id="awu2018anchored" style="display: none;">
+<pre>@inproceedings{wu2018anchored,
+  title = {Anchored multiperspective visualization for efficient vr navigation},
+  author = {Wu, Meng-Lin and Popescu, Voicu},
+  booktitle = {International Conference on Virtual Reality and Augmented Reality},
+  pages = {240--259},
+  year = {2018},
+  organization = {Springer}
+}
+</pre>
+</div>
+<script>
+function toggleBibtexwu2018anchored(parameter) {
+    var x= document.getElementById('awu2018anchored');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script></li></ul>
+
+<p><strong>2017</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2016</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2015</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2014</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2013</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2012</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2011</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2010</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2009</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2008</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2007</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2006</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2005</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2004</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2003</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2002</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>2001</strong></p>
+<ul class="bibliography"></ul>
+
+<p><strong>Pre 2001</strong></p>
+<ul class="bibliography"></ul>
+:ET

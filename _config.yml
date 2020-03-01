@@ -45,3 +45,6 @@ kramdown:
 
 plugins:
   - jekyll-scholar
+
+scholar:
+  bibliography_list_tag: ul

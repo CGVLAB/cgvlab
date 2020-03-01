@@ -1,0 +1,65 @@
+---
+---
+
+<div class="row">
+
+<div class="col-sm-12 clearfix">
+ <div class="well">
+  <pubtit>{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }}) </pubtit>
+
+  {% if entry.image %}
+    {% assign highlight_img = entry.image %}
+  {% else %}
+    {% assign highlight_img = 'dummy.png' %}
+  {% endif %}
+
+  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ highlight_img }}" class="img-responsive" width="20%" style="float: left" />
+
+  <p><em>{{ reference }}</em></p>
+  <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
+
+  
+
+  {% if entry.note %}
+      <strong>{{entry.note}}</strong>
+  {% endif %}
+
+  <button class="button0"  onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
+
+  {% if entry.doi %}
+      <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="doi" /></a>
+  {% endif %}
+   
+  {% if entry.pdf %}
+      <a href="{{ entry.pdf}}"  target="_blank"><input class="button2" type="button" value="PDF" /></a>
+  {% endif %}
+   
+  {% if entry.link %}
+      <a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+  {% endif %}
+   
+  {% if entry.code %}
+      <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+  {% endif %}
+
+
+
+  <div id="a{{entry.key}}" style="display: none;">
+  <pre>{{entry.bibtex}}</pre>
+  </div>
+  <script>
+  function toggleBibtex{{entry.key}}(parameter) {
+      var x= document.getElementById('a{{entry.key}}');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+  }
+  </script>
+
+  <div style="clear:both"></div>
+ </div>
+</div>
+
+</div>
