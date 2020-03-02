@@ -10,49 +10,11 @@ permalink: /publications/
 
 ## Highlights
 
-(For a full list see [below](#full-list).
+(For a full list see [below](#full-list).)
 
 <div id="pubgrid">
 {% bibliography --file highlighted_references --template references_grid %}
 </div>
-
-{% assign year_sorted_pubs = (site.data.publist | sort: 'year') | reverse %}
-
-{% assign number_printed = 0 %}
-{% for publi in year_sorted_pubs %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if publi.highlight == 1 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
- <div class="well">
-  <pubtit>{{ publi.title }} ({{ publi.year }}) </pubtit>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="33%" style="float: left" />
-  <p>{{ publi.description }}</p>
-  <p><em>{{ publi.authors }}</em></p>
-  <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
-  <p class="text-danger"><strong> {{ publi.news1 }}</strong></p>
-  <p> {{ publi.news2 }}</p>
- </div>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endif %}
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
 
 <p> &nbsp; </p>
 
