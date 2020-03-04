@@ -24,8 +24,6 @@
       <strong>{{entry.note}}</strong>
   {% endif %}
 
-  <button class="button0"  onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
-
   {% if entry.doi %}
       <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="doi" /></a>
   {% endif %}
@@ -41,22 +39,6 @@
   {% if entry.code %}
       <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
   {% endif %}
-
-
-
-  <div id="a{{entry.key}}" style="display: none;">
-  <pre>{{entry.bibtex}}</pre>
-  </div>
-  <script>
-  function toggleBibtex{{entry.key}}(parameter) {
-      var x= document.getElementById('a{{entry.key}}');
-      if (x.style.display === 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-  </script>
 
   <div style="clear:both"></div>
  </div>
