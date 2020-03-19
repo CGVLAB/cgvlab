@@ -1,33 +1,14 @@
 - name: XXX name XXX
   photo: bio-photo.jpg
-  duration: XXX duration XXX
   info: XXX info XXX
-  email: XXX email XXX
-  number_educ: 1
-  education1: XXX only 1 education info XXX
-  education2:
-  education3:
-  education4:
+  url: http://example.com/
 
 - name: XXX name XXX
   photo: bio-photo.jpg
-  duration: XXX duration XXX
   info: XXX info XXX
-  email: XXX email XXX
-  number_educ: 3
-  education1: XXX education info 1/3 XXX
-  education2: XXX education info 2/3 XXX
-  education3: XXX education info 3/3 XXX
-  education4:
+  url: http://example.com/
 
 - name: XXX name XXX
   photo: bio-photo.jpg
-  duration: XXX duration XXX
   info: XXX info XXX
-  email: XXX email XXX
-  number_educ: 5
-  education1: XXX currently XXX
-  education2: XXX supports XXX
-  education3: XXX five XXX
-  education4: XXX education XXX
-  education5: XXX slots XXX
+  url: http://example.com/
