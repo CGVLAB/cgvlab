@@ -12,3 +12,8 @@
   photo: bio-photo.jpg
   info: XXX info XXX
   url: http://example.com/
+
+- name: Daniel Andersen
+  photo: andersed.jpg
+  info: 
+  url: https://dan.andersen.name/
