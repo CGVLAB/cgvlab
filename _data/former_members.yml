@@ -1,14 +1,43 @@
-- name: XXX name XXX
-  photo: bio-photo.jpg
-  info: Went to Google
-  url: http://example.com/
+- name: Meng-Lin Wu
+  photo: wu223.jpg
+  info: Senior Engineer at Qualcomm
+  url: https://www.cs.purdue.edu/homes/wu223/
+  linkedin: https://www.linkedin.com/in/menglinwu/
 
-- name: XXX name XXX
-  photo: bio-photo.jpg
-  info: Went to Facebook
-  url: http://example.com/
+- name: Gen Nishida
+  photo: gnishida.jpg
+  info: Senior Software Engineer at Cruise LLC
+  url: https://www.cs.purdue.edu/homes/gnishida/ 
+  linkedin: https://www.linkedin.com/in/gen-nishida-2094166b/
 
-- name: XXX name XXX
-  photo: bio-photo.jpg
-  info: Went to Microsoft
-  url: http://example.com/
+- name: Nabeel Butt
+  photo: nbutt.jpg
+  info: Software Engineer at Oculus VR
+  linkedin: https://www.linkedin.com/in/nabeel-butt-779b903/
+
+
+- name: Zi'ang Ding
+  info: SDE II at Microsoft
+  photo: ding29.jpg
+  linkedin: https://www.linkedin.com/in/ziang-ding-43249120/ 
+ 
+
+- name: Ignacio Garcia-Dorado
+  info: Research Engineer at Google
+  photo: igarciad.jpg
+  url: http://www.ignaciogarciadorado.com 
+  linkedin: https://www.linkedin.com/in/igarciad/
+ 
+
+- name: Ilke Demir
+  info: Postdoctoral Researcher at Facebook
+  photo: idemir.jpg
+  linkedin: https://www.linkedin.com/in/ilkedemir/ 
+  url: https://ilkedemir.weebly.com 
+ 
+
+- name: Carlos Vanegas
+  info: Senior Director at Bright Machines
+  photo: cvanegas.jpg
+  linkedin: https://www.linkedin.com/in/cvanegas/ 
+  url: http://www.cvanegas.com 
