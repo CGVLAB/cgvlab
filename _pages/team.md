@@ -93,10 +93,14 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}</i><br>
   {% if member.url %}
-  <a href="{{ member.url }}" target="_blank">Website</a>
+  <h4><a href="{{ member.url }}" target="_blank">{{ member.name }}</a></h4>
+  {% else %}
+  <h4>{{ member.name }}</h4>
+  {% endif %}
+  <i>{{ member.info }}</i><br>
+  {% if member.linkedin %}
+  <a href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
   {% endif %}
   
 </div>

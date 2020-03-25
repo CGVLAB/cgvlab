@@ -1,14 +1,24 @@
-- name: XXX name XXX
-  photo: bio-photo.jpg
-  info: XXX info XXX
-  url: http://example.com/
+- name: Daniel G. Aliaga
+  photo: aliaga.jpg
+  info: Associate Professor
+  url: https://cs.purdue.edu/homes/aliaga
 
-- name: XXX name XXX
-  photo: bio-photo.jpg
-  info: XXX info XXX
-  url: http://example.com/
+- name: Christoph M. Hoffmann
+  photo: cmh.jpg
+  info: Professor
+  url: https://cs.purdue.edu/homes/cmh
 
-- name: XXX name XXX
-  photo: bio-photo.jpg
-  info: XXX info XXX
-  url: http://example.com/
+- name: Voicu S. Popescu
+  photo: popescu.jpg
+  info: Associate Professor
+  url: https://cs.purdue.edu/homes/popescu
+
+- name: Elisha P. Sacks
+  photo: eps.jpg
+  info: Professor
+  url: https://cs.purdue.edu/homes/eps
+
+- name: Xavier M. Tricoche
+  photo: xmt.jpg
+  info: Associate Professor
+  url: https://cs.purdue.edu/homes/xmt
