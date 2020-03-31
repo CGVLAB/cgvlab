@@ -62,6 +62,9 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
   {% if member.url %}
   <i><a href="{{ member.url }}" target="_blank">Website</a></i>
   {% endif %}
+  {% if member.linkedin %}
+  <i><a href="{{ member.linkedin }}" target="_blank">LinkedIn</a></i>
+  {% endif %}
   
 
 </div>
