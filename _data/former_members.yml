@@ -1,43 +1,100 @@
-- name: Meng-Lin Wu
-  photo: wu223.jpg
-  info: Senior Engineer at Qualcomm
-  url: https://www.cs.purdue.edu/homes/wu223/
-  linkedin: https://www.linkedin.com/in/menglinwu/
-
-- name: Gen Nishida
-  photo: gnishida.jpg
-  info: Senior Software Engineer at Cruise LLC
-  url: https://www.cs.purdue.edu/homes/gnishida/ 
-  linkedin: https://www.linkedin.com/in/gen-nishida-2094166b/
+- name: Nathan Andrysco
+  photo: andrysco_nathan.jpg
+  info: Visualization Researcher and Developer at CD-adapco 
+  linkedin: https://www.linkedin.com/in/nathan-a-4b3b3346/ 
 
 - name: Nabeel Butt
   photo: nbutt.jpg
   info: Software Engineer at Oculus VR
-  linkedin: https://www.linkedin.com/in/nabeel-butt-779b903/
+  linkedin: https://www.linkedin.com/in/nabeel-butt-779b903/  
+  
+- name: Gleb Bahmutov
+  photo: bahmutov_gleb.jpg
+  info: VP of Engineering at Cypress.io
+  linkedin: https://www.linkedin.com/in/bahmutov/
+  url: https://glebbahmutov.com 
 
+- name: Samer Barakat
+  photo: barakat_samer.jpg
+  info: Computer Vision Engineer at Intel
+  linkedin: https://www.linkedin.com/in/samer-barakat-a48662108/ 
 
-- name: Zi'ang Ding
-  info: SDE II at Microsoft
-  photo: ding29.jpg
-  linkedin: https://www.linkedin.com/in/ziang-ding-43249120/ 
- 
+- name: Daniel Bekins
+  photo: bekins_daniel.jpg
+  info: Software Engineer at Electronic Arts
+  linkedin: https://www.linkedin.com/in/daniel-b-6929793/ 
 
-- name: Ignacio Garcia-Dorado
-  info: Research Engineer at Google
-  photo: igarciad.jpg
-  url: http://www.ignaciogarciadorado.com 
-  linkedin: https://www.linkedin.com/in/igarciad/
- 
+- name: Yi-liu Chao
+  photo: chao_yi-liu.jpg
+  info: Senior Software Engineer at BrightEdge
+  linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539/ 
+
+- name: Jian Cui
+  info: Senior Software Engineer at Google
+  photo: cui_jian.jpg
+  linkedin: https://www.linkedin.com/in/jian-cui-6a261442/ 
+
+- name: Jordan Dauble
+  photo: dauble_jordan.jpg
+  info: Founder of SimBlocks.io
+  linkedin: https://www.linkedin.com/in/jordan-dauble/
 
 - name: Ilke Demir
   info: Postdoctoral Researcher at Facebook
   photo: idemir.jpg
   linkedin: https://www.linkedin.com/in/ilkedemir/ 
   url: https://ilkedemir.weebly.com 
- 
+
+- name: Zi'ang Ding
+  info: SDE II at Microsoft
+  photo: ding29.jpg
+  linkedin: https://www.linkedin.com/in/ziang-ding-43249120/ 
+
+- name: Radu Dondera
+  photo: dondera_radu.jpg
+  info: ML Engineer at Cruise Automation
+  linkedin: https://www.linkedin.com/in/radu-dondera-874a4720/ 
+
+- name: Ignacio Garcia-Dorado
+  info: Research Engineer at Google
+  photo: igarciad.jpg
+  url: http://www.ignaciogarciadorado.com 
+  linkedin: https://www.linkedin.com/in/igarciad/
+
+- name: Jamie Gennis
+  photo: gennis_jamie.jpg
+  info: CTO at Tilt Five
+  linkedin: https://www.linkedin.com/in/jamie-gennis-24553218/
+
+- name: Win Mar Htay
+  photo: htay_winmar.jpg
+  info: Software Apps Engineer at Apple
+  linkedin: https://www.linkedin.com/in/win-mar-htay-12b30910/
+
+- name: Abhinav Jain
+  photo: jain_abhinav.jpg
+  info: Technical Program Manager at Facebook
+  linkedin: https://www.linkedin.com/in/abhinav-jain-88042b7/
+
+- name: Chun Jia
+  photo: jia_chun.jpg
+  info:  Manager & Senior Software Engineer at CapsoVision, Inc
+  linkedin: https://www.linkedin.com/in/chun-jia-9217b88/
+  
+- name: Gen Nishida
+  photo: gnishida.jpg
+  info: Senior Software Engineer at Cruise LLC
+  url: https://www.cs.purdue.edu/homes/gnishida/ 
+  linkedin: https://www.linkedin.com/in/gen-nishida-2094166b/
 
 - name: Carlos Vanegas
   info: Senior Director at Bright Machines
   photo: cvanegas.jpg
   linkedin: https://www.linkedin.com/in/cvanegas/ 
   url: http://www.cvanegas.com 
+
+- name: Meng-Lin Wu
+  photo: wu223.jpg
+  info: Senior Engineer at Qualcomm
+  url: https://www.cs.purdue.edu/homes/wu223/
+  linkedin: https://www.linkedin.com/in/menglinwu/
