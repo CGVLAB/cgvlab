@@ -6,7 +6,6 @@
  <img src="{{ entry.owner}}" width="70" align="middle" />
 {% endif %}
 
-
 {% if entry.note %}
     <strong>{{entry.note}}</strong>
 {% endif %}
@@ -18,7 +17,7 @@
 {% endif %}
  
 {% if entry.pdf %}
-    <a href="{{ entry.pdf}}"  target="_blank"><input class="button2" type="button" value="PDF" /></a>
+    <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.pdf }}"  target="_blank"><input class="button2" type="button" value="PDF" /></a>
 {% endif %}
  
 {% if entry.link %}
@@ -28,8 +27,6 @@
 {% if entry.code %}
     <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
 {% endif %}
-
-
 
 <div id="a{{entry.key}}" style="display: none;">
 <pre>{{entry.bibtex}}</pre>
