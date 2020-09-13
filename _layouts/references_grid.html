@@ -3,55 +3,58 @@
 
 <div class="row">
 
-<div class="col-sm-12 clearfix">
- <div id="parent-grid-{{entry.key}}" class="well">
-  <pubtit>{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }}) </pubtit>
+    <div class="col-sm-12 clearfix">
+        <div id="parent-grid-{{entry.key}}" class="well">
+            <pubtit>{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }}) </pubtit>
 
-  {% if entry.image %}
-    {% assign highlight_img = entry.image %}
-  {% else %}
-    {% assign highlight_img = 'dummy.png' %}
-  {% endif %}
+            {% if entry.image %}
+            {% assign highlight_img = entry.image %}
+            {% else %}
+            {% assign highlight_img = 'dummy.png' %}
+            {% endif %}
 
-  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ highlight_img }}" class="img-responsive" width="20%" style="float: left" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ highlight_img }}" class="img-responsive"
+                width="20%" style="float: left" />
 
-  <p><em>{{ reference }}</em></p>
-  <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
+            <p><em>{{ reference }}</em></p>
+            <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
 
-  {% if entry.note %}
-      <strong>{{entry.note}}</strong>
-  {% endif %}
+            {% if entry.note %}
+            <strong>{{entry.note}}</strong>
+            {% endif %}
 
-  {% if entry.doi %}
-      <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="DOI" /></a>
-  {% endif %}
-   
-  {% if entry.pdf %}
-      <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.pdf }}"  target="_blank"><input class="button2" type="button" value="PDF" /></a>
-  {% endif %}
-   
-  {% if entry.link %}
-      <a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
-  {% endif %}
-   
-  {% if entry.code %}
-      <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
-  {% endif %}
+            {% if entry.doi %}
+            <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button"
+                    value="DOI" /></a>
+            {% endif %}
 
-  <div style="clear:both"></div>
- </div>
-</div>
+            {% if entry.pdf %}
+            <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.pdf }}" target="_blank"><input class="button2"
+                    type="button" value="PDF" /></a>
+            {% endif %}
 
-<script>
-    // Remove DOI from reference
-    var removeDoi = true;
-    
-    if (removeDoi) {
-    var reference = document.getElementById('parent-grid-{{entry.key}}').children;
-    for(var i = 0; i < reference.length; i++)
-        reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
-    }
-    
-</script>
-    
+            {% if entry.link %}
+            <a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+            {% endif %}
+
+            {% if entry.code %}
+            <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+            {% endif %}
+
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+    <script>
+        // Remove DOI from reference
+        var removeDoi = true;
+
+        if (removeDoi) {
+            var reference = document.getElementById('parent-grid-{{entry.key}}').children;
+            for (var i = 0; i < reference.length; i++)
+                reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+        }
+
+    </script>
+
 </div>
