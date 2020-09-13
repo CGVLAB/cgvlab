@@ -4,7 +4,7 @@
 <div class="row">
 
 <div class="col-sm-12 clearfix">
- <div class="well">
+ <div id="parent-grid-{{entry.key}}" class="well">
   <pubtit>{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }}) </pubtit>
 
   {% if entry.image %}
@@ -23,7 +23,7 @@
   {% endif %}
 
   {% if entry.doi %}
-      <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="doi" /></a>
+      <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="DOI" /></a>
   {% endif %}
    
   {% if entry.pdf %}
@@ -42,4 +42,16 @@
  </div>
 </div>
 
+<script>
+    // Remove DOI from reference
+    var removeDoi = true;
+    
+    if (removeDoi) {
+    var reference = document.getElementById('parent-grid-{{entry.key}}').children;
+    for(var i = 0; i < reference.length; i++)
+        reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+    }
+    
+</script>
+    
 </div>
