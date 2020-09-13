@@ -1,19 +1,25 @@
 ---
 ---
-<div class="text-justify">{{reference}}</div>
+
+<script>
+function removeDoi{{entry.key}}() {
+}
+</script>
+
+<div id="parent-{{ entry.key }}" class="text-justify">{{reference}}</div>
 
 {% if entry.owner %}
- <img src="{{ entry.owner}}" width="70" align="middle" />
+ <img src="{{ entry.owner }}" width="70" align="middle" />
 {% endif %}
 
 {% if entry.note %}
     <strong>{{entry.note}}</strong>
 {% endif %}
 
-<button class="button0"  onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
+<button class="button0" onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
 
 {% if entry.doi %}
-    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="doi" /></a>
+    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="DOI" /></a>
 {% endif %}
  
 {% if entry.pdf %}
@@ -32,8 +38,17 @@
 <pre>{{entry.bibtex}}</pre>
 </div>
 <script>
+// Remove DOI from reference
+var removeDoi = true;
+
+if (removeDoi) {
+var reference = document.getElementById('parent-{{entry.key}}').children;
+for(var i = 0; i < reference.length; i++)
+    reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+}
+
 function toggleBibtex{{entry.key}}(parameter) {
-    var x= document.getElementById('a{{entry.key}}');
+    var x = document.getElementById('a{{entry.key}}');
     if (x.style.display === 'none') {
         x.style.display = 'block';
     } else {
