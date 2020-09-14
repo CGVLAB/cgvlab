@@ -13,7 +13,7 @@ permalink: /publications/
 (For a full list see [below](#full-list).)
 
 <div id="pubgrid">
-{% bibliography --file highlighted_references --template references_grid %}
+{% bibliography --query @*[highlighted=true] --template references_grid %}
 </div>
 
 <p> &nbsp; </p>
