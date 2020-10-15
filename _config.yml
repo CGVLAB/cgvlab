@@ -7,11 +7,9 @@
 
 # Site settings
 title: CGVLab
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+email: null@cs.purdue.edu
+description: > # This means 'ignore newlines until "baseurl:"'
+  The website of the Computer Graphics and Visualization Laboratory (CGVLab) at Purdue University.
 baseurl: ""
 url: ""
 
@@ -29,8 +27,6 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
-
 # Markdown Processing
 kramdown:
   input: GFM
@@ -41,10 +37,16 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
+  parse_block_html: true # Default for kramdown is false. This will enable using Markdown links
 
 plugins:
   - jekyll-scholar
+  - jekyll-minifier
 
 scholar:
   bibliography_list_tag: ul
+
+# Enable ES6 in minifier
+jekyll-minifier:
+  uglifier_args:
+    harmony: true

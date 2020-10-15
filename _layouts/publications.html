@@ -1,6 +1,37 @@
 ---
 layout: default
 ---
-<div id="publications" class="col-sm-12">
+<script>
+  // Array of publication IDs
+  var publicationIds = [];
+  var highlightedPublicationIds = [];
+
+  function toggleBibtex(key) {
+    var v = document.getElementById(`bibtex-${key}`);
+    if (v.style.display === 'none') {
+      v.style.display = 'block';
+    } else {
+      v.style.display = 'none';
+    }
+  }
+</script>
+<div id="gridid" class="col-sm-12">
   {{ content }}
 </div>
+<script>
+  // Remove DOI from reference
+  const removeDoi = false;
+
+  if (removeDoi) {
+    for (const entry in publicationIds) {
+      var reference = document.getElementById('parent-{{entry.key}}').children;
+      for (var i = 0; i < reference.length; i++)
+        reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+    }
+    for (const entry in highlightedPublicationIds) {
+      var reference = document.getElementById('parent-grid-{{entry.key}}').children;
+      for (var i = 0; i < reference.length; i++)
+        reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+    }
+  }
+</script>

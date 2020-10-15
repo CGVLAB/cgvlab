@@ -10,7 +10,7 @@
             {% if entry.image %}
             {% assign highlight_img = entry.image %}
             {% else %}
-            {% assign highlight_img = 'dummy.png' %}
+            {% assign highlight_img = '../default.png' %}
             {% endif %}
 
             <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ highlight_img }}" class="img-responsive"
@@ -46,15 +46,8 @@
     </div>
 
     <script>
-        // Remove DOI from reference
-        var removeDoi = true;
-
-        if (removeDoi) {
-            var reference = document.getElementById('parent-grid-{{entry.key}}').children;
-            for (var i = 0; i < reference.length; i++)
-                reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
-        }
-
+        // Add entry to global array (declared in publications.html file)
+        highlightedPublicationIds.push('{{entry.key}}');
     </script>
 
 </div>

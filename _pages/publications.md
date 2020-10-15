@@ -1,6 +1,6 @@
 ---
 title: "CGVLab - Publications"
-layout: gridlay
+layout: publications
 excerpt: "CGVLab -- Publications."
 sitemap: false
 permalink: /publications/
@@ -17,7 +17,6 @@ permalink: /publications/
 </div>
 
 <p> &nbsp; </p>
-
 
 ## Full List
 
