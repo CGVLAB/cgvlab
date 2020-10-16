@@ -4,27 +4,24 @@
 #   url: http://example.com/
 
 - name: Daniel Andersen
-  photo: andersed.jpg
-  info:
+  photo: anderson_daniel.jpg
   url: https://dan.andersen.name/
 
 - name: Andres Bejarano
   photo: bejarano_andres.jpg
-  info:
   url: http://andresbejarano.name/
 
 - name: DonEliezer Baize
   photo: baize_doneliezer.jpg
   linkedin: https://www.linkedin.com/in/doneliezer-baize-178660162/
 
+# Name may have changed
 - name: Dana El-Rushaidat
-  photo: elrushaidat_dana.jpg
-  info:
-  url:
+  photo: el-rushaidat_dana.jpg
+  linkedin: https://www.linkedin.com/in/dana-monther-3a51131a9
 
 - name: Liu He
   photo: he_liu.jpg
-  info:
   linkedin: https://www.linkedin.com/in/liu-he-1a7239197/
 
 - name: Chengyuan Lin
@@ -37,20 +34,23 @@
 
 - name: Christopher May
   photo: may_christopher.jpg
+  linkedin:
 
 - name: Justin Messinger
   photo: messinger_justin.jpg
+  linkedin:
 
 - name: Pratiman Patel
   photo: patel_pratiman.jpg
   linkedin: https://www.linkedin.com/in/pratiman-patel-77262739/
 
-- name: Dylan Rodriguez
-  photo: rodriguez_dylan.jpg
+- name: Dylan Rodriquez
+  photo: rodriquez_dylan.jpg
   linkedin: https://www.linkedin.com/in/dylanmr/
 
 - name: Yizhi (David) Song
   photo: song_yizhi.jpg
+  linkedin:
 
 - name: Lu Xing
   photo: xing_lu.jpg
@@ -63,3 +63,25 @@
 - name: Zixun Yu
   photo: yu_zixun.jpg
   linkedin: https://www.linkedin.com/in/zixun-yu-ba0548171/
+
+- name: Yizhi Song
+  photo: song_yizhi.jpg
+  linkedin:
+
+- name: Meng-Lin Wu
+  photo: wu_meng-lin.jpg
+  linkedin:
+
+- name: Xiaowei Zhang
+  photo: zhang_xiaowei.jpg
+  linkedin:
+
+- name: Xiaochen Zhou
+  photo: zhou_xiaochen.jpg
+  url: https://lewkesy.github.io/
+  linkedin: https://www.linkedin.com/in/xiaochen-zhou-26b79b178/
+
+- name: Adnan Firoze
+  photo: firoze_adnan.jpg
+  url: https://scholar.google.com/citations?user=Yatk4KgAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/adnanfiroze/

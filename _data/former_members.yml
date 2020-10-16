@@ -4,7 +4,7 @@
   linkedin: https://www.linkedin.com/in/nathan-a-4b3b3346/
 
 - name: Nabeel Butt
-  photo: nbutt.jpg
+  photo: butt_nabeel.jpg
   info: Software Engineer at Oculus VR
   linkedin: https://www.linkedin.com/in/nabeel-butt-779b903/
 
@@ -41,13 +41,13 @@
 
 - name: Ilke Demir
   info: Postdoctoral Researcher at Facebook
-  photo: idemir.jpg
+  photo: demir_ilke.jpg
   linkedin: https://www.linkedin.com/in/ilkedemir/
   url: https://ilkedemir.weebly.com
 
 - name: Zi'ang Ding
   info: SDE II at Microsoft
-  photo: ding29.jpg
+  photo: ding_ziang.jpg
   linkedin: https://www.linkedin.com/in/ziang-ding-43249120/
 
 - name: Radu Dondera
@@ -57,7 +57,7 @@
 
 - name: Ignacio Garcia-Dorado
   info: Research Engineer at Google
-  photo: igarciad.jpg
+  photo: garcia-dorado_ignacio.jpg
   url: http://www.ignaciogarciadorado.com
   linkedin: https://www.linkedin.com/in/igarciad/
 
@@ -82,19 +82,145 @@
   linkedin: https://www.linkedin.com/in/chun-jia-9217b88/
 
 - name: Gen Nishida
-  photo: gnishida.jpg
+  photo: nishida_gen.jpg
   info: Senior Software Engineer at Cruise LLC
   url: https://www.cs.purdue.edu/homes/gnishida/
   linkedin: https://www.linkedin.com/in/gen-nishida-2094166b/
 
 - name: Carlos Vanegas
   info: Senior Director at Bright Machines
-  photo: cvanegas.jpg
+  photo: vanegas_carlos.jpg
   linkedin: https://www.linkedin.com/in/cvanegas/
   url: http://www.cvanegas.com
 
 - name: Meng-Lin Wu
-  photo: wu223.jpg
+  photo: wu_meng-lin.jpg
   info: Senior Engineer at Qualcomm
   url: https://www.cs.purdue.edu/homes/wu223/
   linkedin: https://www.linkedin.com/in/menglinwu/
+
+# NEWLY ADDED FORMER STUDENTS
+
+- name: Yi-Liu Chao
+  photo: chao_yi-liu.jpg
+  linkedin:
+
+- name: Ziang Ding
+  photo: ding_ziang.jpg
+  linkedin:
+
+- name: Ignacio Garcia
+  photo: garcia_ignacio.jpg
+  linkedin:
+
+- name: Haosi Huang
+  photo: huang_haosi.jpg
+  linkedin:
+
+- name: Sami Kilic
+  photo: kilic_sami.jpg
+  linkedin:
+
+- name: Alvin Law
+  photo: law_alvin.jpg
+  linkedin:
+
+- name: Liang Li
+  photo: li_liang.jpg
+  linkedin:
+
+- name: Yaodong Liu
+  photo: liu_yaodong.jpg
+  linkedin:
+
+- name: Andrew Martin
+  photo: martin_andrew.jpg
+  linkedin:
+
+- name: Chris McDonald
+  photo: mcdonald_chris.jpg
+  linkedin:
+
+- name: Chunhui Mei
+  photo: mei_chunhui.jpg
+  linkedin:
+
+- name: Feng Meng
+  photo: meng_feng.jpg
+  linkedin:
+
+- name: Sagar Mittal
+  photo: mittal_sagar.jpg
+  linkedin:
+
+- name: Carlos Montalto
+  photo: montalto_carlos.jpg
+  linkedin:
+
+- name: Mihai Mudure
+  photo: mudure_mihai.jpg
+  linkedin:
+
+- name: Gahyun Park
+  photo: park_gahyun.jpg
+  linkedin:
+
+- name: Varun Ramachandran
+  photo: ramachandran_varun.jpg
+  linkedin:
+
+- name: Paul Rosen
+  photo: rosen_paul.jpg
+  linkedin:
+
+- name: Wayne Schlei
+  photo: schlei_wayne.jpg
+  linkedin:
+
+- name: Joshua Schpok
+  photo: schpok_joshua.jpg
+  linkedin:
+
+- name: Rajesh Selvamani
+  photo: selvamani_rajesh.jpg
+  linkedin:
+
+- name: Yinlong Sun
+  photo: sun_yinlong.jpg
+  linkedin:
+
+- name: Tion Thomas
+  photo: thomas_tion.jpg
+  linkedin:
+
+- name: Fijoy Vadakkumpadan
+  photo: vadakkumpadan_fijoy.jpg
+  linkedin:
+
+- name: Qiqi Wang
+  photo: wang_qiqi.jpg
+  linkedin:
+
+- name: Huiying Xu
+  photo: xu_huiying.jpg
+  linkedin:
+
+- name: Yi Xu
+  photo: xu_yi.jpg
+  linkedin:
+
+- name: Jade Yang
+  photo: yang_jade.jpg
+  linkedin:
+
+- name: Weiqiang Yang
+  photo: yang_weiqiang.jpg
+  linkedin:
+
+- name: Yu Hong Yeung
+  photo: yeung_yuhong.jpg
+  linkedin:
+
+- name: Ji Zhang
+  photo: zhang_ji.jpg
+  linkedin:

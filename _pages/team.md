@@ -16,12 +16,18 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
+{% if member.photo %}
+{% assign photo_link = site.dir_resources_images | append: '/teampic/' | append: member.photo %}
+{% else %}
+{% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+{% endif %}
+
 {% if even_odd == 0 %}
 <div class="row">
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.dir_resources_images }}/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ photo_link }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}</i><br>
   {% if member.url %}
@@ -43,21 +49,24 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 </div>
 {% endif %}
 
-
-
-
 ## Graduate Students
 {% assign number_printed = 0 %}
 {% for member in site.data.students %}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
+{% if member.photo %}
+{% assign photo_link = site.dir_resources_images | append: '/teampic/' | append: member.photo %}
+{% else %}
+{% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+{% endif %}
+
 {% if even_odd == 0 %}
 <div class="row">
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.dir_resources_images }}/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ photo_link }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
   {% if member.url %}
   <i><a href="{{ member.url }}" target="_blank">Website</a></i>
@@ -66,7 +75,6 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
   <i><a href="{{ member.linkedin }}" target="_blank">LinkedIn</a></i>
   {% endif %}
   
-
 </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
@@ -82,7 +90,6 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 </div>
 {% endif %}
 
-
 ## Former members
 
 {% assign number_printed = 0 %}
@@ -90,12 +97,18 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
+{% if member.photo %}
+{% assign photo_link = site.dir_resources_images | append: '/teampic/' | append: member.photo %}
+{% else %}
+{% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+{% endif %}
+
 {% if even_odd == 0 %}
 <div class="row">
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.dir_resources_images }}/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ photo_link }}" class="img-responsive" width="25%" style="float: left" />
   {% if member.url %}
   <h4><a href="{{ member.url }}" target="_blank">{{ member.name }}</a></h4>
   {% else %}
