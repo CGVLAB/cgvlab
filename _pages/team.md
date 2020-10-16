@@ -21,7 +21,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ site.dir_resources_images }}/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}</i><br>
   {% if member.url %}
@@ -57,7 +57,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ site.dir_resources_images }}/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
   {% if member.url %}
   <i><a href="{{ member.url }}" target="_blank">Website</a></i>
@@ -95,7 +95,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ site.dir_resources_images }}/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   {% if member.url %}
   <h4><a href="{{ member.url }}" target="_blank">{{ member.name }}</a></h4>
   {% else %}
