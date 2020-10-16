@@ -1,3 +1,8 @@
+- name: Daniel Andersen
+  photo: anderson_daniel.jpg
+  url: https://dan.andersen.name/
+  linkedin: https://www.linkedin.com/in/danielspencerandersen/
+
 - name: Nathan Andrysco
   photo: andrysco_nathan.jpg
   info: Visualization Researcher and Developer at CD-adapco
@@ -42,8 +47,8 @@
 - name: Ilke Demir
   info: Postdoctoral Researcher at Facebook
   photo: demir_ilke.jpg
-  linkedin: https://www.linkedin.com/in/ilkedemir/
   url: https://ilkedemir.weebly.com
+  linkedin: https://www.linkedin.com/in/ilkedemir/
 
 - name: Zi'ang Ding
   info: SDE II at Microsoft
@@ -99,128 +104,158 @@
   url: https://www.cs.purdue.edu/homes/wu223/
   linkedin: https://www.linkedin.com/in/menglinwu/
 
-# NEWLY ADDED FORMER STUDENTS
-
 - name: Yi-Liu Chao
   photo: chao_yi-liu.jpg
-  linkedin:
+  info: Senior Software Engineer at BrightEdge
+  linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539
 
 - name: Ziang Ding
   photo: ding_ziang.jpg
-  linkedin:
+  info: Senior Software Engineer at Microsoft
+  linkedin: https://www.linkedin.com/in/ziang-ding-43249120
 
 - name: Ignacio Garcia
   photo: garcia_ignacio.jpg
-  linkedin:
+  info: Research Engineer at Google
+  linkedin: https://www.linkedin.com/in/igarciad/
 
 - name: Haosi Huang
   photo: huang_haosi.jpg
+  info:
   linkedin:
 
 - name: Sami Kilic
   photo: kilic_sami.jpg
+  info:
   linkedin:
 
 - name: Alvin Law
   photo: law_alvin.jpg
-  linkedin:
+  info: Software Engineer at Google
+  linkedin: https://www.linkedin.com/in/alvin-law-376b203b
 
 - name: Liang Li
   photo: li_liang.jpg
-  linkedin:
+  info: Software Engineer at Google Express
+  linkedin: https://www.linkedin.com/in/li900
 
 - name: Yaodong Liu
   photo: liu_yaodong.jpg
+  info:
   linkedin:
 
 - name: Andrew Martin
   photo: martin_andrew.jpg
+  info:
   linkedin:
 
 - name: Chris McDonald
   photo: mcdonald_chris.jpg
+  info:
   linkedin:
 
 - name: Chunhui Mei
   photo: mei_chunhui.jpg
-  linkedin:
+  info: Principal Engineer at Intel Corporation
+  linkedin: https://www.linkedin.com/in/chunhui-mei-60134913
 
 - name: Feng Meng
   photo: meng_feng.jpg
-  linkedin:
+  info: Software Development Engineer at Amazon Web Services (AWS)
+  linkedin: https://www.linkedin.com/in/mengfeng
 
 - name: Sagar Mittal
   photo: mittal_sagar.jpg
-  linkedin:
+  info: Senior Software Engineer at Google
+  linkedin: https://www.linkedin.com/in/sagar-mittal
 
 - name: Carlos Montalto
   photo: montalto_carlos.jpg
-  linkedin:
+  info: Assistant Professor at Universidad de Costa Rica
+  linkedin: https://cr.linkedin.com/in/carlos-r-montalto-cruz-716535a
 
 - name: Mihai Mudure
   photo: mudure_mihai.jpg
-  linkedin:
+  info: Staff Software Engineer at Google Inc.
+  linkedin: https://www.linkedin.com/in/mihaimudure
 
 - name: Gahyun Park
   photo: park_gahyun.jpg
+  info: Lecturer at Department of Computing Security RIT (?)
   linkedin:
 
 - name: Varun Ramachandran
   photo: ramachandran_varun.jpg
-  linkedin:
+  info: Senior SDE at AWS CloudFront, Lambda@Edge
+  linkedin: https://www.linkedin.com/in/varunramachandran
 
 - name: Paul Rosen
   photo: rosen_paul.jpg
-  linkedin:
+  info: Assistant Professor at University of South Florida, Department of Computer Science and Engineering
+  linkedin: https://www.linkedin.com/in/rosenpaul
 
 - name: Wayne Schlei
   photo: schlei_wayne.jpg
-  linkedin:
+  info: Mission Design Engineer (?)
+  linkedin: https://www.linkedin.com/in/wayne-schlei-188bb9b4
 
 - name: Joshua Schpok
   photo: schpok_joshua.jpg
-  linkedin:
+  info:
+  linkedin: https://www.linkedin.com/in/joshua-schpok-46aa33
 
 - name: Rajesh Selvamani
   photo: selvamani_rajesh.jpg
-  linkedin:
+  info: Program Manager at Microsoft
+  linkedin: https://www.linkedin.com/in/rajeshselvamani
 
 - name: Yinlong Sun
   photo: sun_yinlong.jpg
+  info:
   linkedin:
 
 - name: Tion Thomas
   photo: thomas_tion.jpg
-  linkedin:
+  info: Senior Customer Engineer at Sourcegraph
+  linkedin: https://www.linkedin.com/in/tion-thomas-30562017
 
 - name: Fijoy Vadakkumpadan
   photo: vadakkumpadan_fijoy.jpg
-  linkedin:
+  info: Manager, Computer Vision at SAS
+  linkedin: https://www.linkedin.com/in/fijoy
 
 - name: Qiqi Wang
   photo: wang_qiqi.jpg
-  linkedin:
+  info: \?
+  linkedin: https://www.linkedin.com/in/qi-qi-7a0b4726
 
 - name: Huiying Xu
   photo: xu_huiying.jpg
+  info:
   linkedin:
 
 - name: Yi Xu
   photo: xu_yi.jpg
-  linkedin:
+  info: Associate Director of the OPPO US Research Center | AR Innovation
+  linkedin: https://www.linkedin.com/in/yi-xu-42654823
 
 - name: Jade Yang
   photo: yang_jade.jpg
-  linkedin:
+  info: Assistant Professor at Purdue University Calumet
+  linkedin: https://www.linkedin.com/in/jade-yang-57527a65
 
 - name: Weiqiang Yang
   photo: yang_weiqiang.jpg
-  linkedin:
+  info: Solution Architect, Product Owner at SAP America
+  linkedin: https://www.linkedin.com/in/weiqiang-yang-7a178b1b
 
 - name: Yu Hong Yeung
   photo: yeung_yuhong.jpg
+  info: Post-doctoral Research Associate - Department of Computer Science at Purdue University
+  url: https://www.cs.purdue.edu/homes/yyeung/
   linkedin:
 
 - name: Ji Zhang
   photo: zhang_ji.jpg
-  linkedin:
+  info: \?
+  linkedin: https://www.linkedin.com/in/ji-zhang-58a051b
