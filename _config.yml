@@ -20,6 +20,14 @@ include:
 sass:
   sass_dir: _sass
 
+# Data directories
+dir_theme_css: /theme/css
+dir_theme_js: /theme/js
+dir_theme_images: /theme/images
+
+dir_resources_images: /resources/images
+dir_resources_papers: /resources/papers
+
 # Conversion
 markdown: kramdown
 highlighter: rouge
