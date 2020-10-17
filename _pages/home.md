@@ -22,19 +22,19 @@ XXX basic description of the lab XXX
     <div class="carousel-inner" markdown="0">
 
         <div class="item active">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/logo_big.gif" />
+            <img src="{{ site.dir_resources_images }}/slider/logo_big.gif" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider1.jpg" alt="Slide 1" />
+            <img src="{{ site.dir_resources_images }}/slider/slider1.jpg" alt="Slide 1" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider2.png" alt="Slide 2" />
+            <img src="{{ site.dir_resources_images }}/slider/slider2.png" alt="Slide 2" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider3.png" alt="Slide 3" />
+            <img src="{{ site.dir_resources_images }}/slider/slider3.png" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider4.jpg" alt="Slide 4" />
+            <img src="{{ site.dir_resources_images }}/slider/slider4.jpg" alt="Slide 4" />
         </div>
         
     </div>

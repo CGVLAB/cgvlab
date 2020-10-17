@@ -1,42 +1,20 @@
-# - name: XXX name XXX
-#   photo: bio-photo.jpg
-#   info: XXX info XXX
-#   url: http://example.com/
-
-# - name: XXX name XXX
-#   photo: bio-photo.jpg
-#   info: XXX info XXX
-#   url: http://example.com/
-
-# - name: XXX name XXX
-#   photo: bio-photo.jpg
-#   info: XXX info XXX
-#   url: http://example.com/
-
-- name: Daniel Andersen
-  photo: andersed.jpg
-  info: 
-  url: https://dan.andersen.name/
-  
 - name: Andres Bejarano
   photo: bejarano_andres.jpg
-  info:
   url: http://andresbejarano.name/
+  linkedin: https://www.linkedin.com/in/andresbejarano87/
 
 - name: DonEliezer Baize
   photo: baize_doneliezer.jpg
   linkedin: https://www.linkedin.com/in/doneliezer-baize-178660162/
-  
-- name: Dana El-Rushaidat
-  photo: elrushaidat_dana.jpg
-  info:
-  url:
+
+- name: Dana Monther
+  photo: monther_dana.jpg
+  linkedin: https://www.linkedin.com/in/dana-monther-3a51131a9
 
 - name: Liu He
   photo: he_liu.jpg
-  info: 
   linkedin: https://www.linkedin.com/in/liu-he-1a7239197/
-  
+
 - name: Chengyuan Lin
   photo: lin_chengyuan.jpg
   linkedin: https://www.linkedin.com/in/chengyuan-lin-968464b8/
@@ -44,33 +22,50 @@
 - name: Tharindu Mathew
   photo: mathew_tharindu.jpg
   linkedin: https://www.linkedin.com/in/tharindu-mathew/
-  
+
 - name: Christopher May
   photo: may_christopher.jpg
+  linkedin:
 
 - name: Justin Messinger
   photo: messinger_justin.jpg
-  
+  url: https://www.cs.purdue.edu/people/graduate-students/messingj
+  linkedin:
+
 - name: Pratiman Patel
   photo: patel_pratiman.jpg
   linkedin: https://www.linkedin.com/in/pratiman-patel-77262739/
 
-- name: Dylan Rodriguez
-  photo: rodriguez_dylan.jpg
+- name: Dylan Rodriquez
+  photo: rodriquez_dylan.jpg
   linkedin: https://www.linkedin.com/in/dylanmr/
-  
-- name: Yizhi (David) Song
-  photo: song_yizhi.jpg
-  
+
 - name: Lu Xing
   photo: xing_lu.jpg
-  linkedin:
+  linkedin: https://www.linkedin.com/in/luluxing
 
 - name: Raine Yeh
   photo: yeh_raine.jpg
   linkedin: https://www.linkedin.com/in/raineyeh/
-  
+
 - name: Zixun Yu
   photo: yu_zixun.jpg
   linkedin: https://www.linkedin.com/in/zixun-yu-ba0548171/
-  
+
+- name: Yizhi Song
+  photo: song_yizhi.jpg
+  linkedin: https://www.linkedin.com/in/yizhi-song-1781311a9
+
+- name: Xiaowei Zhang
+  photo: zhang_xiaowei.jpg
+  linkedin: https://www.linkedin.com/in/xiaowei-zhang-152881b2
+
+- name: Xiaochen Zhou
+  photo: zhou_xiaochen.jpg
+  url: https://lewkesy.github.io/
+  linkedin: https://www.linkedin.com/in/xiaochen-zhou-26b79b178/
+
+- name: Adnan Firoze
+  photo: firoze_adnan.jpg
+  url: https://scholar.google.com/citations?user=Yatk4KgAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/adnanfiroze/

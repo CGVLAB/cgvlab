@@ -1,38 +1,44 @@
+- name: Daniel Andersen
+  photo: anderson_daniel.jpg
+  info: Research Scientist (Facebook Reality Labs) at Facebook
+  url: https://dan.andersen.name/
+  linkedin: https://www.linkedin.com/in/danielspencerandersen/
+
 - name: Nathan Andrysco
   photo: andrysco_nathan.jpg
-  info: Visualization Researcher and Developer at CD-adapco 
-  linkedin: https://www.linkedin.com/in/nathan-a-4b3b3346/ 
+  info: Visualization Researcher and Developer at CD-adapco
+  linkedin: https://www.linkedin.com/in/nathan-a-4b3b3346/
 
 - name: Nabeel Butt
-  photo: nbutt.jpg
+  photo: butt_nabeel.jpg
   info: Software Engineer at Oculus VR
-  linkedin: https://www.linkedin.com/in/nabeel-butt-779b903/  
-  
+  linkedin: https://www.linkedin.com/in/nabeel-butt-779b903/
+
 - name: Gleb Bahmutov
   photo: bahmutov_gleb.jpg
   info: VP of Engineering at Cypress.io
   linkedin: https://www.linkedin.com/in/bahmutov/
-  url: https://glebbahmutov.com 
+  url: https://glebbahmutov.com
 
 - name: Samer Barakat
   photo: barakat_samer.jpg
   info: Computer Vision Engineer at Intel
-  linkedin: https://www.linkedin.com/in/samer-barakat-a48662108/ 
+  linkedin: https://www.linkedin.com/in/samer-barakat-a48662108/
 
 - name: Daniel Bekins
   photo: bekins_daniel.jpg
   info: Software Engineer at Electronic Arts
-  linkedin: https://www.linkedin.com/in/daniel-b-6929793/ 
+  linkedin: https://www.linkedin.com/in/daniel-b-6929793/
 
 - name: Yi-liu Chao
   photo: chao_yi-liu.jpg
   info: Senior Software Engineer at BrightEdge
-  linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539/ 
+  linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539/
 
 - name: Jian Cui
   info: Senior Software Engineer at Google
   photo: cui_jian.jpg
-  linkedin: https://www.linkedin.com/in/jian-cui-6a261442/ 
+  linkedin: https://www.linkedin.com/in/jian-cui-6a261442/
 
 - name: Jordan Dauble
   photo: dauble_jordan.jpg
@@ -41,24 +47,24 @@
 
 - name: Ilke Demir
   info: Postdoctoral Researcher at Facebook
-  photo: idemir.jpg
-  linkedin: https://www.linkedin.com/in/ilkedemir/ 
-  url: https://ilkedemir.weebly.com 
+  photo: demir_ilke.jpg
+  url: https://ilkedemir.weebly.com
+  linkedin: https://www.linkedin.com/in/ilkedemir/
 
 - name: Zi'ang Ding
   info: SDE II at Microsoft
-  photo: ding29.jpg
-  linkedin: https://www.linkedin.com/in/ziang-ding-43249120/ 
+  photo: ding_ziang.jpg
+  linkedin: https://www.linkedin.com/in/ziang-ding-43249120/
 
 - name: Radu Dondera
   photo: dondera_radu.jpg
   info: ML Engineer at Cruise Automation
-  linkedin: https://www.linkedin.com/in/radu-dondera-874a4720/ 
+  linkedin: https://www.linkedin.com/in/radu-dondera-874a4720/
 
 - name: Ignacio Garcia-Dorado
   info: Research Engineer at Google
-  photo: igarciad.jpg
-  url: http://www.ignaciogarciadorado.com 
+  photo: garcia-dorado_ignacio.jpg
+  url: http://www.ignaciogarciadorado.com
   linkedin: https://www.linkedin.com/in/igarciad/
 
 - name: Jamie Gennis
@@ -78,23 +84,179 @@
 
 - name: Chun Jia
   photo: jia_chun.jpg
-  info:  Manager & Senior Software Engineer at CapsoVision, Inc
+  info: Manager & Senior Software Engineer at CapsoVision, Inc
   linkedin: https://www.linkedin.com/in/chun-jia-9217b88/
-  
+
 - name: Gen Nishida
-  photo: gnishida.jpg
+  photo: nishida_gen.jpg
   info: Senior Software Engineer at Cruise LLC
-  url: https://www.cs.purdue.edu/homes/gnishida/ 
+  url: https://www.cs.purdue.edu/homes/gnishida/
   linkedin: https://www.linkedin.com/in/gen-nishida-2094166b/
 
 - name: Carlos Vanegas
   info: Senior Director at Bright Machines
-  photo: cvanegas.jpg
-  linkedin: https://www.linkedin.com/in/cvanegas/ 
-  url: http://www.cvanegas.com 
+  photo: vanegas_carlos.jpg
+  linkedin: https://www.linkedin.com/in/cvanegas/
+  url: http://www.cvanegas.com
 
 - name: Meng-Lin Wu
-  photo: wu223.jpg
+  photo: wu_meng-lin.jpg
   info: Senior Engineer at Qualcomm
   url: https://www.cs.purdue.edu/homes/wu223/
   linkedin: https://www.linkedin.com/in/menglinwu/
+
+- name: Yi-Liu Chao
+  photo: chao_yi-liu.jpg
+  info: Senior Software Engineer at BrightEdge
+  linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539
+
+- name: Ziang Ding
+  photo: ding_ziang.jpg
+  info: Senior Software Engineer at Microsoft
+  linkedin: https://www.linkedin.com/in/ziang-ding-43249120
+
+- name: Ignacio Garcia
+  photo: garcia_ignacio.jpg
+  info: Research Engineer at Google
+  linkedin: https://www.linkedin.com/in/igarciad/
+
+- name: Haosi Huang
+  photo: huang_haosi.jpg
+  info:
+  linkedin:
+
+- name: Sami Kilic
+  photo: kilic_sami.jpg
+  info:
+  linkedin:
+
+- name: Alvin Law
+  photo: law_alvin.jpg
+  info: Software Engineer at Google
+  linkedin: https://www.linkedin.com/in/alvin-law-376b203b
+
+- name: Liang Li
+  photo: li_liang.jpg
+  info: Software Engineer at Google Express
+  linkedin: https://www.linkedin.com/in/li900
+
+- name: Yaodong Liu
+  photo: liu_yaodong.jpg
+  info:
+  linkedin:
+
+- name: Andrew Martin
+  photo: martin_andrew.jpg
+  info:
+  linkedin:
+
+- name: Chris McDonald
+  photo: mcdonald_chris.jpg
+  info:
+  linkedin:
+
+- name: Chunhui Mei
+  photo: mei_chunhui.jpg
+  info: Principal Engineer at Intel Corporation
+  linkedin: https://www.linkedin.com/in/chunhui-mei-60134913
+
+- name: Feng Meng
+  photo: meng_feng.jpg
+  info: Software Development Engineer at Amazon Web Services (AWS)
+  linkedin: https://www.linkedin.com/in/mengfeng
+
+- name: Sagar Mittal
+  photo: mittal_sagar.jpg
+  info: Senior Software Engineer at Google
+  linkedin: https://www.linkedin.com/in/sagar-mittal
+
+- name: Carlos Montalto
+  photo: montalto_carlos.jpg
+  info: Assistant Professor at Universidad de Costa Rica
+  linkedin: https://cr.linkedin.com/in/carlos-r-montalto-cruz-716535a
+
+- name: Mihai Mudure
+  photo: mudure_mihai.jpg
+  info: Staff Software Engineer at Google Inc.
+  linkedin: https://www.linkedin.com/in/mihaimudure
+
+- name: Gahyun Park
+  photo: park_gahyun.jpg
+  info: Lecturer at Department of Computing Security RIT (?)
+  linkedin:
+
+- name: Varun Ramachandran
+  photo: ramachandran_varun.jpg
+  info: Senior SDE at AWS CloudFront, Lambda@Edge
+  linkedin: https://www.linkedin.com/in/varunramachandran
+
+- name: Paul Rosen
+  photo: rosen_paul.jpg
+  info: Assistant Professor at University of South Florida, Department of Computer Science and Engineering
+  linkedin: https://www.linkedin.com/in/rosenpaul
+
+- name: Wayne Schlei
+  photo: schlei_wayne.jpg
+  info: Mission Design Engineer (?)
+  linkedin: https://www.linkedin.com/in/wayne-schlei-188bb9b4
+
+- name: Joshua Schpok
+  photo: schpok_joshua.jpg
+  info:
+  linkedin: https://www.linkedin.com/in/joshua-schpok-46aa33
+
+- name: Rajesh Selvamani
+  photo: selvamani_rajesh.jpg
+  info: Program Manager at Microsoft
+  linkedin: https://www.linkedin.com/in/rajeshselvamani
+
+- name: Yinlong Sun
+  photo: sun_yinlong.jpg
+  info:
+  linkedin:
+
+- name: Tion Thomas
+  photo: thomas_tion.jpg
+  info: Senior Customer Engineer at Sourcegraph
+  linkedin: https://www.linkedin.com/in/tion-thomas-30562017
+
+- name: Fijoy Vadakkumpadan
+  photo: vadakkumpadan_fijoy.jpg
+  info: Manager, Computer Vision at SAS
+  linkedin: https://www.linkedin.com/in/fijoy
+
+- name: Qiqi Wang
+  photo: wang_qiqi.jpg
+  info: Unknown
+  linkedin: https://www.linkedin.com/in/qi-qi-7a0b4726
+
+- name: Huiying Xu
+  photo: xu_huiying.jpg
+  info:
+  linkedin:
+
+- name: Yi Xu
+  photo: xu_yi.jpg
+  info: Associate Director of the OPPO US Research Center | AR Innovation
+  linkedin: https://www.linkedin.com/in/yi-xu-42654823
+
+- name: Jade Yang
+  photo: yang_jade.jpg
+  info: Assistant Professor at Purdue University Calumet
+  linkedin: https://www.linkedin.com/in/jade-yang-57527a65
+
+- name: Weiqiang Yang
+  photo: yang_weiqiang.jpg
+  info: Solution Architect, Product Owner at SAP America
+  linkedin: https://www.linkedin.com/in/weiqiang-yang-7a178b1b
+
+- name: Yu Hong Yeung
+  photo: yeung_yuhong.jpg
+  info: Post-doctoral Research Associate - Department of Computer Science at Purdue University
+  url: https://www.cs.purdue.edu/homes/yyeung/
+  linkedin:
+
+- name: Ji Zhang
+  photo: zhang_ji.jpg
+  info: Unknown
+  linkedin: https://www.linkedin.com/in/ji-zhang-58a051b
