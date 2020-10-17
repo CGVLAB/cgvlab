@@ -4,7 +4,7 @@
   url: https://cs.purdue.edu/homes/aliaga
 
 - name: Christoph M. Hoffmann
-  photo: cmh.jpg
+  photo: hoffmann.jpg
   info: Professor
   url: https://cs.purdue.edu/homes/cmh
 
@@ -14,11 +14,16 @@
   url: https://cs.purdue.edu/homes/popescu
 
 - name: Elisha P. Sacks
-  photo: eps.jpg
+  photo: sacks.jpg
   info: Professor
   url: https://cs.purdue.edu/homes/eps
 
 - name: Xavier M. Tricoche
-  photo: xmt.jpg
+  photo: tricoche.jpg
   info: Associate Professor
   url: https://cs.purdue.edu/homes/xmt
+
+- name: Bedrich Benes
+  photo: benes.jpg
+  info: George W. McNelly Professor of Technology and Professor of Computer Science
+  url: http://hpcg.purdue.edu/bbenes

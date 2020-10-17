@@ -1,11 +1,6 @@
 ---
 ---
 
-<script>
-    function removeDoi{ { entry.key } } () {
-    }
-</script>
-
 <div id="parent-{{ entry.key }}" class="text-justify">{{reference}}</div>
 
 {% if entry.owner %}
@@ -16,14 +11,14 @@
 <strong>{{entry.note}}</strong>
 {% endif %}
 
-<button class="button0" onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
+<button class="button0" onclick="toggleBibtex('{{entry.key}}')">Bibtex</button>
 
 {% if entry.doi %}
 <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="DOI" /></a>
 {% endif %}
 
 {% if entry.pdf %}
-<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.pdf }}" target="_blank"><input class="button2" type="button"
+<a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input class="button2" type="button"
         value="PDF" /></a>
 {% endif %}
 
@@ -35,25 +30,10 @@
 <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
 {% endif %}
 
-<div id="a{{entry.key}}" style="display: none;">
+<div id="bibtex-{{entry.key}}" style="display: none;">
     <pre>{{entry.bibtex}}</pre>
 </div>
 <script>
-    // Remove DOI from reference
-    var removeDoi = true;
-
-    if (removeDoi) {
-        var reference = document.getElementById('parent-{{entry.key}}').children;
-        for (var i = 0; i < reference.length; i++)
-            reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
-    }
-
-    function toggleBibtex{ { entry.key } } (parameter) {
-        var x = document.getElementById('a{{entry.key}}');
-        if (x.style.display === 'none') {
-            x.style.display = 'block';
-        } else {
-            x.style.display = 'none';
-        }
-    }
+    // Add entry to global array (declared in publications.html file)
+    publicationIds.push('{{entry.key}}');
 </script>
