@@ -49,12 +49,7 @@ kramdown:
 
 plugins:
   - jekyll-scholar
-  - jekyll-minifier
 
 scholar:
   bibliography_list_tag: ul
-
-# Enable ES6 in minifier
-jekyll-minifier:
-  uglifier_args:
-    harmony: true
+  
