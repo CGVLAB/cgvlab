@@ -31,7 +31,7 @@ All papers are expected to be in PDF (.pdf) format and named with the following 
 
 All additional files (images, videos, etc.) should be named with the following standard:
 
-`<PRIMARY AUTHOR>-<YEAR>-<PAPER TITLE>-<IMAGE TITLE>.<FILE EXTENSION>`
+`<PRIMARY AUTHOR>-<YEAR>-<PAPER TITLE FIRST WORD(S)>-<IMAGE TITLE>.<FILE EXTENSION>`
 
 **Rules**
 
@@ -44,7 +44,7 @@ All additional files (images, videos, etc.) should be named with the following s
 
 (Not an actual file)
 
-`Anderson-2016-VR_Annotations_of_the_Surgical_Field_through_an_AR_Transparent_Display-Annoation_Example.jpg`
+`Anderson-2016-VR_Annotations-Annotation_Example.jpg`
 
 ### BibTeX
 
@@ -92,7 +92,7 @@ To add a paper to the repository, follow these steps:
 1. Ensure your paper is PDF named with the conventions above, you have your supplemental files (images, videos, etc.) named with the conventions above, and a BibTeX entry like above
 2. Open the file [bibliography/references.bib](./bibliography/references.bib) and append your BibTeX entry beneath the last entry
 3. Copy your PDF file into the [resources/papers](./resources/papers) directory
-4. Copy your image(s) into the [resources/images/pubpic](./resources/images/pubpic) directory, video(s) to [resources/videos/pubvideo](./resources/videos/pubvideo), and other file(s) to [resources/miscellaneous/pubfiles](./resources/miscellaneous/pubfiles).
+4. Copy your image(s) into the [resources/images/supplemental](./resources/images/supplemental) directory, video(s) to [resources/videos/supplemental](./resources/videos/supplemental), and other file(s) to [resources/files/supplemental](./resources/files/supplemental).
 5. Add the files, commit, and push to the remote repository to finish!
 
 # Building

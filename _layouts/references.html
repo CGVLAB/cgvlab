@@ -22,12 +22,41 @@
         value="PDF" /></a>
 {% endif %}
 
-{% if entry.link %}
-<a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+{% if entry.code %}
+
+{% if entry.code | contains '/' }
+{% assign entry_file_url = entry.code %}
+{% else %}
+{% assign entry_file_url = site.dir_resources_files | append: "/supplemental/" | append: entry.code %}
 {% endif %}
 
-{% if entry.code %}
-<a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+<a href="{{ entry_file_url }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+{% endif %}
+
+{% if entry.image %}
+
+{% if entry.image | contains '/' }
+{% assign entry_image_url = entry.image %}
+{% else %}
+{% assign entry_image_url = site.dir_resources_images | append: "/supplemental/" | append: entry.image %}
+{% endif %}
+
+<a href="{{ entry_image_url }}" target="_blank"><input class="button4" type="button" value="Image" /></a>
+{% endif %}
+
+{% if entry.video %}
+
+{% if entry.video | contains '/' }
+{% assign entry_video_url = entry.video %}
+{% else %}
+{% assign entry_video_url = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+{% endif %}
+
+<a href="{{ entry_video_url }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+{% endif %}
+
+{% if entry.link %}
+<a href="{{ entry.link }}" target="_blank"><input class="button1" type="button" value="Link" /></a>
 {% endif %}
 
 <div id="bibtex-{{entry.key}}" style="display: none;">
