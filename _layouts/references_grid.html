@@ -10,11 +10,10 @@
             {% if entry.image %}
             {% assign highlight_img = entry.image %}
             {% else %}
-            {% assign highlight_img = "default.png" %}
+            {% assign highlight_img = 'default.png' %}
             {% endif %}
 
-            <img src="{{site.dir_resources_images}}/pubpic/{{ highlight_img }}" class="img-responsive"
-                width="20%" style="float: left" />
+            <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}" class="img-responsive-square" />
 
             <p><em>{{ reference }}</em></p>
             <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
@@ -23,23 +22,34 @@
             <strong>{{entry.note}}</strong>
             {% endif %}
 
+            <button onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
+
             {% if entry.doi %}
-            <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button"
-                    value="DOI" /></a>
+            <a href="http://doi.org/{{ entry.doi }}"><input type="button" value="DOI" /></a>
             {% endif %}
 
             {% if entry.pdf %}
-            <a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input class="button2"
-                    type="button" value="PDF" /></a>
-            {% endif %}
-
-            {% if entry.link %}
-            <a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+            <a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input type="button"
+                    value="PDF" /></a>
             {% endif %}
 
             {% if entry.code %}
-            <a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+            <a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank"><input type="button"
+                    value="Code" /></a>
             {% endif %}
+
+            {% if entry.video %}
+            <a href="{{ site.dir_resources_videos }}/supplemental/{{ entry.video }}" target="_blank"><input
+                    type="button" value="Video" /></a>
+            {% endif %}
+
+            {% if entry.link %}
+            <a href="{{ entry.link }}" target="_blank"><input type="button" value="Link" /></a>
+            {% endif %}
+
+            <div id="bibtex-{{entry.key}}" style="display: none;">
+                <pre>{{entry.bibtex}}</pre>
+            </div>
 
             <div style="clear:both"></div>
         </div>

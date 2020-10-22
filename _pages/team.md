@@ -7,9 +7,6 @@ permalink: /team/
 ---
 
 # Group Members
-{% assign img_width = '128px' %}
-{% assign img_height = '128px' %}
-
 Jump to [faculty](#faculty), [graduate students](#graduate-students), [former members](#former-members).
 
 ## Faculty
@@ -19,7 +16,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% assign even_odd = number_printed | modulo: 2 %}
 
 {% if member.photo %}
-{% assign photo_link = site.dir_resources_images | append: '/teampic/' | append: member.photo %}
+{% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
 {% else %}
 {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
 {% endif %}
@@ -29,7 +26,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ photo_link }}" class="img-responsive" style="object-fit: cover; width: {{ img_width }}; height: {{ img_height }}; float: left" />
+  <img src="{{ photo_link }}" class="img-responsive-square" />
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}</i><br>
   {% if member.url %}
@@ -58,7 +55,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% assign even_odd = number_printed | modulo: 2 %}
 
 {% if member.photo %}
-{% assign photo_link = site.dir_resources_images | append: '/teampic/' | append: member.photo %}
+{% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
 {% else %}
 {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
 {% endif %}
@@ -68,7 +65,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ photo_link }}" class="img-responsive" style="object-fit: cover; width: {{ img_width }}; height: {{ img_height }}; float: left" />
+  <img src="{{ photo_link }}" class="img-responsive-square" />
   <h4>{{ member.name }}</h4>
   {% if member.url %}
   <i><a href="{{ member.url }}" target="_blank">Website</a></i>
@@ -100,7 +97,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% assign even_odd = number_printed | modulo: 2 %}
 
 {% if member.photo %}
-{% assign photo_link = site.dir_resources_images | append: '/teampic/' | append: member.photo %}
+{% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
 {% else %}
 {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
 {% endif %}
@@ -110,7 +107,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  <img src="{{ photo_link }}" class="img-responsive" style="object-fit: cover; width: {{ img_width }}; height: {{ img_height }}; float: left" />
+  <img src="{{ photo_link }}" class="img-responsive-square" />
   {% if member.url %}
   <h4><a href="{{ member.url }}" target="_blank">{{ member.name }}</a></h4>
   {% else %}

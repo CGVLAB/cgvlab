@@ -92,8 +92,8 @@ To add a paper to the repository, follow these steps:
 1. Ensure your paper is PDF named with the conventions above, you have your supplemental files (images, videos, etc.) named with the conventions above, and a BibTeX entry like above
 2. Open the file [bibliography/references.bib](./bibliography/references.bib) and append your BibTeX entry beneath the last entry
 3. Copy your PDF file into the [resources/papers](./resources/papers) directory
-4. Copy your image(s) into the [resources/images/supplemental](./resources/images/supplemental) directory, video(s) to [resources/videos/supplemental](./resources/videos/supplemental), and other file(s) to [resources/files/supplemental](./resources/files/supplemental).
-5. Add the files, commit, and push to the remote repository to finish!
+4. Copy your image(s) into the [resources/images/supplemental](./resources/images/supplemental) directory, video(s) to [resources/videos/supplemental](./resources/videos/supplemental), and other file(s) to [resources/files/supplemental](./resources/files/supplemental)
+5. Finally, add the files, commit, and push to the remote repository
 
 # Building
 

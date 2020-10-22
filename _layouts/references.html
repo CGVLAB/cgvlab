@@ -4,59 +4,40 @@
 <div id="parent-{{ entry.key }}" class="text-justify">{{reference}}</div>
 
 {% if entry.owner %}
-<img src="{{ entry.owner }}" width="70" align="middle" />
+<img src="{{ site.dir_resources_images }}/team/{{ entry.owner }}.jpg" width="64" />
 {% endif %}
 
 {% if entry.note %}
 <strong>{{entry.note}}</strong>
 {% endif %}
 
-<button class="button0" onclick="toggleBibtex('{{entry.key}}')">Bibtex</button>
+<button onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
 
 {% if entry.doi %}
-<a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="DOI" /></a>
+<a href="http://doi.org/{{ entry.doi }}"><input type="button" value="DOI" /></a>
 {% endif %}
 
 {% if entry.pdf %}
-<a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input class="button2" type="button"
-        value="PDF" /></a>
+<a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input type="button" value="PDF" /></a>
 {% endif %}
 
 {% if entry.code %}
-
-{% if entry.code | contains '/' }
-{% assign entry_file_url = entry.code %}
-{% else %}
-{% assign entry_file_url = site.dir_resources_files | append: "/supplemental/" | append: entry.code %}
-{% endif %}
-
-<a href="{{ entry_file_url }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+<a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank"><input type="button"
+        value="Code" /></a>
 {% endif %}
 
 {% if entry.image %}
-
-{% if entry.image | contains '/' }
-{% assign entry_image_url = entry.image %}
-{% else %}
-{% assign entry_image_url = site.dir_resources_images | append: "/supplemental/" | append: entry.image %}
-{% endif %}
-
-<a href="{{ entry_image_url }}" target="_blank"><input class="button4" type="button" value="Image" /></a>
+<a href="{{ site.dir_resources_images }}/supplemental/{{ entry.image }}" target="_blank"><input type="button"
+        value="Image" /></a>
 {% endif %}
 
 {% if entry.video %}
-
-{% if entry.video | contains '/' }
-{% assign entry_video_url = entry.video %}
-{% else %}
-{% assign entry_video_url = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
-{% endif %}
-
-<a href="{{ entry_video_url }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+<a href="{{ site.dir_resources_videos }}/supplemental/{{ entry.video }}" target="_blank"><input type="button"
+        value="Video" /></a>
 {% endif %}
 
 {% if entry.link %}
-<a href="{{ entry.link }}" target="_blank"><input class="button1" type="button" value="Link" /></a>
+<a href="{{ entry.link }}" target="_blank"><input type="button" value="Link" /></a>
 {% endif %}
 
 <div id="bibtex-{{entry.key}}" style="display: none;">
