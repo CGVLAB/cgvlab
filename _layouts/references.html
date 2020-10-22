@@ -3,8 +3,9 @@
 
 <div id="parent-{{ entry.key }}" class="text-justify">{{reference}}</div>
 
-{% if entry.owner %}
-<img src="{{ site.dir_resources_images }}/team/{{ entry.owner }}.jpg" width="64" />
+{% if entry.image %}
+<img src="{{ site.dir_resources_images }}/supplemental/{{ entry.image }}"
+        style="object-fit: cover; width: 64px; height: 64px" />
 {% endif %}
 
 {% if entry.note %}
@@ -23,17 +24,18 @@
 
 {% if entry.code %}
 <a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank"><input type="button"
-        value="Code" /></a>
-{% endif %}
-
-{% if entry.image %}
-<a href="{{ site.dir_resources_images }}/supplemental/{{ entry.image }}" target="_blank"><input type="button"
-        value="Image" /></a>
+                value="Code" /></a>
 {% endif %}
 
 {% if entry.video %}
-<a href="{{ site.dir_resources_videos }}/supplemental/{{ entry.video }}" target="_blank"><input type="button"
-        value="Video" /></a>
+
+{% if entry.video contains "/" %}
+{% assign entry_video = entry.video %}
+{% else %}
+{% assign entry_video = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+{% endif %}
+
+<a href="{{ entry_video }}" target="_blank"><input type="button" value="Video" /></a>
 {% endif %}
 
 {% if entry.link %}
@@ -41,9 +43,9 @@
 {% endif %}
 
 <div id="bibtex-{{entry.key}}" style="display: none;">
-    <pre>{{entry.bibtex}}</pre>
+        <pre>{{entry.bibtex}}</pre>
 </div>
 <script>
-    // Add entry to global array (declared in publications.html file)
-    publicationIds.push('{{entry.key}}');
+        // Add entry to global array (declared in publications.html file)
+        publicationIds.push('{{entry.key}}');
 </script>
