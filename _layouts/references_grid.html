@@ -39,7 +39,14 @@
             {% endif %}
 
             {% if entry.video %}
-            <a href="{{ site.dir_resources_videos }}/supplemental/{{ entry.video }}" target="_blank"><input
+
+            {% if entry.video contains "/" %}
+            {% assign entry_video = entry.video %}
+            {% else %}
+            {% assign entry_video = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+            {% endif %}
+            
+            <a href="{{ entry_video }}" target="_blank"><input
                     type="button" value="Video" /></a>
             {% endif %}
 
