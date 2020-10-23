@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Bootstrap Download Links (Bootstrap v4.5.3, JQuery v3.5.1)
-# dist/scss/ -> _scss/ & dist/js/ -> theme/js/ -> https://github.com/twbs/bootstrap/archive/v4.5.3.zip
+# scss/ -> _sass/ & dist/js/ -> theme/js/ -> https://github.com/twbs/bootstrap/archive/v4.5.3.zip
 # jquery.min.js -> https://code.jquery.com/jquery-3.5.1.slim.min.js
 # jquery.min.map -> https://code.jquery.com/jquery-3.5.1.min.map
 
