@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<a class="navbar-brand" href="/">
-		<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt=""
-			loading="lazy">
+		<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
 		CGVLab at Purdue University
 	</a>
 
@@ -13,18 +12,15 @@
 	<div id="navbarSupportedContent" class="collapse navbar-collapse">
 		<div class="mr-auto"></div>
 		<ul class="navbar-nav">
+			{% for item in site.data.navbar %}
 			<li class="nav-item">
-				<a class="nav-link" href="/">Home</a>
+				{% if item.path == page.url %}
+				<a class="nav-link active" href="{{ item.path }}">{{ item.title }}</a>
+				{% else %}
+				<a class="nav-link" href="{{ item.path }}">{{ item.title }}</a>
+				{% endif %}
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/research">Research</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/publications">Publications</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/team">Team</a>
-			</li>
+			{% endfor %}
 		</ul>
 	</div>
 </nav>

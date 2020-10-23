@@ -1,0 +1,11 @@
+- title: Home
+  path: /
+
+- title: Research
+  path: /research/
+
+- title: Publications
+  path: /publications/
+
+- title: Team
+  path: /team/
