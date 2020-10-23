@@ -8,7 +8,7 @@
 # Bootstrap Download Links and Destinations (Bootstrap v4.5.3, JQuery v3.5.1)
 # jquery-3.5.1.min.js -> https://code.jquery.com/jquery-3.5.1.min.js
 # jquery-3.5.1.min.map -> https://code.jquery.com/jquery-3.5.1.min.map
-# scss/* -> theme/css/bootstrap/ & dist/js/*.bundle -> theme/js/bootstrap/ -> https://github.com/twbs/bootstrap/archive/v4.5.3.zip
+# scss/* -> dependencies/css/bootstrap/ & dist/js/*.bundle -> dependencies/js/bootstrap/ -> https://github.com/twbs/bootstrap/archive/v4.5.3.zip
 
 # Site settings
 title: CGVLab
@@ -23,7 +23,7 @@ include:
   - _pages
 
 sass:
-  sass_dir: /theme/css/bootstrap
+  sass_dir: /dependencies/css
 
 # Data directories and files
 dir_theme_css: /theme/css
@@ -34,6 +34,9 @@ dir_resources_files: /resources/files
 dir_resources_images: /resources/images
 dir_resources_videos: /resources/videos
 dir_resources_papers: /resources/papers
+
+dir_dependencies_css: /dependencies/css
+dir_dependencies_js: /dependencies/js
 
 file_theme_jquery_js: jquery-3.5.1.min.js
 file_theme_bootstrap_js: bootstrap.bundle.min.js
