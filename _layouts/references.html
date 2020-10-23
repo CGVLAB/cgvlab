@@ -3,37 +3,49 @@
 
 <div id="parent-{{ entry.key }}" class="text-justify">{{reference}}</div>
 
-{% if entry.owner %}
-<img src="{{ entry.owner }}" width="70" align="middle" />
+{% if entry.image %}
+<img src="{{ site.dir_resources_images }}/supplemental/{{ entry.image }}"
+        style="object-fit: cover; width: 64px; height: 64px" />
 {% endif %}
 
 {% if entry.note %}
 <strong>{{entry.note}}</strong>
 {% endif %}
 
-<button class="button0" onclick="toggleBibtex('{{entry.key}}')">Bibtex</button>
+<button onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
 
 {% if entry.doi %}
-<a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="DOI" /></a>
+<a href="http://doi.org/{{ entry.doi }}"><input type="button" value="DOI" /></a>
 {% endif %}
 
 {% if entry.pdf %}
-<a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input class="button2" type="button"
-        value="PDF" /></a>
-{% endif %}
-
-{% if entry.link %}
-<a href="{{ entry.link }}" target="_blank"><input class="button4" type="button" value="Video" /></a>
+<a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank"><input type="button" value="PDF" /></a>
 {% endif %}
 
 {% if entry.code %}
-<a href="{{ entry.code }}" target="_blank"><input class="button3" type="button" value="Code" /></a>
+<a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank"><input type="button"
+                value="Code" /></a>
+{% endif %}
+
+{% if entry.video %}
+
+{% if entry.video contains "/" %}
+{% assign entry_video = entry.video %}
+{% else %}
+{% assign entry_video = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+{% endif %}
+
+<a href="{{ entry_video }}" target="_blank"><input type="button" value="Video" /></a>
+{% endif %}
+
+{% if entry.link %}
+<a href="{{ entry.link }}" target="_blank"><input type="button" value="Link" /></a>
 {% endif %}
 
 <div id="bibtex-{{entry.key}}" style="display: none;">
-    <pre>{{entry.bibtex}}</pre>
+        <pre>{{entry.bibtex}}</pre>
 </div>
 <script>
-    // Add entry to global array (declared in publications.html file)
-    publicationIds.push('{{entry.key}}');
+        // Add entry to global array (declared in publications.html file)
+        publicationIds.push('{{entry.key}}');
 </script>
