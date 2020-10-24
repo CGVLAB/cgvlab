@@ -1,4 +1,4 @@
---- 
+---
 ---
 
 /* Bootstrap color overrides */
@@ -39,18 +39,20 @@ body {
 
 /* Custom classes */
 
-/*
 .cgv-img-square {
   object-fit: cover;
   width: 128px;
   height: 128px;
   float: left;
 }
-*/
 
-.cgv-img-square {
-  width: inherit;
-  height: inherit;
-  background-position: center center;
-  background-repeat: no-repeat;
+.cgv-text-shadow {
+  text-shadow: 8px 8px 4px #000;
+}
+
+.cgv-slider-control {
+  opacity: 0.25;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  background-color: $dark;
 }

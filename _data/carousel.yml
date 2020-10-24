@@ -1,0 +1,21 @@
+# Image paths are assumed to be relative to the "/resources/images/" directory
+
+- title: CGVLab at Purdue University
+  photo: slider/logo_big.gif
+  caption: This is the website for the Computer Graphics and Visualization Laboratory at Purdue University
+
+- title: A Title
+  photo: slider/slider1.jpg
+  caption: An interesting caption
+
+- title: A Title
+  photo: slider/slider2.png
+  caption: An interesting caption
+
+- title: A Title
+  photo: slider/slider3.png
+  caption: An interesting caption
+
+- title: A Title
+  photo: slider/slider4.jpg
+  caption: An interesting caption
