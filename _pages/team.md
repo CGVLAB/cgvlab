@@ -6,129 +6,41 @@ sitemap: false
 permalink: /team/
 ---
 
+{% assign members_per_row = 3 %}
+
 # Group Members
 Jump to [faculty](#faculty), [graduate students](#graduate-students), [former members](#former-members).
 
 ## Faculty
-{% assign number_printed = 0 %}
+
+<div class="container-fluid">
+  <div class="row">
+{% assign member_count = 0 %}
 {% for member in site.data.faculty %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if member.photo %}
-{% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
-{% else %}
-{% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+{% assign member_should_new_row = member_count | modulo: members_per_row %}
+{% if member_should_new_row == 0 %}
 {% endif %}
-
-{% if even_odd == 0 %}
-<div class="row">
+{% include member.html member = member %}
+{% assign member_should_close_row = member_count | plus: 1 | modulo: members_per_row %}
+{% if member_should_close_row == 0 %}
 {% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ photo_link }}" class="img-responsive-square" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}</i><br>
-  {% if member.url %}
-  <i><a href="{{ member.url }}" target="_blank">Website</a></i>
-  {% endif %}
-
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
+{% assign member_count = member_count | plus: 1 %}
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
+</div>
 
 ## Graduate Students
-{% assign number_printed = 0 %}
+
+<div class="container-fluid">
 {% for member in site.data.students %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if member.photo %}
-{% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
-{% else %}
-{% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
-{% endif %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ photo_link }}" class="img-responsive-square" />
-  <h4>{{ member.name }}</h4>
-  {% if member.url %}
-  <i><a href="{{ member.url }}" target="_blank">Website</a></i>
-  {% endif %}
-  {% if member.linkedin %}
-  <i><a href="{{ member.linkedin }}" target="_blank">LinkedIn</a></i>
-  {% endif %}
-  
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
+{% include member.html member = member %}
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
 
-## Former members
+## Former Members
 
-{% assign number_printed = 0 %}
+<div class="container-fluid">
 {% for member in site.data.former_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if member.photo %}
-{% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
-{% else %}
-{% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
-{% endif %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ photo_link }}" class="img-responsive-square" />
-  {% if member.url %}
-  <h4><a href="{{ member.url }}" target="_blank">{{ member.name }}</a></h4>
-  {% else %}
-  <h4>{{ member.name }}</h4>
-  {% endif %}
-  <i>{{ member.info }}</i><br>
-  {% if member.linkedin %}
-  <a href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
-  {% endif %}
-  
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
+{% include member.html member = member %}
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
