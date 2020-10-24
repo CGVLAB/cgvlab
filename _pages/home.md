@@ -1,51 +1,66 @@
 ---
 title: "CGVLab - Home"
-layout: homelay
+layout: home
 excerpt: "CGVLab at Purdue University."
 sitemap: false
 permalink: /
 ---
 
-XXX basic description of the lab XXX
+# Welcome to the CGVLab
 
-<div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover" >
-    <!-- Menu -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-        <li data-target="#carousel" data-slide-to="4"></li>
-    </ol>
-
-    <!-- Items -->
-    <div class="carousel-inner" markdown="0">
-
-        <div class="item active">
-            <img src="{{ site.dir_resources_images }}/slider/logo_big.gif" />
+<div class="container m-0 p-0 justify-content-start">
+<div id="homeCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% assign indicator_count = 0 %}
+    {% for item in site.data.carousel %}
+    {% if indicator_count == 0 %}
+    <li data-target="#homeCarousel" data-slide-to="{{ indicator_count }}" 
+     class="{{ indicator_class }}"></li>
+    {% else %}
+    <li data-target="#homeCarousel" data-slide-to="{{ indicator_count }}"></li>
+    {% endif %}
+    {% assign indicator_count = indicator_count | plus: 1 %}
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner">
+    {% assign item_count = 0 %}
+    {% for item in site.data.carousel %}
+    {% if item_count == 0 %}
+    <div class="carousel-item active">
+    {% else %}
+    <div class="carousel-item">
+    {% endif %}
+    <div class="p-2 bg-dark">
+        <div class="embed-responsive embed-responsive-16by9">
+            <img src="{{ site.dir_resources_images }}/{{ item.photo }}" class="embed-responsive-item card-img-top rounded" 
+            style="object-fit: cover;" alt="{{ item.title }}">
         </div>
-        <div class="item">
-            <img src="{{ site.dir_resources_images }}/slider/slider1.jpg" alt="Slide 1" />
-        </div>
-        <div class="item">
-            <img src="{{ site.dir_resources_images }}/slider/slider2.png" alt="Slide 2" />
-        </div>
-        <div class="item">
-            <img src="{{ site.dir_resources_images }}/slider/slider3.png" alt="Slide 3" />
-        </div>
-        <div class="item">
-            <img src="{{ site.dir_resources_images }}/slider/slider4.jpg" alt="Slide 4" />
-        </div>
-        
     </div>
-  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+
+    {% if item.title and item.caption %}
+      <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 0, 0, 0.5)">
+        <h5 style="font-weight-bold">{{ item.title }}</h5>
+        <p>{{ item.caption }}</p>
+      </div>
+    {% endif %}
+    </div>
+    {% assign item_count = item_count | plus: 1 %}
+    {% endfor %}
+  </div>
+  <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon cgv-slider-control"  aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon cgv-slider-control" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
+</div>
+<br>
+
+# About Us
+
+XXX basic description of the lab XXX
 
 XXX add more description of our research, and any funding we have XXX
