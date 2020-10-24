@@ -1,19 +1,22 @@
-<div class="card col-md">
-    <div class="row no-gutters align-items-center">
-        <div class="col bg-dark flex-row justify-content-center align-items-center align-self-center">
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 m-0 p-0">
+    <div class="m-2">
+        <div class="card border-primary">
             {% if member.photo %}
             {% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
             {% else %}
             {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
             {% endif %}
-            <img src="{{ photo_link }}" style="width: 100px; height: 100px;" 
-            class="cvg-image-square" alt="{{ member.name }}">
-        </div>
-        <div class="col-md-12">
+            <div class="p-4 bg-primary">
+                <div class="embed-responsive embed-responsive-1by1">
+                    <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
+                        alt="{{ member.name }}">
+                </div>
+            </div>
             <div class="card-body">
                 <h5 class="card-title">{{ member.name }}</h5>
+                <p class="text-muted">{{ member.info }}</p>
+                <hr>
                 <p class="card-text">
-                    <p class="text-muted">{{ member.info }}</p>
                     {% if member.url %}
                     <a href="{{ member.url }}" target="_blank">Website</a>
                     {% endif %}
