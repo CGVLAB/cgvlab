@@ -58,7 +58,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  parse_block_html: true # Default for kramdown is false. This will enable using Markdown links
+  parse_block_html: false # Default for kramdown is false. This will enable using Markdown links
 
 plugins:
   - jekyll-scholar

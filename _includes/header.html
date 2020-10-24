@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="/">
+	<a class="navbar-brand m-0 p-2" href="/">
 		<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
-		CGVLab at Purdue University
+		<div class="d-inline-flex flex-column justify-content-center align-items-start ml-3">
+			<h1 class="text-primary m-0">CGVLab</h1>
+			<small class="text-muted m-0">Computer Graphics and Visualization Laboratory at Purdue University</small>
+		</div>
 	</a>
 
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -15,10 +18,11 @@
 			{% for item in site.data.navbar %}
 			<li class="nav-item">
 				{% if item.path == page.url %}
-				<a class="nav-link active" href="{{ item.path }}">{{ item.title }}</a>
+				{% assign nav_class = "active" %}
 				{% else %}
-				<a class="nav-link" href="{{ item.path }}">{{ item.title }}</a>
+				{% assign nav_class = "" %}
 				{% endif %}
+				<a class="h6 nav-link {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
 			</li>
 			{% endfor %}
 		</ul>
