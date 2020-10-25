@@ -16,13 +16,13 @@
 		<div class="mr-auto"></div>
 		<ul class="navbar-nav">
 			{% for item in site.data.navbar %}
-			<li class="nav-item">
+			<li class="nav-item mx-4">
 				{% if item.path == page.url %}
 				{% assign nav_class = "active" %}
 				{% else %}
 				{% assign nav_class = "" %}
 				{% endif %}
-				<a class="h6 nav-link {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
+				<a class="h5 nav-link {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
 			</li>
 			{% endfor %}
 		</ul>

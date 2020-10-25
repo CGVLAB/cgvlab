@@ -1,0 +1,93 @@
+---
+---
+
+<div class="row my-2">
+    {% if entry.image %}
+    {% assign highlight_img = entry.image %}
+    {% else %}
+    {% assign highlight_img = 'default.png' %}
+    {% endif %}
+
+    {% if entry.highlighted %}
+    {% assign img_column_class = "col-md-2" %}
+    {% assign info_column_class = "col-md-10" %}
+    {% else %}
+    {% assign img_column_class = "col-md-1" %}
+    {% assign info_column_class = "col-md-11" %}
+    {% endif %}
+
+    <div class="col card border-primary">
+        <div class="row no-gutters align-items-center">
+            <div class="{{ img_column_class }}">
+                <div class="m-2 p-2 bg-primary">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
+                            class="embed-responsive-item rounded" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            <div class="{{ info_column_class }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }}) </h5>
+                    <p class="card-text">
+                        <p><em>{{ reference }}</em></p>
+                        <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
+
+                        {% if entry.note %}
+                        <strong>{{entry.note}}</strong>
+                        {% endif %}
+
+                        <button class="btn btn-primary" onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
+
+                        {% if entry.doi %}
+                        <a href="http://doi.org/{{ entry.doi }}">
+                            <input class="btn btn-outline-primary" type="button" value="DOI" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.pdf %}
+                        <a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank">
+                            <input class="btn btn-outline-primary" type="button" value="PDF" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.code %}
+                        <a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank">
+                            <input class="btn btn-outline-primary" type="button" value="Code" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.video %}
+
+                        {% if entry.video contains "/" %}
+                        {% assign entry_video = entry.video %}
+                        {% else %}
+                        {% assign entry_video = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+                        {% endif %}
+
+                        <a href="{{ entry_video }}" target="_blank">
+                            <input class="btn btn-outline-primary" type="button" value="Video" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.link %}
+                        <a href="{{ entry.link }}" target="_blank">
+                            <input class="btn btn-outline-primary" type="button" value="Link" />
+                        </a>
+                        {% endif %}
+                    </p>
+
+                    <div id="bibtex-{{entry.key}}" style="display: none;">
+                        <pre>{{entry.bibtex}}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add entry to global array (declared in publications.html file)
+        publicationIds.push('{{entry.key}}');
+    </script>
+
+</div>
