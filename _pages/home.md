@@ -30,7 +30,7 @@ permalink: /
     {% else %}
     <div class="carousel-item">
     {% endif %}
-    <div class="p-2 bg-dark">
+    <div class="p-2 bg-dark border border-dark rounded">
         <div class="embed-responsive embed-responsive-16by9">
             <img src="{{ site.dir_resources_images }}/{{ item.photo }}" class="embed-responsive-item card-img-top rounded" 
             style="object-fit: cover;" alt="{{ item.title }}">

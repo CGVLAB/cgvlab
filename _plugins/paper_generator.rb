@@ -1,3 +1,7 @@
+# Generates a page for each paper
+# Uses the BibTeX file _bibliography/references.bib
+# Each page can have customized content by creating a .html file with the papers's key in _include/_paper
+
 require "bibtex"
 require "citeproc"
 require "csl/styles"
@@ -30,6 +34,8 @@ module Jekyll
       @citation = citation
 
       @name = "index.html"
+      @fname = paper.key + ".html"
+      @customize_dir = File.join(base, "_includes", "_paper", @fname);
       
       self.process(@name)
       self.read_yaml(File.join(base, "_layouts"), "paper.html")
@@ -47,6 +53,7 @@ module Jekyll
 
       self.data["paper_citation"] = @citation
       self.data["paper_bibtex"] = @paper.to_s
+      self.data["paper_file"] = File.file?(@customize_dir) ? File.join("_paper", @fname).to_s : ""
     end
   end
 end

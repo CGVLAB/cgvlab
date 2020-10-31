@@ -30,6 +30,14 @@ layout: default
         </div>
     </div>
     <hr>
+    {% if page.paper_file.size > 0 %}
+    <div class="row">
+        <div class="col">
+            {% include {{ page.paper_file }} %}
+        </div>
+    </div>
+    <hr>
+    {% endif %}
     <div class="row">
         <div class="col">
             <iframe src="{{ site.dir_resources_papers }}/{{ page.paper_pdf }}" type="application/pdf" width="100%"
