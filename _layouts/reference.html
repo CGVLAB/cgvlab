@@ -16,10 +16,10 @@
     {% assign info_column_class = "col-md-11" %}
     {% endif %}
 
-    <div class="col card border-primary">
+    <div class="col card border-dark">
         <div class="row no-gutters align-items-center">
             <div class="{{ img_column_class }}">
-                <div class="m-1 p-1 bg-primary rounded">
+                <div class="m-1 p-1 bg-dark rounded">
                     <div class="embed-responsive embed-responsive-1by1">
                         <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
                             class="embed-responsive-item rounded" style="object-fit: cover;">
@@ -37,23 +37,23 @@
                         <strong>{{entry.note}}</strong>
                         {% endif %}
 
-                        <button class="btn btn-primary" onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
+                        <button class="btn btn-dark" onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
 
                         {% if entry.doi %}
                         <a href="http://doi.org/{{ entry.doi }}">
-                            <input class="btn btn-outline-primary" type="button" value="DOI" />
+                            <input class="btn btn-outline-dark" type="button" value="DOI" />
                         </a>
                         {% endif %}
 
                         {% if entry.pdf %}
                         <a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank">
-                            <input class="btn btn-outline-primary" type="button" value="PDF" />
+                            <input class="btn btn-outline-dark" type="button" value="PDF" />
                         </a>
                         {% endif %}
 
                         {% if entry.code %}
                         <a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank">
-                            <input class="btn btn-outline-primary" type="button" value="Code" />
+                            <input class="btn btn-outline-dark" type="button" value="Code" />
                         </a>
                         {% endif %}
 
@@ -66,7 +66,7 @@
                         {% endif %}
 
                         <a href="{{ entry_video }}" target="_blank">
-                            <input class="btn btn-outline-primary" type="button" value="Video" />
+                            <input class="btn btn-outline-dark" type="button" value="Video" />
                         </a>
                         {% endif %}
 

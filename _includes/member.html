@@ -1,12 +1,12 @@
 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 m-0 p-0">
     <div class="m-3">
-        <div class="card border-primary">
+        <div class="card border-dark">
             {% if member.photo %}
             {% assign photo_link = site.dir_resources_images | append: '/team/' | append: member.photo %}
             {% else %}
             {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
             {% endif %}
-            <div class="p-2 bg-primary">
+            <div class="p-2 bg-dark">
                 <div class="embed-responsive embed-responsive-1by1">
                     <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
                         style="object-fit: cover;" alt="{{ member.name }}">

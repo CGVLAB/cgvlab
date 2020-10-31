@@ -34,6 +34,14 @@ layout: default
         </div>
     </div>
     <hr>
+    {% if page.person_file.size > 0 %}
+    <div class="row">
+        <div class="col">
+            {% include {{ page.person_file }} %}
+        </div>
+    </div>
+    <hr>
+    {% endif %}
     <div class="row">
         <div class="col">
             <h3 class="text-primary">Publications</h3>
