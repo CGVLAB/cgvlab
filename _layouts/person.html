@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="col m-0 p-0">
+    <div class="row">
+        <div class="col-sm-3">
+            {% if page.person_photo %}
+            {% assign photo_link = site.dir_resources_images | append: '/team/' | append: page.person_photo %}
+            {% else %}
+            {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+            {% endif %}
+            <div class="p-2 bg-primary">
+                <div class="embed-responsive embed-responsive-1by1">
+                    <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
+                        style="object-fit: cover;" alt="{{ page.person_name }}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <h1 class="text-primary">{{ page.person_name }}</h1>
+            {% if page.person_info %}
+            <h3 class="text-muted">{{ page.person_info }}</h3>
+            {% endif %}
+            <!--<strong class="text-dark">{{ page.person_type | capitalize }}</strong>!-->
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <h3 class="text-primary">Publications</h3>
+            <p class="text-muted">...</p>
+        </div>
+    </div>
+</div>
