@@ -5,7 +5,7 @@ module Jekyll
     def generate(site)
       if site.layouts.key? "person"
 
-        dir = "people"
+        dir = "person"
 
         faculty = site.data["faculty"].map{|s| s.merge!("type" => "faculty") }
         students = site.data["students"].map{|s| s.merge!("type" => "student") }
@@ -32,8 +32,6 @@ module Jekyll
       
       self.process(@name)
       self.read_yaml(File.join(base, "_layouts"), "person.html")
-
-      category_title_prefix = site.config["category_title_prefix"] || "Category: "
 
       self.data["title"] = "#{@person["name"]} (#{@person["type"].capitalize}) - CGVLab"
 

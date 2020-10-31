@@ -8,12 +8,12 @@
             {% endif %}
             <div class="p-2 bg-primary">
                 <div class="embed-responsive embed-responsive-1by1">
-                    <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded" style="object-fit: cover;"
-                        alt="{{ member.name }}">
+                    <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
+                        style="object-fit: cover;" alt="{{ member.name }}">
                 </div>
             </div>
             <div class="card-body">
-                <a class="h5 card-title" href="/people/{{ member.name | slugify }}">{{ member.name }}</a>
+                <a class="h5 card-title" href="/person/{{ member.name | slugify }}">{{ member.name }}</a>
                 <p class="text-muted">{{ member.info }}</p>
                 <hr>
                 <p class="card-text">
