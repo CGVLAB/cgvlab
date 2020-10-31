@@ -20,8 +20,17 @@ layout: default
             <h1 class="text-primary">{{ page.person_name }}</h1>
             {% if page.person_info %}
             <h3 class="text-muted">{{ page.person_info }}</h3>
+            {% else %}
+            <h3 class="text-muted">{{ page.person_type | capitalize }}</h3>
             {% endif %}
-            <!--<strong class="text-dark">{{ page.person_type | capitalize }}</strong>!-->
+            <hr>
+            {% if page.person_url %}
+            <a href="{{ page.person_url }}" target="_blank">Website</a>
+            {% endif %}
+            <br>
+            {% if page.person_linkedin %}
+            <a href="{{ page.person_linkedin }}" target="_blank">LinkedIn</a>
+            {% endif %}
         </div>
     </div>
     <hr>

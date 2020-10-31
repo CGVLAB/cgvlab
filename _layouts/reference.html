@@ -28,7 +28,7 @@
             </div>
             <div class="{{ info_column_class }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }}) </h5>
+                    <a class="h5 card-title" href="/paper/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }} et al. {{ entry.year }})</a>
                     <p class="card-text">
                         <p><em>{{ reference }}</em></p>
                         <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>

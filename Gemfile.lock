@@ -102,6 +102,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bibtex-ruby
+  citeproc-ruby
+  csl-styles
   jekyll
   jekyll-admin
   jekyll-scholar
