@@ -58,9 +58,3 @@ permalink: /
 </div>
 </div>
 <br>
-
-# About Us
-
-XXX basic description of the lab XXX
-
-XXX add more description of our research, and any funding we have XXX

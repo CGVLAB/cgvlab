@@ -49,12 +49,12 @@ ul, li {
 {% if forloop.last %}
 <h3>Pre-{{ publication_year }}</h3>
 <div class="container-fluid">
-{% bibliography --query @*[year<={{publication_year}}] --template reference %}
+{% bibliography --query @*[year<={{publication_year}},highlighted!=true] --template reference %}
 </div>
 {% else %}
 <h3>{{ publication_year }}</h3>
 <div class="container-fluid">
-{% bibliography --query @*[year={{publication_year}}] --template reference %}
+{% bibliography --query @*[year={{publication_year}},highlighted!=true] --template reference %}
 </div>
 {% endif %}
 {% endfor %}
