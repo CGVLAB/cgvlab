@@ -1,7 +1,7 @@
 # Image paths are assumed to be relative to the "/resources/images/" directory
 
 - title: CGVLab at Purdue University
-  photo: slider/logo_big.gif
+  photo: slider/logo.png
   caption: This is the website for the Computer Graphics and Visualization Laboratory at Purdue University
 
 - title: A Title
