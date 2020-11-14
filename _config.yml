@@ -13,10 +13,9 @@
 # Site settings
 title: CGVLab
 email: null@cs.purdue.edu
-description: > # This means 'ignore newlines until "baseurl:"'
-  The website of the Computer Graphics and Visualization Laboratory (CGVLab) at Purdue University.
-baseurl: ""
-url: ""
+description: The website of the Computer Graphics and Visualization Laboratory (CGVLab) at Purdue University.
+baseurl: ''
+url: 'https://cgv.purdue.edu'
 
 include:
   - .htaccess
@@ -45,7 +44,7 @@ file_theme_bootstrap_js: bootstrap.bundle.min.js
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: '\n\n'
 incremental: false
 
 # Markdown Processing
@@ -62,6 +61,7 @@ kramdown:
 
 plugins:
   - jekyll-scholar
+  - jekyll-sitemap
 
 scholar:
   bibliography_list_tag: ul

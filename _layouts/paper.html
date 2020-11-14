@@ -9,7 +9,7 @@ layout: default
             {% else %}
             {% assign photo_link = site.dir_theme_images | append: '/default.png' %}
             {% endif %}
-            <div class="p-2 bg-primary">
+            <div class="p-2 bg-dark rounded">
                 <div class="embed-responsive embed-responsive-1by1">
                     <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
                         style="object-fit: cover;" alt="{{ page.person_name }}">
@@ -17,7 +17,7 @@ layout: default
             </div>
         </div>
         <div class="col-sm-9">
-            <h1 class="text-primary">{{ page.paper_title }}</h1>
+            <h1 class="text-dark">{{ page.paper_title }}</h1>
             {% if page.paper_source and page.paper_year %}
             {% assign paper_source_append = ' - ' %}
             {% else %}
@@ -25,6 +25,7 @@ layout: default
             {% endif %}
             <p class="text-muted">{{ page.paper_source | append: paper_source_append }}{{ page.paper_year }}</p>
             <hr>
+            <!-- Todo: Link to authors -> <h1>{{ page.paper_authors }}</h1> !-->
             <p class="text-dark">{{ page.paper_citation }}</p>
             <pre>{{ page.paper_bibtex }}</pre>
         </div>

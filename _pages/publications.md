@@ -20,7 +20,6 @@ ul, li {
     list-style-type: none;
 }
 </style>
-<h3>{{ publication_year }}</h3>
 <div class="container-fluid">
 {% bibliography --query @*[highlighted=true] --template reference %}
 </div>
@@ -47,7 +46,7 @@ ul, li {
 </style>
 {% for publication_year in (2000..2020) reversed %}
 {% if forloop.last %}
-<h3>Pre-{{ publication_year }}</h3>
+<h3>Pre-{{ publication_year | plus: 1 }}</h3>
 <div class="container-fluid">
 {% bibliography --query @*[year<={{publication_year}},highlighted!=true] --template reference %}
 </div>
