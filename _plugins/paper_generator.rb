@@ -1,4 +1,5 @@
 # Generates a page for each paper
+# Pages are located at /paper/<key>/index.html
 # Uses the BibTeX file _bibliography/references.bib
 # Each page can have customized content by creating a .html file with the papers's key in _include/_paper
 
@@ -46,13 +47,42 @@ module Jekyll
       self.data['paper_year'] = @paper['year']
       self.data['paper_source'] = @paper['booktitle'] || @paper['journal'] || @paper['publisher'] || 'Unknown'
 
-      authors = []
+      # Add authors and author links (if applicable)
+
+      @faculty = site.data['faculty'].map{|s| s.merge!('type' => 'faculty') }
+      @students = site.data['students'].map{|s| s.merge!('type' => 'student') }
+      @former_members = site.data['former_members'].map{|s| s.merge!('type' => 'former member') }
+
+      @all_members = @faculty.concat(@students.concat(@former_members))
+
+      @authors = []
 
       for a in @paper['author']
-        authors.append("#{a.first} #{a.last}")
+        n = a.first.to_s + " " + a.last.to_s
+        s = n.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+
+        p_first = s.split(/\-/).first
+        p_last = s.split(/\-/).last
+
+        found = false
+
+        for i in @all_members
+          sl = i['name'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+          if sl.start_with?(p_first) && sl.end_with?(p_last)
+            found = true
+            s = sl
+            break
+          end
+        end
+
+        if found
+          @authors.append(n + "|" + s)
+        else
+          @authors.append(n + "| ")
+        end
       end
 
-      self.data['paper_authors'] = authors.join(',')
+      self.data['paper_authors'] = @authors.join(',')
 
       self.data['paper_doi'] = @paper['doi']
       self.data['paper_photo'] = @paper['image']
