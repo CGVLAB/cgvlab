@@ -5,15 +5,6 @@ layout: default
   // Array of publication IDs
   var publicationIds = [];
   var highlightedPublicationIds = [];
-
-  function toggleBibtex(key) {
-    var v = document.getElementById(`bibtex-${key}`);
-    if (v.style.display === 'none') {
-      v.style.display = 'block';
-    } else {
-      v.style.display = 'none';
-    }
-  }
 </script>
 <div id="gridid" class="col-sm-12">
   {{ content }}

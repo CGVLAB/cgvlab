@@ -37,7 +37,7 @@
                         <strong>{{entry.note}}</strong>
                         {% endif %}
 
-                        <button class="btn btn-dark" onclick="toggleBibtex('{{entry.key}}')">BibTeX</button>
+                        <button class="btn btn-dark" onclick="$('#bibtex-{{ entry.key }}').toggle()">BibTeX</button>
 
                         {% if entry.doi %}
                         <a href="http://doi.org/{{ entry.doi }}">

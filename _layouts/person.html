@@ -58,6 +58,11 @@ layout: default
     {% endif %}
     <div class="row">
         <div class="col">
+            {% capture all_pub_count %}{% bibliography_count -f references --query @*[author~={{person_query_name}}] %}{% endcapture %}
+            {% assign all_pub_count = all_pub_count | plus: 0 %}
+            {% if all_pub_count == 0 %}
+            <h3 class="text-dark">No Publications</h3>
+            {% else %}
             <h3 class="text-dark">Publications</h3>
 
             {% assign person_first_name = page.person_name | split: ' ' | first %}
@@ -107,6 +112,8 @@ layout: default
                     list-style-type: initial;
                 }
             </style>
+            
+            {% endif %}
         </div>
     </div>
 </div>

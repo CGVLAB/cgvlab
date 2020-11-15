@@ -1,4 +1,5 @@
 # Generates a page for each person
+# Pages are located at /person/<name>/index.html
 # Each page can have customized content by creating a .html file with the person's slug-ified name in _include/_person
 
 module Jekyll
