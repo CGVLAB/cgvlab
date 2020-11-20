@@ -1,8 +1,6 @@
 ---
 title: "CGVLab - Home"
 layout: home
-excerpt: "CGVLab at Purdue University."
-sitemap: false
 permalink: /
 ---
 
