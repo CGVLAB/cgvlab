@@ -1,9 +1,7 @@
 ---
 title: "News"
 layout: textlay
-excerpt: "CGVLab at Purdue University."
-sitemap: false
-permalink: /allnews.html
+permalink: /news.html
 ---
 
 # News

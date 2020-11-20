@@ -1,6 +1,9 @@
 - title: Home
   path: /
 
+- title: News
+  path: /news/
+
 - title: Research
   path: /research/
 

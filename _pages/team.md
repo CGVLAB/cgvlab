@@ -1,8 +1,6 @@
 ---
 title: "CGVLab - Team"
 layout: gridlay
-excerpt: "CGVLab: Team members"
-sitemap: false
 permalink: /team/
 ---
 
