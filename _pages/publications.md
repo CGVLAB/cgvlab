@@ -1,5 +1,5 @@
 ---
-title: "CGVLab - Publications"
+title: "Publications"
 layout: publications
 permalink: /publications/
 ---

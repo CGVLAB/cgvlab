@@ -1,6 +1,6 @@
 ---
 title: "News"
-layout: textlay
+layout: content
 permalink: /news.html
 ---
 

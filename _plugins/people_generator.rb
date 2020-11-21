@@ -36,12 +36,12 @@ module Jekyll
 
       @name = 'index.html'
       @fname = slug + '.html'
-      @customize_dir = File.join(base, '_includes', '_person', @fname);
+      @customize_dir = File.join(base, '_pages', '_person', @fname);
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'person.html')
 
-      self.data['title'] = "#{@person['name']} (#{@person['type'].capitalize}) - CGVLab"
+      self.data['title'] = "#{@person['name']} (#{@person['type'].capitalize})"
 
       self.data['person_type'] = @person['type']
       self.data['person_name'] = @person['name']
