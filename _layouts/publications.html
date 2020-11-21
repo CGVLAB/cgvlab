@@ -1,14 +1,12 @@
 ---
-layout: default
+layout: content
 ---
 <script>
   // Array of publication IDs
   var publicationIds = [];
   var highlightedPublicationIds = [];
 </script>
-<div id="gridid" class="col-sm-12">
-  {{ content }}
-</div>
+{{ content }}
 <script>
   // Remove DOI from reference
   const removeDoi = false;

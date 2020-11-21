@@ -1,25 +1,27 @@
 <div class="footer container-fluid px-3 py-3 mt-auto bg-dark">
 	<div class="row justify-content-center">
 		<div class="col-sm-4">
-			<strong class="text-light">CGVLab Website</strong>
-			<p class="text-light">Copyright &copy 2020 CGVLab. Site made with <a href="https://jekyllrb.com">Jekyll</a>.
+			<strong class="text-light">{{ site.title }} Website</strong>
+			<p class="text-light m-0">Copyright &copy; {{ site.time | date: '%y' }} {{ site.title }}. Site made with <a
+					href="https://jekyllrb.com">Jekyll</a>.
 			</p>
-			<p class="text-light">(<a href="http://wiki.cs.purdue.edu/cgvlab/doku.php">Internal Lab Wiki</a>)</p>
+			{{ site.data.footer.site_content }}
 		</div>
 		<div class="col-sm-4">
 			<strong class="text-light">Funding</strong>
-			<p class="text-light">
-				XXX funding info XXX
+			<p class="text-light m-0">
+				{{ site.data.footer.funding_information }}
 			</p>
-			<p class="text-light">We are part of the <a href="https://www.cs.purdue.edu/">Department of Computer
-					Science</a> at <a href="https://www.purdue.edu/">Purdue University</a>.
+			{{ site.data.footer.funding_content }}
 			</p>
 		</div>
 		<div class="col-sm-4">
 			<strong class="text-light">Address</strong>
-			<p class="text-light">Lawson Computer Science Building (LWSN) Room 3151, Purdue University</p>
-			<p class="text-light">305 N. University Street, West Lafayette, IN 47907</p>
-			<p class="text-light">(<a href="https://goo.gl/maps/kWo74ytXx42Mv5TD8" target="_blank">Map</a>)</p>
+			<p class="text-light m-0">{{ site.data.footer.address.line1 }}</p>
+			<p class="text-light m-0">{{ site.data.footer.address.line2 }}, {{ site.data.footer.address.city }},
+				{{ site.data.footer.address.state }} {{ site.data.footer.address.zip }}</p>
+			<p class="text-light m-0">(<a href="{{ site.data.footer.address.google_maps_link }}" target="_blank">Map</a>)</p>
+			{{ site.data.footer.address_content }}
 		</div>
 	</div>
 </div>

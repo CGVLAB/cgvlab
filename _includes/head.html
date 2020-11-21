@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape | prepend: ' - ' | prepend: site.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
   <meta name="description"
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -24,11 +24,9 @@
   <meta name="msapplication-config" content="{{ site.dir_theme_images }}/icons/browserconfig.xml?v=1">
   <meta name="theme-color" content="#000000">
 
-  {% if jekyll.environment == 'production' %}
-  {% include analytics.html %}
-  {% endif %}
-
   <script src="{{ site.dir_dependencies_js }}/jquery/{{ site.file_theme_jquery_js }}"></script>
   <script src="{{ site.dir_dependencies_js }}/bootstrap/{{ site.file_theme_bootstrap_js }}"></script>
+
+  {% seo %}
 
 </head>

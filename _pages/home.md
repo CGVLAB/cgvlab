@@ -1,6 +1,6 @@
 ---
-title: "CGVLab - Home"
-layout: home
+title: "Home"
+layout: content
 permalink: /
 ---
 
@@ -44,6 +44,7 @@ permalink: /
     </div>
     {% assign item_count = item_count | plus: 1 %}
     {% endfor %}
+
   </div>
   <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon cgv-slider-control"  aria-hidden="true"></span>
@@ -56,3 +57,5 @@ permalink: /
 </div>
 </div>
 <br>
+
+{% include news.html %}

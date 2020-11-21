@@ -9,7 +9,7 @@
             <div class="p-2">
                 <div class="embed-responsive embed-responsive-1by1">
                     <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded p-1 bg-dark"
-                        style="object-fit: cover;" alt="{{ member.name }}">
+                        style="object-fit: cover;" alt="{{ member.name }}" {% if site.enable_lazy_loading %}loading="lazy"{% endif %}>
                 </div>
             </div>
             <div class="card-body">

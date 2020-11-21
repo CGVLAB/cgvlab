@@ -1,10 +1,10 @@
 ---
-title: "CGVLab - Team"
-layout: gridlay
+title: "Team"
+layout: content
 permalink: /team/
 ---
 
-# Group Members
+# Team
 Jump to [faculty](#faculty), [graduate students](#graduate-students), [former members](#former-members).
 
 ## Faculty

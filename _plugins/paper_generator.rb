@@ -36,12 +36,12 @@ module Jekyll
 
       @name = 'index.html'
       @fname = paper.key + '.html'
-      @customize_dir = File.join(base, '_includes', '_paper', @fname);
+      @customize_dir = File.join(base, '_pages', '_paper', @fname);
       
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'paper.html')
 
-      self.data['title'] = "#{@paper['title']} (Paper) - CGVLab"
+      self.data['title'] = "#{@paper['title']} (Paper)"
 
       self.data['paper_title'] = @paper['title']
       self.data['paper_year'] = @paper['year']
