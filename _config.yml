@@ -12,7 +12,7 @@
 
 # All custom (CGVLab-specific) content is located in the "resources", "theme", "_pages", "_bibliography", and "_data" folders.
 # The only other files that are CGVLab-specific are "_config.yml", "README.md", "LICENSE", and "favicon.ico".
-# The only exception to these rules are the files located in the "_includes/_paper" and "_includes/_person" folders.
+# The only exception to these rules are the files located in the "_includes/_publication" and "_includes/_person" folders.
 
 # Site settings
 title: CGVLab
@@ -36,7 +36,7 @@ dir_theme_images: /theme/images
 dir_resources_files: /resources/files
 dir_resources_images: /resources/images
 dir_resources_videos: /resources/videos
-dir_resources_papers: /resources/papers
+dir_resources_publications: /resources/papers
 
 dir_dependencies_css: /dependencies/css
 dir_dependencies_js: /dependencies/js
