@@ -1,0 +1,81 @@
+<!-- Relies on variables declared in `publications.html` !-->
+<div id="searchBar" class="container-fluid border border-dark rounded">
+    <form class="form-inline m-2 p-1">
+        <label class="mr-2" for="searchField">Search Field</label>
+        <select id="searchField" class="custom-select mr-2">
+            <option selected value="title">Title</option>
+            <option value="source">Publication Source</option>
+            <option value="author">Author</option>
+            <option value="primary-author">Primary Author</option>
+        </select>
+
+        <input id="searchText" type="text" class="form-control mr-2" placeholder="Search Text">
+
+        <button type="submit" class="btn btn-outline-dark">Search</button>
+    </form>
+</div>
+<script>
+    const defaultSearchText = '';
+    const defaultSearchField = 'title';
+    const searchQuery = '#search#';
+    const initialQuery = window.location.hash.indexOf(searchQuery) === 0 ? window.location.hash : '';
+
+    function decodeHash(str) {
+        var result = {
+            searchField: defaultSearchField,
+            searchText: defaultSearchText
+        };
+
+        const index = str.indexOf(searchQuery);
+        if (index !== 0)
+            return result;
+
+        const queryComponents = str.substring(searchQuery.length).split('&') || [];
+
+        for (var i = 0; i < queryComponents.length; i++) {
+            const componentKeyValue = queryComponents[i].split('=');
+            const componentKey = componentKeyValue[0] || '';
+            const componentValue = decodeURIComponent(componentKeyValue[1]) || '';
+
+            if (componentKey === 'field')
+                result.searchField = componentValue;
+            else if (componentKey === 'text')
+                result.searchText = componentValue;
+        }
+
+        return result;
+    }
+
+    function encodeHash(obj) {
+        return '#search#field=' + encodeURIComponent(obj.searchField || defaultSearchField) + '&text=' +
+            encodeURIComponent(obj.searchText || defaultSearchText);
+    }
+
+    $('form').on('keyup change paste', 'input, select, textarea', function () {
+        const obj = {
+            searchField: $('#searchField').val() || 'title',
+            searchText: $('#searchText').val() || ''
+        };
+
+        // Set window hash
+        window.location.hash = encodeHash(obj);
+
+        // Search for value
+        for (var i = 0; i < publicationIds.length; i++) {
+            if (obj.searchField === 'title') {
+                var element = $('#' + publicationIds[i]);
+                var title = $('#' + publicationIds[i] + '-title');
+                var val = title.html();
+
+                // title.attr('contenteditable', 'true');
+                /*
+                title.html(val.replace(obj.searchField, '<span style="background-color: yellow">' + obj
+                    .searchField + '</span>'));
+                    */
+
+                element.toggle(val.indexOf(obj
+                    .searchText) !== -1);
+            }
+        }
+    });
+</script>

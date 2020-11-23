@@ -4,23 +4,27 @@ layout: content
 <script>
   // Array of publication IDs
   var publicationIds = [];
-  var highlightedPublicationIds = [];
+
+  // State of publication IDs (loaded or not loaded)
+  var publicationsLoaded = false;
 </script>
 {{ content }}
 <script>
-  // Remove DOI from reference
+  // Removes DOI from reference (if enabled)
+
   const removeDoi = false;
 
   if (removeDoi) {
-    for (const entry in publicationIds) {
-      var reference = document.getElementById('parent-{{entry.key}}').children;
-      for (var i = 0; i < reference.length; i++)
-        reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
-    }
-    for (const entry in highlightedPublicationIds) {
-      var reference = document.getElementById('parent-grid-{{entry.key}}').children;
-      for (var i = 0; i < reference.length; i++)
-        reference[i].innerHTML = reference[i].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+    for (var i = 0; i < publicationIds.length; i++) {
+      var reference = $('#' + (publicationIds[i] || '')).children();
+      for (var j = 0; j < reference.length; j++)
+        reference[j].innerHTML = reference[j].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
     }
   }
+
+  // Set publication status as loaded
+  publicationsLoaded = true;
+
+  // Enable search bar
+  $('#searchBar').show();
 </script>

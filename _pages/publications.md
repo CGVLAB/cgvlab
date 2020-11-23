@@ -6,6 +6,12 @@ permalink: /publications/
 
 # Publications
 
+## Search
+
+{% include search.html %}
+
+<hr>
+
 ## Highlights
 
 (For a full list see [below](#full-list).)
@@ -42,8 +48,10 @@ ul, li {
     list-style-type: none;
 }
 </style>
+
 {% for publication_year in (2000..2020) reversed %}
 {% if forloop.last %}
+
 <h3>Pre-{{ publication_year | plus: 1 }}</h3>
 <div class="container-fluid">
 {% bibliography --query @*[year<={{publication_year}},highlighted!=true] --template reference %}

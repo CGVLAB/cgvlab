@@ -4,11 +4,11 @@ layout: content
 <div class="row">
     <div class="col-sm-3">
         {% if page.person_photo %}
-        {% assign photo_link = site.dir_resources_images | append: '/team/' | append: page.person_photo %}
+        {% assign photo_link = site.dir_resources_images | append: '/people/' | append: page.person_photo %}
         {% else %}
         {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
         {% endif %}
-        <div class="p-2 bg-dark rounded">
+        <div class="p-2 bg-dark rounded" href="{{ page.person_url }}">
             <div class="embed-responsive embed-responsive-1by1">
                 <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
                     style="object-fit: cover;" alt="{{ page.person_name }}">

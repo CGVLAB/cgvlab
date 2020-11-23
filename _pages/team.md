@@ -5,14 +5,15 @@ permalink: /team/
 ---
 
 # Team
-Jump to [faculty](#faculty), [graduate students](#graduate-students), [former members](#former-members).
+
+Jump to [faculty](#faculty), [graduate students](#graduate-students), [former persons](#former-members).
 
 ## Faculty
 
 <div class="container-fluid">
   <div class="row">
-    {% for member in site.data.faculty %}
-    {% include member.html member = member %}
+    {% for person in site.data.faculty %}
+    {% include member.html person = person %}
     {% endfor %}
   </div>
 </div>
@@ -21,18 +22,18 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 <div class="container-fluid">
   <div class="row">
-    {% for member in site.data.students %}
-    {% include member.html member = member %}
+    {% for person in site.data.students %}
+    {% include member.html person = person %}
     {% endfor %}
   </div>
 </div>
 
-## Former Members
+## Former persons
 
 <div class="container-fluid">
   <div class="row">
-    {% for member in site.data.former_members %}
-    {% include member.html member = member %}
+    {% for person in site.data.former_members %}
+    {% include member.html person = person %}
     {% endfor %}
   </div>
 </div>

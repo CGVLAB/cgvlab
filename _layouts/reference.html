@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="row my-2">
+<div id="{{ entry.key }}" class="row my-2">
     {% if entry.image %}
     {% assign highlight_img = entry.image %}
     {% else %}
@@ -18,7 +18,7 @@
 
     <div class="col card border-dark">
         <div class="row no-gutters align-items-center">
-            <div class="{{ img_column_class }}">
+            <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
                 <div class="m-1 p-1 bg-dark rounded">
                     <div class="embed-responsive embed-responsive-1by1">
                         <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
@@ -28,14 +28,14 @@
             </div>
             <div class="{{ info_column_class }}">
                 <div class="card-body">
-                    <a class="h5 card-title" href="/paper/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }}
+                    <a id="{{ entry.key }}-title" class="h5 card-title" href="/publications/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }}
                         et al. {{ entry.year }})</a>
                     <p class="card-text">
-                        <p><em>{{ reference }}</em></p>
+                        <p id="{{ entry.key }}-reference"><em>{{ reference }}</em></p>
                         <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
 
                         {% if entry.note %}
-                        <strong>{{entry.note}}</strong>
+                        <strong id="{{ entry.key }}-optional-note">{{entry.note}}</strong>
                         {% endif %}
 
                         <button class="btn btn-dark" onclick="$('#bibtex-{{ entry.key }}').toggle()">BibTeX</button>
@@ -47,7 +47,7 @@
                         {% endif %}
 
                         {% if entry.pdf %}
-                        <a href="{{ site.dir_resources_papers }}/{{ entry.pdf }}" target="_blank">
+                        <a href="{{ site.dir_resources_publications }}/{{ entry.pdf }}" target="_blank">
                             <input class="btn btn-outline-dark" type="button" value="PDF" />
                         </a>
                         {% endif %}
