@@ -22,13 +22,15 @@
                 <div class="m-1 p-1 bg-dark rounded">
                     <div class="embed-responsive embed-responsive-1by1">
                         <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
-                            class="embed-responsive-item rounded" style="object-fit: cover;" {% if site.enable_lazy_loading %}loading="lazy"{% endif %}>
+                            class="embed-responsive-item rounded" style="object-fit: cover;"
+                            {% if site.enable_lazy_loading %}loading="lazy" {% endif %}>
                     </div>
                 </div>
             </div>
             <div class="{{ info_column_class }}">
                 <div class="card-body">
-                    <a id="{{ entry.key }}-title" class="h5 card-title" href="/publications/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }}
+                    <a id="{{ entry.key }}-title" class="h5 card-title"
+                        href="/publications/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }}
                         et al. {{ entry.year }})</a>
                     <p class="card-text">
                         <p id="{{ entry.key }}-reference"><em>{{ reference }}</em></p>
@@ -88,8 +90,8 @@
 
     <script>
         // Add entry to global array (declared in publications.html file)
-        if (publicationIds)
-            publicationIds.push('{{entry.key}}');
+        if (publications)
+            publications.push({{ entry | json | replace: '"=>', '":' }});
     </script>
 
 </div>
