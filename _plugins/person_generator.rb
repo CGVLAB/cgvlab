@@ -47,6 +47,7 @@ module Jekyll
       # Initialize other variables
       @fname = slug + '.html'
       @person = person
+      @description = (@person['info'].length > 0 ? @person['info'] : @person['type']).capitalize
       @customize_dir = File.join(base, '_pages', '_person', @fname);
 
       # Create file and load layout file
@@ -56,7 +57,7 @@ module Jekyll
       # Set page properties
       # Accessible in Liquid via `page.<property>` (e.g. `page.title`)
 
-      self.data['title'] = "#{@person['name']} (#{@person['type'].capitalize})"
+      self.data['title'] = "#{@person['name']} ()"
 
       self.data['person_type'] = @person['type']
       self.data['person_name'] = @person['name']

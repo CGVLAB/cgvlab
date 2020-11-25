@@ -9,35 +9,63 @@
             <option value="primary-author">Primary Author</option>
         </select>
         <input id="searchText" type="text" class="form-control m-1 mr-2" placeholder="Search Text">
-        <button id="searchSubmit" type="submit" class="btn btn-outline-dark m-1 mr-4">Search</button>
+        <button id="searchSubmit" type="submit" class="btn btn-outline-dark m-1 mr-2">Search</button>
+        <button id="searchAdvanced" class="btn btn-dark m-1 mr-4" onclick="$('#searchOptions').toggle()">Options</button>
         <p id="search-matched" class="text-muted m-1 my-1"></p>
+    </form>
+    <form id="searchOptions" class="form-inline bg-dark m-2 p-2 rounded" style="display: none;">
+        <div class="form-check form-check-inline mr-4">
+            <input id="searchOptionCaseInsensitive" class="form-check-input" type="checkbox" value="yes">
+            <label class="form-check-label text-light" for="searchOptionCaseInsensitive">Case-Insensitive</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input id="searchOptionRegex" class="form-check-input" type="checkbox" value="yes">
+            <label class="form-check-label text-light" for="searchOptionRegex">Regex</label>
+        </div>
     </form>
 </div>
 <script>
+    // Publication values
+
+    // Array of publications
+    var publications = [];
+
+    // State of publication IDs (loaded or not loaded)
+    var publicationsLoaded = false;
+
     // Utility functions
 
     // Parses a URL string representation of a search query and returns its object
     function decodeHash(str) {
+        const SEARCH_FIELDS = $('#searchField option').map(function () {
+            return $(this).val();
+        }).get();
+
         var result = {
-            searchField: defaultSearchField,
-            searchText: defaultSearchText
+            searchField: DEFAULT_SEARCH_FIELD,
+            searchText: DEFAULT_SEARCH_TEXT
         };
 
-        const index = str.indexOf(searchQuery);
+        const index = str.indexOf(SEARCH_QUERY_PREFIX);
         if (index !== 0)
             return result;
 
-        const queryComponents = str.substring(searchQuery.length).split('&') || [];
+        const queryComponents = str.substring(SEARCH_QUERY_PREFIX.length).split('&') || [];
 
         for (var i = 0; i < queryComponents.length; i++) {
             const componentKeyValue = queryComponents[i].split('=');
             const componentKey = componentKeyValue[0] || '';
             const componentValue = decodeURIComponent(componentKeyValue[1]) || '';
 
-            if (componentKey === 'field')
+            if (componentKey === 'field') {
                 result.searchField = componentValue;
-            else if (componentKey === 'text')
-                result.searchText = componentValue;
+            } else {
+                const index = SEARCH_FIELDS.indexOf(componentKey);
+                if (index === -1)
+                    return result;
+                else if (SEARCH_FIELDS[index] === 'text')
+                    result.searchText = componentValue;
+            }
         }
 
         return result;
@@ -45,8 +73,8 @@
 
     // Converts the search query object into its URL string representation
     function encodeHash(obj) {
-        return '#search#field=' + encodeURIComponent(obj.searchField || defaultSearchField) + '&text=' +
-            encodeURIComponent(obj.searchText || defaultSearchText);
+        return '#search#field=' + encodeURIComponent(obj.searchField || DEFAULT_SEARCH_FIELD) + '&text=' +
+            encodeURIComponent(obj.searchText || DEFAULT_SEARCH_TEXT);
     }
 
     // Resets the HTML of the given reference
@@ -54,6 +82,7 @@
         const pub = publications[id];
 
         // Reset title
+        // Uses the same format as in `reference.html`
         $('#' + pub.key + '-title').html(pub.title + ' (' + pub.author_0_last + ' et al. ' + pub.year + ')');
 
         // Enable element
@@ -62,21 +91,20 @@
 
     // Set default values on page load
 
-    const defaultSearchText = '';
-    const defaultSearchField = 'title';
-    const searchQuery = '#search#';
-    const earliestYear = 2001;
-    const latestYear = 2020;
-    const initialQuery = window.location.hash.indexOf(searchQuery) === 0 ? decodeHash(window.location.hash) : {
-        searchField: defaultSearchField,
-        searchText: defaultSearchText
+    const DEFAULT_SEARCH_TEXT = '';
+    const DEFAULT_SEARCH_FIELD = 'title';
+    const SEARCH_QUERY_PREFIX = '#search#';
+    const SEARCH_EARLIEST_YEAR = 2001;
+    const SEARCH_LATEST_YEAR = 2020;
+    const initialQuery = window.location.hash.indexOf(SEARCH_QUERY_PREFIX) === 0 ? decodeHash(window.location.hash) : {
+        searchField: DEFAULT_SEARCH_FIELD,
+        searchText: DEFAULT_SEARCH_TEXT
     };
 
     $('#searchField').val(initialQuery.searchField);
     $('#searchText').val(initialQuery.searchText);
 
-    // Handle form update
-    // $('form').on('keyup change paste', 'input, select, textarea', function () {
+    // Handle form update on submit
     $('#searchSubmit').click(function () {
         // Create search object
         const obj = {
@@ -93,7 +121,7 @@
 
         // Toggle visibility of all sections
         $('#highlighted').hide();
-        for (var i = earliestYear; i <= latestYear; i++)
+        for (var i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
             $('#year-' + i).hide();
         $('#previous').hide();
 
@@ -127,14 +155,18 @@
                     const year = Number(pub.year);
                     if (pub.highlighted === "true")
                         $('#highlighted').show();
-                    else if (year > earliestYear)
+                    else if (year > SEARCH_EARLIEST_YEAR)
                         $('#year-' + year).show();
-                    else if (year <= earliestYear)
+                    else if (year <= SEARCH_EARLIEST_YEAR)
                         $('#previous').show();
 
                     // Record match
                     matched++;
                 }
+            }
+            // Search by author
+            else if (obj.searchField === 'author') {
+
             }
         }
 
@@ -142,7 +174,7 @@
         if ($('#highlighted').is(':hidden'))
             $('#highlighted-empty').show();
         var hidden = true;
-        for (var i = earliestYear; i <= latestYear; i++)
+        for (var i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
             hidden = hidden && $('#year-' + i).is(':hidden');
         if (hidden && $('#previous').is(':hidden'))
             $('#full-empty').show();

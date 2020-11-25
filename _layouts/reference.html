@@ -1,6 +1,5 @@
 ---
 ---
-
 <div id="{{ entry.key }}" class="row my-2">
     {% if entry.image %}
     {% assign highlight_img = entry.image %}
@@ -15,7 +14,6 @@
     {% assign img_column_class = "col-md-1" %}
     {% assign info_column_class = "col-md-11" %}
     {% endif %}
-
     <div class="col card border-dark">
         <div class="row no-gutters align-items-center">
             <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
@@ -87,11 +85,9 @@
             </div>
         </div>
     </div>
-
     <script>
         // Add entry to global array (declared in publications.html file)
         if (publications)
             publications.push({{ entry | json | replace: '"=>', '":' }});
     </script>
-
 </div>
