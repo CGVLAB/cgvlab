@@ -1,6 +1,7 @@
 # Generates a page for each publication
 # Pages are located at /publications/<key>/index.html
 # Uses the BibTeX file _bibliography/references.bib
+# Jekyll-Scholar provides functionality to do this, but our custom plugin has more more capabilities 
 # Each page can have customized content by creating a .html file with the publications's key in _include/_publication
 
 require 'bibtex'

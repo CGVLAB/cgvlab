@@ -1,25 +1,22 @@
-<!-- Relies on variables declared in `publications.html` !-->
+<!-- Relies on HTML elements and IDs declared in `publication.html` and `publications.md` !-->
 <div id="searchBar" class="container-fluid border border-dark rounded">
     <form class="form-inline m-2 p-1">
         <label class="mr-2" for="searchField">Search Field</label>
-        <select id="searchField" class="custom-select mr-2">
+        <select id="searchField" class="custom-select m-1 mr-2">
             <option selected value="title">Title</option>
             <option value="source">Publication Source</option>
             <option value="author">Author</option>
             <option value="primary-author">Primary Author</option>
         </select>
-
-        <input id="searchText" type="text" class="form-control mr-2" placeholder="Search Text">
-
-        <button type="submit" class="btn btn-outline-dark">Search</button>
+        <input id="searchText" type="text" class="form-control m-1 mr-2" placeholder="Search Text">
+        <button id="searchSubmit" type="submit" class="btn btn-outline-dark m-1 mr-4">Search</button>
+        <p id="search-matched" class="text-muted m-1 my-1">Matched ? publications</p>
     </form>
 </div>
 <script>
-    const defaultSearchText = '';
-    const defaultSearchField = 'title';
-    const searchQuery = '#search#';
-    const initialQuery = window.location.hash.indexOf(searchQuery) === 0 ? window.location.hash : '';
+    // Utility functions
 
+    // Parses a URL string representation of a search query and returns its object
     function decodeHash(str) {
         var result = {
             searchField: defaultSearchField,
@@ -46,12 +43,42 @@
         return result;
     }
 
+    // Converts the search query object into its URL string representation
     function encodeHash(obj) {
         return '#search#field=' + encodeURIComponent(obj.searchField || defaultSearchField) + '&text=' +
             encodeURIComponent(obj.searchText || defaultSearchText);
     }
 
-    $('form').on('keyup change paste', 'input, select, textarea', function () {
+    // Resets the HTML of the given reference
+    function resetReference(id) {
+        const pub = publications[id];
+
+        // Reset title
+        $('#' + pub.key + '-title').html(pub.title + ' (' + pub.author_0_last + ' et al. ' + pub.year + ')');
+
+        // Enable element
+        $('#' + pub.key).show();
+    }
+
+    // Set default values on page load
+
+    const defaultSearchText = '';
+    const defaultSearchField = 'title';
+    const searchQuery = '#search#';
+    const earliestYear = 2001;
+    const latestYear = 2020;
+    const initialQuery = window.location.hash.indexOf(searchQuery) === 0 ? decodeHash(window.location.hash) : {
+        searchField: defaultSearchField,
+        searchText: defaultSearchText
+    };
+
+    $('#searchField').val(initialQuery.searchField);
+    $('#searchText').val(initialQuery.searchText);
+
+    // Handle form update
+    // $('form').on('keyup change paste', 'input, select, textarea', function () {
+    $('#searchSubmit').click(function () {
+        // Create search object
         const obj = {
             searchField: $('#searchField').val() || 'title',
             searchText: $('#searchText').val() || ''
@@ -60,22 +87,79 @@
         // Set window hash
         window.location.hash = encodeHash(obj);
 
+        // Toggle visibility of "No Publications" messages
+        $('#highlighted-empty').hide();
+        $('#full-empty').hide();
+
+        // Toggle visibility of all sections
+        $('#highlighted').hide();
+        for (var i = earliestYear; i <= latestYear; i++)
+            $('#year-' + i).hide();
+        $('#previous').hide();
+
+        // Record matches
+        var matched = 0;
+
         // Search for value
-        for (var i = 0; i < publicationIds.length; i++) {
+        for (var i = 0; i < publications.length; i++) {
+            const pub = publications[i];
+            var parent = $('#' + pub.key);
+            resetReference(i);
+
+            // Search by title
             if (obj.searchField === 'title') {
-                var element = $('#' + publicationIds[i]);
-                var title = $('#' + publicationIds[i] + '-title');
-                var val = title.html();
+                var el = $('#' + pub.key + '-title');
+                const val = el.html();
+                const exists = pub.title.indexOf(obj
+                    .searchText) !== -1;
 
-                // title.attr('contenteditable', 'true');
-                /*
-                title.html(val.replace(obj.searchField, '<span style="background-color: yellow">' + obj
-                    .searchField + '</span>'));
-                    */
+                // Toggle parent element
+                parent.toggle(exists);
 
-                element.toggle(val.indexOf(obj
-                    .searchText) !== -1);
+                // Edit page if the item is a match
+                if (exists) {
+                    // Highlight matches in title
+                    const res = val.replace(obj.searchText, '<span style="background-color: yellow">' + obj
+                        .searchText + '</span>');
+                    el.html(res);
+
+                    // Enable parent section
+                    const year = Number(pub.year);
+                    if (pub.highlighted === "true")
+                        $('#highlighted').show();
+                    else if (year > earliestYear)
+                        $('#year-' + year).show();
+                    else if (year <= earliestYear)
+                        $('#previous').show();
+
+                    // Record match
+                    matched++;
+                }
             }
         }
+
+        // Enable "No Publications" message if no matches were found
+        if ($('#highlighted').is(':hidden'))
+            $('#highlighted-empty').show();
+        var hidden = true;
+        for (var i = earliestYear; i <= latestYear; i++)
+            hidden = hidden && $('#year-' + i).is(':hidden');
+        if (hidden && $('#previous').is(':hidden'))
+            $('#full-empty').show();
+
+        // Set matched text
+        var matchedText = '';
+        if (matched <= 0)
+            matchedText = 'No matches were found'
+        else if (matched < publications.length)
+            matchedText = 'Matched ' + matched + ' out of ' + publications.length + ' publications';
+        else
+            matchedText = 'Matched all (' + publications.length + ') publications'
+        $('#search-matched').html(matchedText);
+    });
+
+    // Trigger search on page load
+    $(document).ready(function () {
+        $('#searchSubmit').trigger('click');
     });
 </script>
