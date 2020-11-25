@@ -52,17 +52,14 @@ layout: content
         {% if all_pub_count == 0 %}
         <h2>No Publications</h2>
         {% else %}
-        <h2>Publications</h2>
-        <h5 class="text-muted">
-            {% if all_pub_count > 1 %}
-            {{ all_pub_count }} publications
-            {% else if all_pub_count == 1 %}
-            1 publication
-            {% else %}
-            0 publications
-            {% endif %} in total
-        </h5>
-        <br>
+
+        {% if all_pub_count > 1 %}
+        {% assign all_pub_count_text = 'Publications' | append: ' (' | append: all_pub_count | append: ' Total)' %}
+        {% else %}
+        {% assign all_pub_count_text = 'Publication' %}
+        {% endif %}
+
+        <h2>{{ all_pub_count_text }}</h2>
 
         {% capture pub_count_highlighted %}{% bibliography_count -f references --query @*[author~={{person_query_name}},highlighted=true] %}{% endcapture %}
         {% assign pub_count_highlighted = pub_count_highlighted | plus: 0 %}
