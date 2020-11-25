@@ -6,7 +6,7 @@ permalink: /team/
 
 # Team
 
-Jump to [faculty](#faculty), [graduate students](#graduate-students), [former persons](#former-members).
+Jump to [faculty](#faculty), [graduate students](#graduate-students), [former members](#former-members).
 
 ## Faculty
 
