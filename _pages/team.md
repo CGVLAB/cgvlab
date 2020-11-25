@@ -10,7 +10,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 ## Faculty
 
-<div class="container-fluid">
+<div class="container-fluid no-space">
   <div class="row">
     {% for person in site.data.faculty %}
     {% include member.html person = person %}
@@ -20,7 +20,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 ## Graduate Students
 
-<div class="container-fluid">
+<div class="container-fluid no-space">
   <div class="row">
     {% for person in site.data.students %}
     {% include member.html person = person %}
@@ -30,7 +30,7 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [former me
 
 ## Former persons
 
-<div class="container-fluid">
+<div class="container-fluid no-space">
   <div class="row">
     {% for person in site.data.former_members %}
     {% include member.html person = person %}
