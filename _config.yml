@@ -14,17 +14,27 @@
 # The only other files that are CGVLab-specific are "_config.yml", "README.md", "LICENSE", and "favicon.ico".
 # The only exception to these rules are the files located in the "_includes/_publication" and "_includes/_person" folders.
 
-# Site settings
+# Site settings (SEO)
 title: CGVLab
-email: null@cs.purdue.edu
 description: Computer Graphics and Visualization Laboratory at Purdue University
-baseurl: ''
 url: 'https://cgvlab.purdue.edu'
+logo: /theme/images/icon.png
+locale: en_US
+baseurl: ''
 
+# Site defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /theme/images/icon.png
+
+# Include files in conversion
 include:
   - .htaccess
   - _pages
 
+# SASS theme
 sass:
   sass_dir: /dependencies/css
 

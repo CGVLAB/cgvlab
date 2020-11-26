@@ -49,15 +49,14 @@ module Jekyll
       @person = person
       @description = @person['type'].capitalize + (@person['info'].to_s.length > 0 ? ' - ' + @person['info'].to_s : '') 
       @customize_dir = File.join(base, '_pages', '_person', @fname);
+      @person_dir = File.join(base, '_layouts', 'person.html')
 
       # Create file and load layout file
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'person.html')
+      self.read_yaml(File.dirname(@person_dir), File.basename(@person_dir))
 
       # Set page properties
       # Accessible in Liquid via `page.<property>` (e.g. `page.title`)
-
-      self.data['title'] = "#{@person['name']} (#{@description})"
 
       self.data['person_type'] = @person['type']
       self.data['person_name'] = @person['name']
@@ -66,6 +65,17 @@ module Jekyll
       self.data['person_url'] = @person['url']
       self.data['person_linkedin'] = @person['linkedin']
       self.data['person_file'] = File.file?(@customize_dir) ? File.join('_person', @fname).to_s : ''
+
+      # Finally, set SEO values
+
+      self.data['title'] = "#{@person['name']} (#{@description})"
+      self.data['description'] = @description
+
+      person_hash = @person.to_hash
+      
+      if person_hash.key?(:photo) && @person['photo'].to_s.length > 0
+        self.data['image'] = @person['photo']
+      end
     end
   end
 end

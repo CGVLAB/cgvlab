@@ -4,7 +4,7 @@ layout: content
 <div class="row">
     <div class="col-sm-3 text-center">
         {% if page.publication_photo %}
-        {% assign photo_link = site.dir_resources_images | append: '/' | append: page.publication_photo %}
+        {% assign photo_link = site.dir_resources_images | append: '/supplemental/' | append: page.publication_photo %}
         {% else %}
         {% assign photo_link = site.dir_theme_images | append: '/default.png' %}
         {% endif %}

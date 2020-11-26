@@ -18,20 +18,17 @@
             <input id="searchOptionCaseInsensitive" class="form-check-input" type="checkbox" checked>
             <label class="form-check-label text-light" for="searchOptionCaseInsensitive">Case-Insensitive</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline mr-4">
             <input id="searchOptionRegex" class="form-check-input" type="checkbox">
             <label class="form-check-label text-light" for="searchOptionRegex">Regex</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input id="searchOptionKeyword" class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label text-light" for="searchOptionKeyword">Keyword</label>
         </div>
     </form>
 </div>
 <script>
-    // Publication search values
-
-    // Array of publications
-    var publications = [];
-    // State of publication IDs (loaded or not loaded)
-    var publicationsLoaded = false;
-
     // Search constants
     const SEARCH_QUERY_PREFIX = '#search#';
     const SEARCH_EARLIEST_YEAR = 2001;
@@ -40,7 +37,8 @@
         field: 'title',
         text: '',
         caseInsensitive: 'true',
-        regex: 'false'
+        regex: 'false',
+        keyword: 'true'
     };
 
     // Utility functions
@@ -113,29 +111,35 @@
     const initialQuery = initial ? DEFAULT_SEARCH : decodeHash(window.location.hash);
 
     // https://stackoverflow.com/a/47731066
-    $('#searchField').val(initialQuery.field).change();
-    $('#searchText').val(initialQuery.text).change();
-    bool(initialQuery.caseInsensitive) ? $('#searchOptionCaseInsensitive').attr('checked', '') : $(
-        '#searchOptionCaseInsensitive').removeAttr('checked');
-    bool(initialQuery.regex) ? $('#searchOptionRegex').attr('checked', '') : $('#searchOptionRegex').removeAttr(
-        'checked');
+    $('#searchField').val(initialQuery.field);
+    $('#searchText').val(initialQuery.text);
+    bool(initialQuery.caseInsensitive) ? $('#searchOptionCaseInsensitive').prop('checked', true) : $(
+        '#searchOptionCaseInsensitive').prop('checked', false);
+    bool(initialQuery.regex) ? $('#searchOptionRegex').prop('checked', true) : $('#searchOptionRegex').prop(
+        'checked', false);
+    bool(initialQuery.keyword) ? $('#searchOptionKeyword').prop('checked', true) : $('#searchOptionKeyword')
+        .prop(
+            'checked', false);
 
-    // If the query is the first one (i.e. this is the the page is being visited without a query) hide the option panel
-    // Otherwise, show the panel
-    if (initial)
-        $('#searchOptions').hide();
-    else
-        $('#searchOptions').show();
+    // Handle Regex checkbox change
+    $('#searchOptionRegex').click(function () {
+        $('#searchOptionKeyword').prop('disabled', this.checked);
+        $('#searchOptionKeyword').prop('checked', false);
+    });
 
     // Handle form update on submit
     $('#searchSubmit').click(function () {
         // Create search object
-        const search = {
+        var search = {
             field: $('#searchField').val() || DEFAULT_SEARCH.field,
             text: $('#searchText').val() || DEFAULT_SEARCH.text,
             caseInsensitive: $('#searchOptionCaseInsensitive').is(':checked'),
-            regex: $('#searchOptionRegex').is(':checked')
+            regex: $('#searchOptionRegex').is(':checked'),
+            keyword: $('#searchOptionKeyword').is(':checked')
         };
+
+        // Allow keyword searching only if Regex is not used
+        // search.keyword = search.regex ? false : search.keyword;
 
         // Set window hash
         window.location.hash = encodeHash(search);
@@ -159,10 +163,13 @@
             resetReference(i);
 
             // Create search values
-            const cs = bool(search.caseInsensitive);
-            const rx = bool(search.regex);
+            // Keyword searches split the search query into words (i.e. non-whitespace strings)
+            // so that if any individual word is found the text is treated as a match
             const pub = publications[i];
-            const searchValue = new RegExp(rx ? search.text : escapeRegExp(search.text), cs ? 'gim' : 'gm');
+            const searchText = search.regex ? search.text : escapeRegExp(search.text);
+            const searchValue = new RegExp(search.keyword ? searchText.replace(/(^|\s*)(.+?)($|\s+)/gm, '($2)|')
+                .slice(0, -1) : searchText, search.caseInsensitive ? 'gim' :
+                'gm');
 
             // Search variables
             var exists = false;
@@ -221,24 +228,7 @@
             }
             // Search by author
             else if (search.field === 'author') {
-                // Too expensive for regular searching
-                /*
-                // Iterate over paper authors
-                for (var i = 0; i < pub.author_array; i++) {
-                    // Create a string with the author's full name
-                    const item = pub.author_array[i];
-                    const fullName = (item.prefix || '') + ' ' + (item.first || '') + ' ' + (item.last || '') +
-                        ' ' + (item.suffix || '');
-
-                    // Check if the full name string matches the search value
-                    if (fullName.search(searchValue) !== -1) {
-                        exists = true;
-                        break;
-                    }
-                }
-                */
-
-                // Instead search the author field
+                // Search the author field
                 exists = pub.author.search(searchValue) !== -1;
             }
 
