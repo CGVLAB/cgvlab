@@ -4,6 +4,16 @@ layout: content
 permalink: /publications/
 ---
 
+<!-- Code for publication searching !-->
+<script>
+    // Publication search values
+
+    // Array of publications
+    var publications = [];
+    // State of publication IDs (loaded or not loaded)
+    var publicationsLoaded = false;
+</script>
+
 # Publications
 
 ## Search

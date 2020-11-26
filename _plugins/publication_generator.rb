@@ -50,15 +50,14 @@ module Jekyll
       @fname = publication.key + '.html'
       @publication = publication
       @customize_dir = File.join(base, '_pages', '_publication', @fname);
+      @publication_dir = File.join(base, '_layouts', 'publication.html')
       
       # Create file and load layout file
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'publication.html')
+      self.read_yaml(File.dirname(@publication_dir), File.basename(@publication_dir))
 
       # Set page properties
       # Accessible in Liquid via `page.<property>` (e.g. `page.title`)
-
-      self.data['title'] = "#{@publication['title']} (Publication)"
 
       self.data['publication_title'] = @publication['title']
       self.data['publication_year'] = @publication['year']
@@ -117,6 +116,17 @@ module Jekyll
       self.data['publication_citation'] = @citation
       self.data['publication_bibtex'] = @publication.to_s
       self.data['publication_file'] = File.file?(@customize_dir) ? File.join('_publication', @fname).to_s : ''
+
+      # Finally, set SEO values
+
+      self.data['title'] = "#{@publication['title']} (Publication)"
+      self.data['description'] = @citation
+
+      publication_hash = @publication.to_hash
+
+      if publication_hash.key?(:image) && @publication['image'].to_s.length > 0
+        self.data['image'] = @publication['image']
+      end
     end
   end
 end
