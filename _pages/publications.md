@@ -1,84 +1,78 @@
 ---
-title: "CGVLab - Publications"
-layout: publications
-excerpt: "CGVLab -- Publications."
-sitemap: false
+title: "Publications"
+layout: content
 permalink: /publications/
 ---
 
+<!-- Code for publication searching !-->
+<script>
+    // Publication search values
+
+    // Array of publications
+    var publications = [];
+    // State of publication IDs (loaded or not loaded)
+    var publicationsLoaded = false;
+</script>
+
 # Publications
+
+## Search
+
+{% include search.html %}
+
+<hr>
 
 ## Highlights
 
 (For a full list see [below](#full-list).)
 
-<div id="pubgrid">
-{% bibliography --query @*[highlighted=true] --template references_grid %}
+<div id="highlighted" class="container-fluid">
+{% bibliography --query @*[highlighted=true] --template reference %}
+</div>
+<div id="highlighted-empty" class="container-fluid p-0" style="display: none">
+<h3 class="text-muted">No publications</h3>
 </div>
 
-<p> &nbsp; </p>
+<hr>
 
 ## Full List
 
-**2020**
-{% bibliography --query @*[year=2020] --template references %}  
+{% for publication_year in (2000..2020) reversed %}
+{% if forloop.last %}
 
-**2019**
-{% bibliography --query @*[year=2019] --template references %}
+<h3 id="previous">Pre-{{ publication_year | plus: 1 }}</h3>
+<div class="container-fluid">
+{% bibliography --query @*[year<={{publication_year}},highlighted!=true] --template reference %}
+</div>
+{% else %}
+<h3 id="year-{{ publication_year }}">{{ publication_year }}</h3>
+<div class="container-fluid">
+{% bibliography --query @*[year={{publication_year}},highlighted!=true] --template reference %}
+</div>
+{% endif %}
+{% endfor %}
+<div id="full-empty" class="container-fluid p-0" style="display: none">
+<h3 class="text-muted">No publications</h3>
+</div>
 
-**2018**
-{% bibliography --query @*[year=2018] --template references %}
+<!-- Code for publication searching !-->
+<!-- Relies on variables declared in `search.html` !-->
+<script>
+  // Removes DOI from reference (if enabled)
 
-**2017**
-{% bibliography --query @*[year=2017] --template references %}  
+  const removeDoi = false;
 
-**2016**
-{% bibliography --query @*[year=2016] --template references %}  
+  if (removeDoi) {
+    for (var i = 0; i < publications.length; i++) {
+      var reference = $('#' + (publications[i] || '')).children();
+      for (var j = 0; j < reference.length; j++)
+        reference[j].innerHTML = reference[j].innerHTML.replace(/(https?:\/\/)?doi.org\S+/gim, '');
+    }
+  }
 
-**2015**
-{% bibliography --query @*[year=2015] --template references %}  
+  // Set publication status as loaded
+  publicationsLoaded = true;
 
-**2014**
-{% bibliography --query @*[year=2014] --template references %}  
-
-**2013**
-{% bibliography --query @*[year=2013] --template references %}  
-
-**2012**
-{% bibliography --query @*[year=2012] --template references %}  
-
-**2011**
-{% bibliography --query @*[year=2011] --template references %}  
-
-**2010**
-{% bibliography --query @*[year=2010] --template references %}  
-
-**2009**
-{% bibliography --query @*[year=2009] --template references %}  
-
-**2008**
-{% bibliography --query @*[year=2008] --template references %}  
-
-**2007**
-{% bibliography --query @*[year=2007] --template references %}  
-
-**2006**
-{% bibliography --query @*[year=2006] --template references %}  
-
-**2005**
-{% bibliography --query @*[year=2005] --template references %}  
-
-**2004**
-{% bibliography --query @*[year=2004] --template references %}  
-
-**2003**
-{% bibliography --query @*[year=2003] --template references %}  
-
-**2002**
-{% bibliography --query @*[year=2002] --template references %}  
-
-**2001**
-{% bibliography --query @*[year=2001] --template references %}  
-
-**Pre 2001**
-{% bibliography --query @*[year<=2000] --template references %}  
+  // Enable search bar
+  $('#searchBar').show();
+</script>

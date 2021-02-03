@@ -1,0 +1,14 @@
+- title: Home
+  path: /
+
+- title: News
+  path: /news/
+
+- title: Research
+  path: /research/
+
+- title: Publications
+  path: /publications/
+
+- title: Team
+  path: /team/

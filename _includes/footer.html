@@ -1,32 +1,27 @@
-<div id="footer" class="panel">
-	<div class="panel-footer">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-4">
-
-					<p>CGVLab Website. Copyright &copy 2020 CGVLab. Site made with <a
-							href="https://jekyllrb.com">Jekyll</a>.</p>
-
-					<p>We are part of the <a href="https://www.cs.purdue.edu/">Department of Computer Science</a> at <a
-							href="https://www.purdue.edu/">Purdue University</a>.</p>
-
-					<p><a href="http://wiki.cs.purdue.edu/cgvlab/doku.php">(Internal Lab Wiki)</a></p>
-				</div>
-				<div class="col-sm-4">
-					Funding: XXX funding info XXX
-				</div>
-				<div class="col-sm-4">
-					<p>Lawson Computer Science Building (LWSN) Room 3151, Purdue University</p>
-					<p>305 N. University Street</p>
-					<p>West Lafayette, IN 47907</p>
-
-					<p>(<a href="https://goo.gl/maps/kWo74ytXx42Mv5TD8" target="_blank"
-							rel="noopener noreferrer">Map</a>)</p>
-				</div>
-			</div>
+<div class="footer container-fluid px-3 py-3 mt-auto bg-dark">
+	<div class="row justify-content-center">
+		<div class="col-sm-4">
+			<strong class="text-light">{{ site.title }} Website</strong>
+			<p class="text-light m-0">Copyright &copy; {{ site.time | date: '%y' }} {{ site.title }}. Site made with <a
+					href="https://jekyllrb.com">Jekyll</a>.
+			</p>
+			{{ site.data.footer.site_content }}
+		</div>
+		<div class="col-sm-4">
+			<strong class="text-light">Funding</strong>
+			<p class="text-light m-0">
+				{{ site.data.footer.funding_information }}
+			</p>
+			{{ site.data.footer.funding_content }}
+			</p>
+		</div>
+		<div class="col-sm-4">
+			<strong class="text-light">Address</strong>
+			<p class="text-light m-0">{{ site.data.footer.address.line1 }}</p>
+			<p class="text-light m-0">{{ site.data.footer.address.line2 }}, {{ site.data.footer.address.city }},
+				{{ site.data.footer.address.state }} {{ site.data.footer.address.zip }}</p>
+			<p class="text-light m-0">(<a href="{{ site.data.footer.address.google_maps_link }}" target="_blank">Map</a>)</p>
+			{{ site.data.footer.address_content }}
 		</div>
 	</div>
 </div>
-
-<script src="{{ site.dir_theme_js }}/jquery.min.js"></script>
-<script src="{{ site.dir_theme_js }}/bootstrap.min.js"></script>

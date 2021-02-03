@@ -1,11 +1,12 @@
-<div class="well">
-    <h4>News</h4>
+<div>
+    <h1>News</h1>
 
     {% for article in site.data.news limit:9 %}
     {{ article.date }}
     <p>{{ article.headline }}</p>
     {% endfor %}
 
-    <h4><a href="/allnews.html">... see all News</a></h4>
-
+    <h4>
+        <a href="/news.html">...see all news</a>
+    </h4>
 </div>

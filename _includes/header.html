@@ -1,23 +1,30 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-				data-target="#navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand m-0 p-2" href="/">
+		<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
+		<div class="d-inline-flex flex-column justify-content-center align-items-start ml-3">
+			<h1 class="text-primary m-0">{{ site.title }}</h1>
+			<small class="text-muted mr-5 text-wrap">{{ site.description }}</small>
+		</div>
+	</a>
 
-			<a class="navbar-brand" href="/">CGVLab @ Purdue University</a>
-		</div>
-		<div class="collapse navbar-collapse" id="navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/">Home</a></li>
-				<li><a href="/team">Team</a></li>
-				<li><a href="/publications">Publications</a></li>
-				<li><a href="/research">Research</a></li>
-			</ul>
-		</div>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<div class="mr-auto"></div>
+		<ul class="navbar-nav">
+			{% for item in site.data.navbar %}
+			<li class="nav-item mx-4">
+				{% if item.path == page.url %}
+				{% assign nav_class = "active" %}
+				{% else %}
+				{% assign nav_class = "" %}
+				{% endif %}
+				<a class="h5 nav-link text-primary {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
 	</div>
-</div>
+</nav>

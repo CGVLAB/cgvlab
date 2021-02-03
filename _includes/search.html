@@ -1,0 +1,279 @@
+<!-- Relies on HTML elements and IDs declared in `publication.html` and `publications.md` !-->
+<div id="searchBar" class="container-fluid border border-dark rounded">
+    <form class="form-inline m-2 p-1">
+        <label class="mr-2" for="searchField">Search Field</label>
+        <select id="searchField" class="custom-select m-1 mr-2">
+            <option selected value="title">Title</option>
+            <option value="source">Publication Source</option>
+            <option value="author">Author</option>
+        </select>
+        <input id="searchText" type="text" class="form-control m-1 mr-2" placeholder="Search Text">
+        <button id="searchSubmit" type="submit" class="btn btn-outline-dark m-1 mr-2">Search</button>
+        <button id="searchAdvanced" class="btn btn-dark m-1 mr-4"
+            onclick="$('#searchOptions').toggle()">Options</button>
+        <p id="search-matched" class="text-muted m-1 my-1"></p>
+    </form>
+    <form id="searchOptions" class="form-inline bg-dark m-2 p-2 rounded" style="display: none;">
+        <div class="form-check form-check-inline mr-4">
+            <input id="searchOptionCaseInsensitive" class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label text-light" for="searchOptionCaseInsensitive">Case-Insensitive</label>
+        </div>
+        <div class="form-check form-check-inline mr-4">
+            <input id="searchOptionRegex" class="form-check-input" type="checkbox">
+            <label class="form-check-label text-light" for="searchOptionRegex">Regex</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input id="searchOptionKeyword" class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label text-light" for="searchOptionKeyword">Keyword</label>
+        </div>
+    </form>
+</div>
+<script>
+    // Search constants
+    const SEARCH_QUERY_PREFIX = '#search#';
+    const SEARCH_EARLIEST_YEAR = 2001;
+    const SEARCH_LATEST_YEAR = 2020;
+    const DEFAULT_SEARCH = {
+        field: 'title',
+        text: '',
+        caseInsensitive: 'true',
+        regex: 'false',
+        keyword: 'true'
+    };
+
+    // Utility functions
+
+    // Parses a URL string representation of a search query and returns its object
+    function decodeHash(str) {
+        const FIELDS = Object.keys(DEFAULT_SEARCH);
+
+        const index = str.indexOf(SEARCH_QUERY_PREFIX);
+        if (index !== 0)
+            return result;
+
+        const queryComponents = str.substring(SEARCH_QUERY_PREFIX.length).split('&') || [];
+
+        var result = DEFAULT_SEARCH;
+
+        for (var i = 0; i < queryComponents.length; i++) {
+            const componentKeyValue = queryComponents[i].split('=');
+            const componentKey = decodeURIComponent(componentKeyValue[0]) || '';
+            const componentValue = decodeURIComponent(componentKeyValue[1]) || '';
+
+            if (FIELDS.indexOf(componentKey) === -1)
+                return result;
+            else
+                result[componentKey] = componentValue;
+        }
+
+        return result;
+    }
+
+    // Converts the search query object into its URL string representation
+    function encodeHash(obj) {
+        var i = 0;
+        var res = SEARCH_QUERY_PREFIX;
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                const element = String(obj[key]) || DEFAULT_SEARCH['key'] || '';
+                res += (i++ == 0 ? '' : '&') + encodeURIComponent(key) + '=' + encodeURIComponent(element);
+            }
+        }
+        return res;
+    }
+
+    // Resets the HTML of the given reference
+    function resetReference(id) {
+        const pub = publications[id];
+
+        // Reset title
+        // Uses the same format as in `reference.html`
+        $('#' + pub.key + '-title').html(pub.title + ' (' + pub.author_0_last + ' et al. ' + pub.year + ')');
+
+        // Enable element
+        $('#' + pub.key).show();
+    }
+
+    // https://stackoverflow.com/a/6969486
+    function escapeRegExp(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // Converts a string to a boolean value
+    // https://stackoverflow.com/a/323546
+    function bool(str) {
+        return String(str).toLowerCase() === 'true';
+    }
+
+    // Set default values on page load
+
+    const initial = window.location.hash.indexOf(SEARCH_QUERY_PREFIX) === -1;
+    const initialQuery = initial ? DEFAULT_SEARCH : decodeHash(window.location.hash);
+
+    // https://stackoverflow.com/a/47731066
+    $('#searchField').val(initialQuery.field);
+    $('#searchText').val(initialQuery.text);
+    bool(initialQuery.caseInsensitive) ? $('#searchOptionCaseInsensitive').prop('checked', true) : $(
+        '#searchOptionCaseInsensitive').prop('checked', false);
+    bool(initialQuery.regex) ? $('#searchOptionRegex').prop('checked', true) : $('#searchOptionRegex').prop(
+        'checked', false);
+    bool(initialQuery.keyword) ? $('#searchOptionKeyword').prop('checked', true) : $('#searchOptionKeyword')
+        .prop(
+            'checked', false);
+
+    // Handle Regex checkbox change
+    $('#searchOptionRegex').click(function () {
+        $('#searchOptionKeyword').prop('disabled', this.checked);
+        $('#searchOptionKeyword').prop('checked', false);
+    });
+
+    // Handle form update on submit
+    $('#searchSubmit').click(function () {
+        // Create search object
+        var search = {
+            field: $('#searchField').val() || DEFAULT_SEARCH.field,
+            text: $('#searchText').val() || DEFAULT_SEARCH.text,
+            caseInsensitive: $('#searchOptionCaseInsensitive').is(':checked'),
+            regex: $('#searchOptionRegex').is(':checked'),
+            keyword: $('#searchOptionKeyword').is(':checked')
+        };
+
+        // Allow keyword searching only if Regex is not used
+        // search.keyword = search.regex ? false : search.keyword;
+
+        // Set window hash
+        window.location.hash = encodeHash(search);
+
+        // Toggle visibility of "No Publications" messages
+        $('#highlighted-empty').hide();
+        $('#full-empty').hide();
+
+        // Toggle visibility of all sections
+        $('#highlighted').hide();
+        for (var i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
+            $('#year-' + i).hide();
+        $('#previous').hide();
+
+        // Record matches
+        var matches = 0;
+
+        // Search for value
+        for (var i = 0; i < publications.length; i++) {
+            // Reset reference
+            resetReference(i);
+
+            // Create search values
+            // Keyword searches split the search query into words (i.e. non-whitespace strings)
+            // so that if any individual word is found the text is treated as a match
+            const pub = publications[i];
+            const searchText = search.regex ? search.text : escapeRegExp(search.text);
+            const searchValue = new RegExp(search.keyword ? searchText.replace(/(^|\s*)(.+?)($|\s+)/gm, '($2)|')
+                .slice(0, -1) : searchText, search.caseInsensitive ? 'gim' :
+                'gm');
+
+            // Search variables
+            var exists = false;
+            var parent = $('#' + pub.key);
+
+            // Search by title
+            if (search.field === 'title') {
+                var el = $('#' + pub.key + '-title');
+
+                // Get title and author
+                const valTitle = pub.title;
+                const valAuthor = el.html().substring(el.html().indexOf(' ('));
+
+                exists = pub.title.search(searchValue) !== -1;
+
+                // Toggle parent element
+                parent.toggle(exists);
+
+                // Edit page if the item is a match
+                if (exists) {
+                    // Highlight matches in title
+                    const res = valTitle.replace(searchValue, function (match) {
+                        return '<span style="background-color: yellow">' + match + '</span>';
+                    }) + valAuthor;
+                    el.html(res);
+
+                    // Record match
+                    matches++;
+                }
+            }
+            // Search by publication source
+            else if (search.field === 'source') {
+                // Look for source in BibTeX
+                var source = pub.bibtex.indexOf('booktitle');
+                if (source === -1)
+                    source = pub.bibtex.indexOf('journal');
+                else if (source === -1)
+                    source = pub.bibtex.indexOf('publisher');
+
+                // If a source was found
+                if (source !== -1) {
+                    // Retrieve start and end indices of BibTeX value
+                    const start = pub.bibtex.indexOf('{', source);
+                    if (start === -1)
+                        continue;
+                    var end = pub.bibtex.indexOf('}', source);
+                    if (end === -1)
+                        end = pub.bibtex.length;
+
+                    // Check if the BibTeX value matches the search value
+                    exists = pub.bibtex.substring(start, end).search(searchValue) !== -1;
+                } else {
+                    // Handle default "Unknown" case
+                    exists = "Unknown".search(searchValue) !== -1;
+                }
+            }
+            // Search by author
+            else if (search.field === 'author') {
+                // Search the author field
+                exists = pub.author.search(searchValue) !== -1;
+            }
+
+            // Toggle parent element
+            parent.toggle(exists);
+
+            // Enable parent section (by highlighted status/year/old publications)
+            if (exists) {
+                // Find which section to show
+                const year = Number(pub.year);
+                if (pub.highlighted === "true")
+                    $('#highlighted').show();
+                else if (year > SEARCH_EARLIEST_YEAR)
+                    $('#year-' + year).show();
+                else if (year <= SEARCH_EARLIEST_YEAR)
+                    $('#previous').show();
+
+                // Count match
+                if (exists)
+                    matches++;
+            }
+        }
+
+        // Enable "No Publications" message if no matches were found
+        if ($('#highlighted').is(':hidden'))
+            $('#highlighted-empty').show();
+        var hidden = true;
+        for (var i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
+            hidden = hidden && $('#year-' + i).is(':hidden');
+        if (hidden && $('#previous').is(':hidden'))
+            $('#full-empty').show();
+
+        // Set matched text
+        var matchedText = '';
+        if (matches <= 0)
+            matchedText = 'No matches were found'
+        else if (matches < publications.length)
+            matchedText = 'Matched ' + matches + ' out of ' + publications.length + ' publications';
+        else
+            matchedText = 'Matched all (' + publications.length + ') publications'
+        $('#search-matched').html(matchedText);
+    });
+
+    // Trigger search on page load
+    $(document).ready(function () {
+        $('#searchSubmit').trigger('click');
+    });
+</script>

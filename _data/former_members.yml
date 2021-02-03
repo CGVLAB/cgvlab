@@ -30,7 +30,7 @@
   info: Software Engineer at Electronic Arts
   linkedin: https://www.linkedin.com/in/daniel-b-6929793/
 
-- name: Yi-liu Chao
+- name: Yi-Liu Chao
   photo: chao_yi-liu.jpg
   info: Senior Software Engineer at BrightEdge
   linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539/
@@ -104,11 +104,6 @@
   info: Senior Engineer at Qualcomm
   url: https://www.cs.purdue.edu/homes/wu223/
   linkedin: https://www.linkedin.com/in/menglinwu/
-
-- name: Yi-Liu Chao
-  photo: chao_yi-liu.jpg
-  info: Senior Software Engineer at BrightEdge
-  linkedin: https://www.linkedin.com/in/yi-liu-willow-chao-2b9b6539
 
 - name: Ziang Ding
   photo: ding_ziang.jpg
@@ -227,7 +222,7 @@
 
 - name: Qiqi Wang
   photo: wang_qiqi.jpg
-  info: Unknown
+  info:
   linkedin: https://www.linkedin.com/in/qi-qi-7a0b4726
 
 - name: Huiying Xu
@@ -258,5 +253,5 @@
 
 - name: Ji Zhang
   photo: zhang_ji.jpg
-  info: Unknown
+  info:
   linkedin: https://www.linkedin.com/in/ji-zhang-58a051b
