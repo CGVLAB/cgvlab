@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
-gem "jekyll", ">= 3.6.3"
-gem "jekyll-scholar"
-gem 'jekyll-admin', group: :jekyll_plugins
+gem 'bibtex-ruby'
+gem 'citeproc-ruby'
+gem 'csl-styles'
 
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'jekyll'
+gem 'jekyll-scholar'
+gem 'jekyll-admin', group: :jekyll_plugins
+gem 'jekyll-sitemap'
+gem 'jekyll-analytics'
+gem 'jekyll-seo-tag'
+
+gem 'wdm' if Gem.win_platform?

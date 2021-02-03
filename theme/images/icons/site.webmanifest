@@ -1,6 +1,6 @@
 {
-    "name": "Purdue CGVLab",
-    "short_name": "Purdue CGVLab",
+    "name": "CGVLab",
+    "short_name": "CGVLab",
     "icons": [
         {
             "src": "/theme/images/icons/android-chrome-36x36.png?v=1",
@@ -48,7 +48,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#cfb991",
-    "background_color": "#cfb991",
+    "theme_color": "#000000",
+    "background_color": "#000000",
     "display": "standalone"
 }

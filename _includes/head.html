@@ -2,29 +2,26 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description"
-    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{site.dir_theme_css}}/main.css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.dir_theme_images }}/icons/apple-touch-icon.png?v=1">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.dir_theme_images }}/icons/favicon-32x32.png?v=1">
   <link rel="icon" type="image/png" sizes="194x194" href="{{ site.dir_theme_images }}/icons/favicon-194x194.png?v=1">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.dir_theme_images }}/icons/android-chrome-192x192.png?v=1">
+  <link rel="icon" type="image/png" sizes="192x192"
+    href="{{ site.dir_theme_images }}/icons/android-chrome-192x192.png?v=1">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.dir_theme_images }}/icons/favicon-16x16.png?v=1">
   <link rel="manifest" href="{{ site.dir_theme_images }}/icons/site.webmanifest?v=1">
-  <link rel="mask-icon" href="{{ site.dir_theme_images }}/icons/safari-pinned-tab.svg?v=1" color="#cfb991">
+  <link rel="mask-icon" href="{{ site.dir_theme_images }}/icons/safari-pinned-tab.svg?v=1" color="#000000">
   <link rel="shortcut icon" href="{{ site.dir_theme_images }}/icons/favicon.ico?v=1">
-  <meta name="apple-mobile-web-app-title" content="Purdue CGV Lab">
-  <meta name="application-name" content="Purdue CGV Lab">
-  <meta name="msapplication-TileColor" content="#cfb991">
+
+  <meta name="msapplication-TileColor" content="#000000">
   <meta name="msapplication-TileImage" content="{{ site.dir_theme_images }}/icons/mstile-144x144.png?v=1">
   <meta name="msapplication-config" content="{{ site.dir_theme_images }}/icons/browserconfig.xml?v=1">
-  <meta name="theme-color" content="#cfb991">
+  <meta name="theme-color" content="#000000">
 
-  {% if jekyll.environment == 'production' %}
-  {% include analytics.html %}
-  {% endif %}
+  <link rel="stylesheet" href="{{site.dir_theme_css}}/main.css">
 
+  <script src="{{ site.dir_dependencies_js }}/jquery/{{ site.file_theme_jquery_js }}"></script>
+  <script src="{{ site.dir_dependencies_js }}/bootstrap/{{ site.file_theme_bootstrap_js }}"></script>
+
+  {% seo %}
 </head>

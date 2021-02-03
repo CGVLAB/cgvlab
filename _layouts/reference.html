@@ -1,0 +1,92 @@
+---
+---
+<div id="{{ entry.key }}" class="row my-2">
+    {% if entry.image %}
+    {% assign highlight_img = entry.image %}
+    {% else %}
+    {% assign highlight_img = 'default.png' %}
+    {% endif %}
+
+    {% if entry.highlighted %}
+    {% assign img_column_class = "col-md-2" %}
+    {% assign info_column_class = "col-md-10" %}
+    {% else %}
+    {% assign img_column_class = "col-md-1" %}
+    {% assign info_column_class = "col-md-11" %}
+    {% endif %}
+    <div class="col card border-dark">
+        <div class="row no-gutters align-items-center">
+            <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
+                <div class="m-1 p-1 bg-dark rounded">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
+                            class="embed-responsive-item rounded" style="object-fit: cover;"
+                            {% if site.enable_lazy_loading %}loading="lazy" {% endif %}>
+                    </div>
+                </div>
+            </div>
+            <div class="{{ info_column_class }}">
+                <div class="card-body">
+                    <a id="{{ entry.key }}-title" class="h5 card-title"
+                        href="/publications/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }}
+                        et al. {{ entry.year }})</a>
+                    <p class="card-text">
+                        <p id="{{ entry.key }}-reference"><em>{{ reference }}</em></p>
+                        <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
+
+                        {% if entry.note %}
+                        <strong id="{{ entry.key }}-optional-note">{{entry.note}}</strong>
+                        {% endif %}
+
+                        <button class="btn btn-dark" onclick="$('#bibtex-{{ entry.key }}').toggle()">BibTeX</button>
+
+                        {% if entry.doi %}
+                        <a href="http://doi.org/{{ entry.doi }}">
+                            <input class="btn btn-outline-dark" type="button" value="DOI" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.pdf %}
+                        <a href="{{ site.dir_resources_publications }}/{{ entry.pdf }}" target="_blank">
+                            <input class="btn btn-outline-dark" type="button" value="PDF" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.code %}
+                        <a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank">
+                            <input class="btn btn-outline-dark" type="button" value="Code" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.video %}
+
+                        {% if entry.video contains "/" %}
+                        {% assign entry_video = entry.video %}
+                        {% else %}
+                        {% assign entry_video = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+                        {% endif %}
+
+                        <a href="{{ entry_video }}" target="_blank">
+                            <input class="btn btn-outline-dark" type="button" value="Video" />
+                        </a>
+                        {% endif %}
+
+                        {% if entry.link %}
+                        <a href="{{ entry.link }}" target="_blank">
+                            <input class="btn btn-outline-primary" type="button" value="Link" />
+                        </a>
+                        {% endif %}
+                    </p>
+
+                    <div id="bibtex-{{entry.key}}" style="display: none;">
+                        <pre>{{entry.bibtex}}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (publications)
+            publications.push({{ entry | json | replace: '"=>', '":' }});
+    </script>
+</div>

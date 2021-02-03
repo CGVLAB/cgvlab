@@ -1,8 +1,6 @@
 ---
-title: "CGVLab - Research"
-layout: textlay
-excerpt: "CGVLab -- Research"
-sitemap: false
+title: "Research"
+layout: content
 permalink: /research/
 ---
 

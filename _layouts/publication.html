@@ -1,0 +1,83 @@
+---
+layout: content
+---
+<div class="row">
+    <div class="col-sm-3 text-center">
+        {% if page.publication_photo %}
+        {% assign photo_link = site.dir_resources_images | append: '/supplemental/' | append: page.publication_photo %}
+        {% else %}
+        {% assign photo_link = site.dir_theme_images | append: '/default.png' %}
+        {% endif %}
+        <div class="p-2 bg-dark rounded">
+            <div class="embed-responsive embed-responsive-1by1">
+                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
+                    style="object-fit: cover;" alt="{{ page.person_name }}">
+            </div>
+        </div>
+        <button class="btn btn-dark my-2" onclick="$('#bibtex').toggle()">BibTeX</button>
+    </div>
+    <div class="col-sm-9">
+        <h1>{{ page.publication_title }}</h1>
+        {% if page.publication_source and page.publication_year %}
+        {% assign publication_source_append = ' - ' %}
+        {% else %}
+        {% assign publication_source_append = '' %}
+        {% endif %}
+        <span class="text-dark my-2" style="font-size: 0;">
+            {% assign listed_style = 'font-size: medium' %}
+            {% assign listed_publication_authors = page.publication_authors | split: ',' %}
+            {% for listed_author in listed_publication_authors %}
+
+            {% assign author_name = listed_author | split: '|' | first %}
+            {% assign author_link = listed_author | split: '|' | last %}
+
+            {% if author_link == ' ' %}
+            <span class="text-dark" style="{{ listed_style }}">{{ author_name }}</span>
+            {% else %}
+            <a class="text-primary" style="{{ listed_style }}" href="/team/{{ author_link }}">{{ author_name }}</a>
+            {% endif %}
+
+            {% if forloop.length > 1 and forloop.last == false %}
+            {% if forloop.length > 2 and forloop.last == false %}
+            <span class="text-dark" style="{{ listed_style }}">,&nbsp;</span>
+            {% else %}
+            <span class="text-dark" style="{{ listed_style }}">&nbsp;</span>
+            {% endif %}
+            {% endif %}
+
+            {% if forloop.length > 1 and forloop.rindex0 == 1 %}
+            <span class="text-dark" style="{{ listed_style }}">and&nbsp;</span>
+            {% endif %}
+
+            {% endfor %}
+        </span>
+        <br>
+        <p class="text-muted">
+            {{ page.publication_source | append: publication_source_append }}{{ page.publication_year }}
+        </p>
+        <hr>
+        <p class="text-dark">{{ page.publication_citation }}</p>
+        <pre id="bibtex" style="display: none;">{{ page.publication_bibtex }}</pre>
+    </div>
+</div>
+<hr>
+{% if page.publication_file.size > 0 %}
+<div class="row">
+    <div class="col">
+        {% include {{ page.publication_file }} %}
+    </div>
+</div>
+<hr>
+{% endif %}
+<div class="row">
+    <div class="col">
+        {% if page.publication_pdf != blank %}
+        <iframe src="{{ site.dir_resources_publications }}/{{ page.publication_pdf }}" type="application/pdf"
+            width="100%" height="1024px">
+            <a href="{{ site.dir_resources_publications }}/{{ page.publication_pdf }}">View PDF File</a>
+        </iframe>
+        {% else %}
+        <h2>No Available PDF</h2>
+        {% endif %}
+    </div>
+</div>

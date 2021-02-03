@@ -1,0 +1,30 @@
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 m-0 p-0">
+    <div class="m-3">
+        <div class="card border-dark">
+            {% if person.photo %}
+            {% assign photo_link = site.dir_resources_images | append: '/team/' | append: person.photo %}
+            {% else %}
+            {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+            {% endif %}
+            <div class="p-2">
+                <div class="embed-responsive embed-responsive-1by1">
+                    <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded p-1 bg-dark"
+                        style="object-fit: cover;" alt="{{ person.name }}" {% if site.enable_lazy_loading %}loading="lazy"{% endif %}>
+                </div>
+            </div>
+            <div class="card-body">
+                <a class="h5 card-title" href="/team/{{ person.name | slugify }}">{{ person.name }}</a>
+                <p class="text-muted">{{ person.info }}</p>
+                <hr>
+                <p class="card-text">
+                    {% if person.url %}
+                    <a href="{{ person.url }}" target="_blank">Website</a>
+                    {% endif %}
+                    {% if person.linkedin %}
+                    <a href="{{ person.linkedin }}" target="_blank">LinkedIn</a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
