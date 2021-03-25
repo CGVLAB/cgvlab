@@ -18,7 +18,7 @@ All papers are expected to be in PDF (.pdf) format and named with the following 
 
 **Rules**
 
-1. Replace <Text\> with its value (e.g. "<PRIMARY AUTHOR\>" becomes "Smith")
+1. Replace <Text> with its value (e.g. "<PRIMARY AUTHOR>" becomes "Smith")
 2. All spaces must be replaced with underscores (e.g. "A Paper on Stuff" becomes "A_Paper_on_Stuff")
 3. Should any fields contain hyphens or underscores, double them (e.g. "Generic-Journal_Name" becomes "Generic--Journal__Name")
 4. The file extension should be lowercase (e.g. ".PDF" is not allowed, use ".pdf")
@@ -35,7 +35,7 @@ All additional files (images, videos, etc.) should be named with the following s
 
 **Rules**
 
-1. Replace <Text\> with its value (e.g. "<PRIMARY AUTHOR\>" becomes "Smith")
+1. Replace <Text> with its value (e.g. "<PRIMARY AUTHOR>" becomes "Smith")
 2. All spaces must be replaced with underscores (e.g. "A Paper on Stuff" becomes "A_Paper_on_Stuff")
 3. Should any fields contain hyphens or underscores, double them (e.g. "Generic-Journal_Name" becomes "Generic--Journal__Name")
 4. The file extension should be lowercase (e.g. ".JPG" is not allowed, use ".jpg")
