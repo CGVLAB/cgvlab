@@ -28,11 +28,11 @@
             <div class="{{ info_column_class }}">
                 <div class="card-body">
                     <a id="{{ entry.key }}-title" class="h5 card-title"
-                        href="/publications/{{ entry.key }}">{{ entry.title }} ({{ entry.author_0_last }}
+                        href="/publications/{{ entry.key }}" target="_blank">{{ entry.title }} ({{ entry.author_0_last }}
                         et al. {{ entry.year }})</a>
                     <p class="card-text">
                         <p id="{{ entry.key }}-reference"><em>{{ reference }}</em></p>
-                        <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
+                        <p><strong><a href="{{ publi.link.url }}" target="_blank">{{ publi.link.display }}</a></strong></p>
 
                         {% if entry.note %}
                         <strong id="{{ entry.key }}-optional-note">{{entry.note}}</strong>
@@ -41,7 +41,7 @@
                         <button class="btn btn-dark" onclick="$('#bibtex-{{ entry.key }}').toggle()">BibTeX</button>
 
                         {% if entry.doi %}
-                        <a href="http://doi.org/{{ entry.doi }}">
+                        <a href="http://doi.org/{{ entry.doi }}" target="_blank">
                             <input class="btn btn-outline-dark" type="button" value="DOI" />
                         </a>
                         {% endif %}
