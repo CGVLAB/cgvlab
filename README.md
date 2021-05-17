@@ -65,9 +65,7 @@ The format for a BibTeX entry should generally be like the following standard:
 ```
 @<ENTRY TYPE, USUALLY "inproceedings" OR "article">{<AUTHOR LAST NAME><YEAR><FIRST WORD(S) OF TITLE>,
 
-    ...
-
-  highlighted  = {<SET TO "true" IF THIS PAPER SHOULD BE HIGHLIGHTED, "false" IF NOT>},
+  ...
   doi          = {<DOI ONLY>},
   pdf          = {<PDF FILE NAME IN THE UPLOAD DIRECTORY>}
   image        = {<FILE NAME(S) (SPACE-SEPARATED) OF IMAGES>}

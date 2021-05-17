@@ -7,13 +7,8 @@
     {% assign highlight_img = 'default.png' %}
     {% endif %}
 
-    {% if entry.highlighted %}
     {% assign img_column_class = "col-md-2" %}
     {% assign info_column_class = "col-md-10" %}
-    {% else %}
-    {% assign img_column_class = "col-md-1" %}
-    {% assign info_column_class = "col-md-11" %}
-    {% endif %}
     <div class="col card border-dark">
         <div class="row no-gutters align-items-center">
             <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
@@ -27,12 +22,13 @@
             </div>
             <div class="{{ info_column_class }}">
                 <div class="card-body">
-                    <a id="{{ entry.key }}-title" class="h5 card-title"
-                        href="/publications/{{ entry.key }}" target="_blank">{{ entry.title }} ({{ entry.author_0_last }}
+                    <a id="{{ entry.key }}-title" class="h5 card-title" href="/publications/{{ entry.key }}"
+                        target="_blank">{{ entry.title }} ({{ entry.author_0_last }}
                         et al. {{ entry.year }})</a>
                     <p class="card-text">
                         <p id="{{ entry.key }}-reference"><em>{{ reference }}</em></p>
-                        <p><strong><a href="{{ publi.link.url }}" target="_blank">{{ publi.link.display }}</a></strong></p>
+                        <p><strong><a href="{{ publi.link.url }}" target="_blank">{{ publi.link.display }}</a></strong>
+                        </p>
 
                         {% if entry.note %}
                         <strong id="{{ entry.key }}-optional-note">{{entry.note}}</strong>
@@ -87,6 +83,10 @@
     </div>
     <script>
         if (publications)
-            publications.push({{ entry | json | replace: '"=>', '":' }});
+            publications.push({
+                {
+                    entry | json | replace: '"=>', '":'
+                }
+            });
     </script>
 </div>
