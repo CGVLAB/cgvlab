@@ -1,5 +1,5 @@
 <!-- Relies on HTML elements and IDs declared in `publication.html` and `publications.md` !-->
-<div id="searchBar" class="container-fluid border border-dark rounded">
+<div id="searchBar" class="container-fluid border border-dark">
     <form class="form-inline m-2 p-1">
         <label class="mr-2" for="searchField">Search Field</label>
         <select id="searchField" class="custom-select m-1 mr-2">
@@ -13,7 +13,7 @@
             onclick="$('#searchOptions').toggle()">Options</button>
         <p id="search-matched" class="text-muted m-1 my-1"></p>
     </form>
-    <form id="searchOptions" class="form-inline bg-dark m-2 p-2 rounded" style="display: none;">
+    <form id="searchOptions" class="form-inline bg-dark m-2 p-2" style="display: none;">
         <div class="form-check form-check-inline mr-4">
             <input id="searchOptionCaseInsensitive" class="form-check-input" type="checkbox" checked>
             <label class="form-check-label text-light" for="searchOptionCaseInsensitive">Case-Insensitive</label>
@@ -237,7 +237,7 @@
             if (exists) {
                 // Find which section to show
                 const year = Number(pub.year);
-                else if (year > SEARCH_EARLIEST_YEAR)
+                if (year > SEARCH_EARLIEST_YEAR)
                     $('#year-' + year).show();
                 else if (year <= SEARCH_EARLIEST_YEAR)
                     $('#previous').show();

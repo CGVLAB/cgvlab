@@ -7,15 +7,15 @@
     {% assign highlight_img = 'default.png' %}
     {% endif %}
 
-    {% assign img_column_class = "col-md-2" %}
-    {% assign info_column_class = "col-md-10" %}
+    {% assign img_column_class = "col-md-3" %}
+    {% assign info_column_class = "col-md-9" %}
     <div class="col card border-dark">
         <div class="row no-gutters align-items-center">
             <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
-                <div class="m-1 p-1 bg-dark rounded">
+                <div class="m-1 p-1 bg-dark">
                     <div class="embed-responsive embed-responsive-1by1">
                         <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
-                            class="embed-responsive-item rounded" style="object-fit: cover;"
+                            class="embed-responsive-item" style="object-fit: cover;"
                             {% if site.enable_lazy_loading %}loading="lazy" {% endif %}>
                     </div>
                 </div>
@@ -83,10 +83,6 @@
     </div>
     <script>
         if (publications)
-            publications.push({
-                {
-                    entry | json | replace: '"=>', '":'
-                }
-            });
+            publications.push({{entry | json | replace: '"=>', '":'}});
     </script>
 </div>

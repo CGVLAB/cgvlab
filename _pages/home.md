@@ -28,15 +28,15 @@ permalink: /
     {% else %}
     <div class="carousel-item">
     {% endif %}
-    <div class="p-2 bg-dark border border-dark rounded">
+    <div class="p-2 bg-dark border border-dark">
         <div class="embed-responsive embed-responsive-16by9">
-            <img src="{{ site.dir_resources_images }}/{{ item.photo }}" class="embed-responsive-item card-img-top rounded" 
+            <img src="{{ site.dir_resources_images }}/{{ item.photo }}" class="embed-responsive-item card-img-top" 
             style="object-fit: cover;" alt="{{ item.title }}">
         </div>
     </div>
 
     {% if item.title and item.caption %}
-      <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 0, 0, 0.5)">
+      <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5)">
         <h5 style="font-weight-bold">{{ item.title }}</h5>
         <p>{{ item.caption }}</p>
       </div>
