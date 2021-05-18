@@ -16,13 +16,9 @@ permalink: /publications/
 
 # Publications
 
-## Search
-
 {% include search.html %}
 
 <hr>
-
-## Full List
 
 {% for publication_year in (2000..2021) reversed %}
 

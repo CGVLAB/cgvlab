@@ -8,9 +8,9 @@ layout: content
         {% else %}
         {% assign photo_link = site.dir_theme_images | append: '/default.png' %}
         {% endif %}
-        <div class="p-2 bg-dark rounded">
+        <div class="p-2 bg-dark">
             <div class="embed-responsive embed-responsive-1by1">
-                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
+                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top"
                     style="object-fit: cover;" alt="{{ page.person_name }}">
             </div>
         </div>

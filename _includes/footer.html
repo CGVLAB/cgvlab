@@ -2,8 +2,8 @@
 	<div class="row justify-content-center">
 		<div class="col-sm-4">
 			<strong class="text-light">{{ site.title }} Website</strong>
-			<p class="text-light m-0">Copyright &copy; {{ site.time | date: '%y' }} {{ site.title }}. Site made with <a
-					href="https://jekyllrb.com">Jekyll</a>.
+			<p class="text-light m-0">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Site made with
+				<a href="https://jekyllrb.com">Jekyll</a>.
 			</p>
 			{{ site.data.footer.site_content }}
 		</div>
@@ -20,7 +20,8 @@
 			<p class="text-light m-0">{{ site.data.footer.address.line1 }}</p>
 			<p class="text-light m-0">{{ site.data.footer.address.line2 }}, {{ site.data.footer.address.city }},
 				{{ site.data.footer.address.state }} {{ site.data.footer.address.zip }}</p>
-			<p class="text-light m-0">(<a href="{{ site.data.footer.address.google_maps_link }}" target="_blank">Map</a>)</p>
+			<p class="text-light m-0">(<a href="{{ site.data.footer.address.google_maps_link }}"
+					target="_blank">Map</a>)</p>
 			{{ site.data.footer.address_content }}
 		</div>
 	</div>

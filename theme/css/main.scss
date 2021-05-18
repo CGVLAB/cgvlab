@@ -1,6 +1,5 @@
 ---
 ---
-
 /* Bootstrap color overrides */
 /* Double import to use default Bootstrap values */
 
@@ -17,6 +16,9 @@ $danger:        $red !default;
 */
 $light: #FFFFFF; // White
 $dark: #000000; // Black
+
+/* No rounding */
+$enable-rounded: false;
 
 /* Import Bootstrap */
 @import "dependencies/css/bootstrap/bootstrap";
