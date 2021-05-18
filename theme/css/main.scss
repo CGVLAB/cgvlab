@@ -50,6 +50,8 @@ body {
 /* Bold hyperlinks */
 a {
   font-weight: 400 !important;
+  text-decoration: underline !important;
+  color: $dark;
 }
 
 /* Changes Jekyll-Scholar list size */
