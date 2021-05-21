@@ -5,7 +5,8 @@ This is the website of our academic research group - the
 at [Purdue University](https://purdue.edu).
 
 This website is powered by Jekyll and Bootstrap (with Bootswatch). It is forked
-from the [Allan Lab at Leiden University](https://www.allanlab.org/) website.
+from the [Allan Lab at Leiden University](https://www.allanlab.org/) website
+(code licensed under the terms of the MIT license).
 
 # Updating
 
