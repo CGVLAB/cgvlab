@@ -1,13 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav id="lab-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-primary">
 	<a class="navbar-brand m-0 p-2" href="/">
 		<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
-		<div class="d-inline-flex flex-column justify-content-center align-items-start ml-3">
-			<h1 class="text-primary m-0">{{ site.title }}</h1>
-			<small class="text-muted mr-5 text-wrap">{{ site.description }}</small>
-		</div>
 	</a>
+	<div class="d-inline-flex flex-column justify-content-center align-items-start ml-3">
+		<h1 class="text-primary m-0">{{ site.title }}</h1>
+		<a class="text-muted mr-5 text-wrap" href="{{ site.parent_organization_url }}"
+			target="_blank">{{ site.parent_organization }}</a>
+	</div>
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+	<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -16,13 +17,11 @@
 		<div class="mr-auto"></div>
 		<ul class="navbar-nav">
 			{% for item in site.data.navbar %}
-			<li class="nav-item mx-4">
+			<li class="nav-item mx-3">
 				{% if item.path == page.url %}
 				{% assign nav_class = "active" %}
-				{% else %}
-				{% assign nav_class = "" %}
 				{% endif %}
-				<a class="h5 nav-link text-primary {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
+				<a class="h5 nav-link lab-nav-link m-0 {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
 			</li>
 			{% endfor %}
 		</ul>

@@ -34,24 +34,26 @@ body {
   overflow-x: hidden;
 }
 
-/* Minimum height and no spacing */
-#main {
-  min-height: 90vh;
-  margin: 0;
-  padding: 0;
-}
-
-/* No spacing */
-.no-space {
-  margin: 0;
-  padding: 0;
-}
-
 /* Bold hyperlinks */
 a {
-  font-weight: 400 !important;
-  text-decoration: underline !important;
+  font-weight: bold;
+  text-decoration: underline;
   color: $dark;
+}
+
+/* Reduce small text margins */
+a,
+p,
+i,
+b,
+u,
+strong {
+  margin: 0;
+}
+
+/* Light color links */
+.bg-dark a {
+  color: $light;
 }
 
 /* Changes Jekyll-Scholar list size */
@@ -67,20 +69,46 @@ a {
   list-style-type: none !important;
 }
 
+/* Specific ID styles */
+
+/* Minimum height and no spacing */
+#lab-main {
+  min-height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar primary color (bottom) border */
+#lab-navbar {
+  border-width: 8px !important;
+}
+
 /* Custom classes */
 
-.cgv-img-square {
+/* No spacing */
+.lab-no-space {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-dark .nav-link.lab-nav-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: $primary !important;
+}
+
+.lab-img-square {
   object-fit: cover;
   width: 128px;
   height: 128px;
   float: left;
 }
 
-.cgv-text-shadow {
+.lab-text-shadow {
   text-shadow: 8px 8px 4px #000;
 }
 
-.cgv-slider-control {
+.lab-slider-control {
   opacity: 0.25;
   padding: 1.5rem;
   border-radius: 0.25rem;
