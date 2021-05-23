@@ -6,6 +6,8 @@ permalink: /
 
 # Welcome to the CGVLab
 
+<h4 class="text-muted">{{ site.description }}</h4>
+
 <div class="container m-0 p-0 justify-content-start">
 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -47,11 +49,11 @@ permalink: /
 
   </div>
   <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon cgv-slider-control"  aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon lab-slider-control"  aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon cgv-slider-control" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon lab-slider-control" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>

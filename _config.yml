@@ -18,6 +18,8 @@
 title: CGVLab
 description: Computer Graphics and Visualization Laboratory at Purdue University
 url: "https://cgvlab.purdue.edu"
+parent_organization: Department of Computer Science at Purdue University
+parent_organization_url: "https://cs.purdue.edu"
 logo: /theme/images/icon.png
 locale: en_US
 baseurl: ""
