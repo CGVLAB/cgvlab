@@ -8,7 +8,7 @@ layout: content
         {% else %}
         {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
         {% endif %}
-        <div class="p-2 bg-dark" href="{{ page.person_url }}">
+        <div class="p-2 bg-dark text-light" href="{{ page.person_url }}">
             <div class="embed-responsive embed-responsive-1by1">
                 <img src="{{ photo_link }}" class="embed-responsive-item card-img-top"
                     style="object-fit: cover;" alt="{{ page.person_name }}">

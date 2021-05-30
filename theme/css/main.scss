@@ -22,6 +22,7 @@ $enable-rounded: false;
 
 /* Import Bootstrap */
 @import "dependencies/css/bootstrap/bootstrap";
+@import "dependencies/css/font_css/source-sans-pro";
 
 /* Global settings */
 
@@ -32,16 +33,18 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Source Sans Pro';
 }
 
-/* Bold hyperlinks */
+/* Default hyperlinks */
 a {
+  @extend .text-dark;
   font-weight: bold;
   text-decoration: underline;
-  color: $dark;
 }
 
 /* Reduce small text margins */
+/*
 a,
 p,
 i,
@@ -50,11 +53,7 @@ u,
 strong {
   margin: 0;
 }
-
-/* Light color links */
-.bg-dark a {
-  color: $light;
-}
+*/
 
 /* Changes Jekyll-Scholar list size */
 .bibliography {
@@ -74,16 +73,14 @@ strong {
 /* Minimum height and no spacing */
 #lab-main {
   min-height: 90vh;
-  margin: 0;
-  padding: 0;
-}
-
-/* Navbar primary color (bottom) border */
-#lab-navbar {
-  border-width: 8px !important;
 }
 
 /* Custom classes */
+
+/* Navbar/Footer primary color (bottom/top) border */
+.lab-border {
+  border-width: 8px !important;
+}
 
 /* No spacing */
 .lab-no-space {
@@ -91,10 +88,26 @@ strong {
   padding: 0;
 }
 
+/* Muted link */
+a.lab-single-link-muted {
+  @extend .text-muted;
+  text-decoration: none;
+}
+
+a.lab-single-link-muted:hover {
+  color: $text-muted !important;
+  text-decoration: underline;
+}
+
+/* Light links */
+.lab-link-light a {
+  @extend .text-light;
+}
+
 .bg-dark .nav-link.lab-nav-link {
+  @extend .text-primary;
   font-weight: bold;
   text-decoration: underline;
-  color: $primary !important;
 }
 
 .lab-img-square {
