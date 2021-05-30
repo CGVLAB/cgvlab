@@ -12,7 +12,7 @@
     <div class="col card border-dark">
         <div class="row no-gutters align-items-center">
             <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
-                <div class="m-1 p-1 bg-dark">
+                <div class="m-1 p-1 bg-dark text-light">
                     <div class="embed-responsive embed-responsive-1by1">
                         <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
                             class="embed-responsive-item" style="object-fit: cover;"
@@ -29,10 +29,6 @@
                         <p id="{{ entry.key }}-reference"><em>{{ reference }}</em></p>
                         <p><strong><a href="{{ publi.link.url }}" target="_blank">{{ publi.link.display }}</a></strong>
                         </p>
-
-                        {% if entry.note %}
-                        <strong id="{{ entry.key }}-optional-note">{{entry.note}}</strong>
-                        {% endif %}
 
                         <button class="btn btn-dark" onclick="$('#bibtex-{{ entry.key }}').toggle()">BibTeX</button>
 
@@ -69,8 +65,12 @@
 
                         {% if entry.link %}
                         <a href="{{ entry.link }}" target="_blank">
-                            <input class="btn btn-outline-primary" type="button" value="Link" />
+                            <input class="btn btn-outline-dark" type="button" value="Link" />
                         </a>
+                        {% endif %}
+
+                        {% if entry.note %}
+                        <strong id="{{ entry.key }}-optional-note">{{entry.note}}</strong>
                         {% endif %}
                     </p>
 
