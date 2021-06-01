@@ -1,21 +1,18 @@
-<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 m-0 p-0">
-    <div class="m-3">
-        <div class="card border-dark">
-            {% if person.photo %}
-            {% assign photo_link = site.dir_resources_images | append: '/team/' | append: person.photo %}
-            {% else %}
-            {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
-            {% endif %}
-            <div class="p-2">
-                <div class="embed-responsive embed-responsive-1by1">
-                    <img src="{{ photo_link }}" class="embed-responsive-item card-img-top p-1 bg-dark text-light"
-                        style="object-fit: cover;" alt="{{ person.name }}"
-                        {% if site.enable_lazy_loading %}loading="lazy" {% endif %}>
-                </div>
-            </div>
-            <div class="card-body">
+<div class="card m-1">
+    {% if person.photo %}
+    {% assign photo_link = site.dir_resources_images | append: '/team/' | append: person.photo %}
+    {% else %}
+    {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
+    {% endif %}
+    <div class="row no-gutters">
+        <div class="col-xs p-3">
+            <img src="{{ photo_link }}" class="card-img border border-dark lab-img-square"
+                alt="{{ person.name }}" {% if site.enable_lazy_loading %}loading="lazy" {% endif %}>
+        </div>
+        <div class="col">
+            <div class="card-body p-3">
                 <a class="h5 card-title" href="/team/{{ person.name | slugify }}">{{ person.name }}</a>
-                <p class="text-muted">{{ person.info }}</p>
+                <p class="card-subtitle mt-2 text-muted">{{ person.info }}</p>
                 <hr>
                 <p class="card-text">
                     {% if person.url %}

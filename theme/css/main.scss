@@ -22,7 +22,7 @@ $enable-rounded: false;
 
 /* Import Bootstrap */
 @import "dependencies/css/bootstrap/bootstrap";
-@import "dependencies/css/font_css/source-sans-pro";
+@import "dependencies/css/font/source-sans-pro";
 
 /* Global settings */
 
@@ -34,6 +34,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: 'Source Sans Pro';
+  overflow-wrap: break-word;
 }
 
 /* Default hyperlinks */
@@ -114,7 +115,6 @@ a.lab-single-link-muted:hover {
   object-fit: cover;
   width: 128px;
   height: 128px;
-  float: left;
 }
 
 .lab-text-shadow {

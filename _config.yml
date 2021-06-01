@@ -10,14 +10,14 @@
 # jquery-3.6.0.min.map -> dependencies/js/jquery/ (from https://code.jquery.com/jquery-3.6.0.min.map)
 # scss/* -> dependencies/css/bootstrap/* & dist/js/bootstrap.bundle.min.* -> dependencies/js/bootstrap/* (from https://github.com/twbs/bootstrap/archive/v4.6.0.zip)
 # Use https://github.com/majodev/google-webfonts-helper (web app linked in repository), with the following settings:
-  # Select the "Source Sans Pro" font
-  # Select "latin" only
-  # Select all font styles (200, 300, 200italic, ...)
-  # Select "Best Support" for the CSS
-  # Set the folder prefix to "/dependencies/fonts/source-sans-pro/"
+# Select the "Source Sans Pro" font
+# Select "latin" only
+# Select all font styles (200, 300, 200italic, ...)
+# Select "Best Support" for the CSS
+# Set the folder prefix to "/dependencies/fonts/source-sans-pro/"
 # Then (after downloading the generated ZIP file):
-  # Copy the CSS to a new file dependencies/font_css/source-sans-pro.css (and include the license information of each file as a comment at the top of the file)
-  # Copy all the font files (e.g. .svg and .woff) to a new directory dependencies/fonts/source-sans-pro
+# Copy the CSS to a new file dependencies/font/source-sans-pro.css (and include the license information of each file as a comment at the top of the file)
+# Copy all the font files (e.g. .svg and .woff) to a new directory dependencies/fonts/source-sans-pro
 
 # All custom (CGVLab-specific) content is located in the "resources", "theme", "_pages", "_bibliography", and "_data" folders.
 # Other files that are CGVLab-specific are "_config.yml", "README.md", "LICENSE", and "favicon.ico".
@@ -66,7 +66,7 @@ file_theme_jquery_js: jquery-3.6.0.min.js
 file_theme_bootstrap_js: bootstrap.bundle.min.js
 
 # Settings
-enable_lazy_loading: true
+enable_lazy_loading: false
 
 # Conversion
 markdown: kramdown
