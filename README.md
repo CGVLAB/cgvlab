@@ -24,7 +24,7 @@ standard:
 
 **Rules**
 
-1. Replace <Text> with its value (e.g. "<PRIMARY AUTHOR>" becomes "Smith")
+1. Replace \<Text> with its value (e.g. "\<PRIMARY AUTHOR>" becomes "Smith")
 2. All spaces must be replaced with underscores (e.g. "A Paper on Stuff" becomes
    "A_Paper_on_Stuff")
 3. Should any fields contain hyphens or underscores, double them (e.g.
@@ -45,7 +45,7 @@ standard:
 
 **Rules**
 
-1. Replace <Text> with its value (e.g. "<PRIMARY AUTHOR>" becomes "Smith")
+1. Replace \<Text> with its value (e.g. "\<PRIMARY AUTHOR>" becomes "Smith")
 2. All spaces must be replaced with underscores (e.g. "A Paper on Stuff" becomes
    "A_Paper_on_Stuff")
 3. Should any fields contain hyphens or underscores, double them (e.g.
