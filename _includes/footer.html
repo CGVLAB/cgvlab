@@ -1,30 +1,32 @@
-<div class="footer container px-3 py-3 mt-auto bg-dark text-light border-top border-primary lab-border lab-link-light">
-	<div class="row justify-content-center">
-		<div class="col-sm">
-			<h5>{{ site.title }} Website</h5>
-			<p>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Site made with
-				<a href="https://jekyllrb.com">Jekyll</a>.
-			</p>
-			{{ site.data.footer.site_content }}
-		</div>
-		<div class="col-sm mt-3 mt-sm-0">
-			<h5>Funding</h5>
-			<p>
-				{{ site.data.footer.funding_information }}
-			</p>
-			{{ site.data.footer.funding_content }}
-		</div>
-		<div class="col-sm mt-3 mt-sm-0">
-			<h5>Address</h5>
-			<p>
-				{{ site.data.footer.address.line1 }}
-				<br>
-				{{ site.data.footer.address.line2 }}, {{ site.data.footer.address.city }},
-				{{ site.data.footer.address.state }} {{ site.data.footer.address.zip }}
-				<br>
-				(<a href="{{ site.data.footer.address.google_maps_link }}" target="_blank">Map</a>)
-			</p>
-			{{ site.data.footer.address_content }}
+<div class="container-fluid px-3 py-3 mt-auto bg-dark text-light border-top border-primary lab-border lab-link-light">
+	<div class="footer container">
+		<div class="row justify-content-center">
+			<div class="col-sm">
+				<h5>{{ site.title }} Website</h5>
+				<p>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Site made with
+					<a href="https://jekyllrb.com">Jekyll</a>.
+				</p>
+				{{ site.data.footer.site_content }}
+			</div>
+			<div class="col-sm mt-3 mt-sm-0">
+				<h5>Funding</h5>
+				<p>
+					{{ site.data.footer.funding_information }}
+				</p>
+				{{ site.data.footer.funding_content }}
+			</div>
+			<div class="col-sm mt-3 mt-sm-0">
+				<h5>Address</h5>
+				<p>
+					{{ site.data.footer.address.line1 }}
+					<br>
+					{{ site.data.footer.address.line2 }}, {{ site.data.footer.address.city }},
+					{{ site.data.footer.address.state }} {{ site.data.footer.address.zip }}
+					<br>
+					(<a href="{{ site.data.footer.address.google_maps_link }}" target="_blank">Map</a>)
+				</p>
+				{{ site.data.footer.address_content }}
+			</div>
 		</div>
 	</div>
 </div>
