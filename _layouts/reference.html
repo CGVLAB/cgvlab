@@ -9,19 +9,15 @@
 
     {% assign img_column_class = "col-md-3" %}
     {% assign info_column_class = "col-md-9" %}
-    <div class="col card border-dark">
-        <div class="row no-gutters align-items-center">
-            <div class="{{ img_column_class }}" href="/publications/{{ entry.key }}">
-                <div class="m-1 p-1 bg-dark text-light">
-                    <div class="embed-responsive embed-responsive-1by1">
-                        <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
-                            class="embed-responsive-item" style="object-fit: cover;"
-                            {% if site.enable_lazy_loading %}loading="lazy" {% endif %}>
-                    </div>
-                </div>
+    <div class="card m-1">
+        <div class="row no-gutters">
+            <div class="col-xs p-3" href="/publications/{{ entry.key }}">
+                <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
+                    class="card-img border border-dark lab-img-square" {% if site.enable_lazy_loading %}loading="lazy"
+                    {% endif %}>
             </div>
-            <div class="{{ info_column_class }}">
-                <div class="card-body">
+            <div class="col">
+                <div class="card-body p-3">
                     <a id="{{ entry.key }}-title" class="h5 card-title" href="/publications/{{ entry.key }}"
                         target="_blank">{{ entry.title }} ({{ entry.author_0_last }}
                         et al. {{ entry.year }})</a>
