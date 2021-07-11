@@ -6,6 +6,8 @@ permalink: /
 
 # Welcome to the CGVLab
 
+<h4 class="text-muted">{{ site.description }}</h4>
+
 <div class="container m-0 p-0 justify-content-start">
 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -28,15 +30,15 @@ permalink: /
     {% else %}
     <div class="carousel-item">
     {% endif %}
-    <div class="p-2 bg-dark border border-dark rounded">
+    <div class="p-2 bg-dark text-light border border-dark">
         <div class="embed-responsive embed-responsive-16by9">
-            <img src="{{ site.dir_resources_images }}/{{ item.photo }}" class="embed-responsive-item card-img-top rounded" 
+            <img src="{{ site.dir_resources_images }}/{{ item.photo }}" class="embed-responsive-item card-img-top" 
             style="object-fit: cover;" alt="{{ item.title }}">
         </div>
     </div>
 
     {% if item.title and item.caption %}
-      <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 0, 0, 0.5)">
+      <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5)">
         <h5 style="font-weight-bold">{{ item.title }}</h5>
         <p>{{ item.caption }}</p>
       </div>
@@ -47,15 +49,14 @@ permalink: /
 
   </div>
   <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon cgv-slider-control"  aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon lab-slider-control"  aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon cgv-slider-control" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon lab-slider-control" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
 </div>
-<br>
 
 {% include news.html %}

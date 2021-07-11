@@ -5,22 +5,33 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Bootstrap Download Links and Destinations (Bootstrap v4.5.3, JQuery v3.5.1)
-# jquery-3.5.1.min.js -> https://code.jquery.com/jquery-3.5.1.min.js
-# jquery-3.5.1.min.map -> https://code.jquery.com/jquery-3.5.1.min.map
-# scss/* -> dependencies/css/bootstrap/ & dist/js/*.bundle -> dependencies/js/bootstrap/ -> https://github.com/twbs/bootstrap/archive/v4.5.3.zip
+# Bootstrap, JQuery, and Font Download Links and Destinations (Bootstrap v4.6.0, JQuery v3.6.0, google-webfonts-helper latest)
+# jquery-3.6.0.min.js -> dependencies/js/jquery/ (from https://code.jquery.com/jquery-3.6.0.min.js)
+# jquery-3.6.0.min.map -> dependencies/js/jquery/ (from https://code.jquery.com/jquery-3.6.0.min.map)
+# scss/* -> dependencies/css/bootstrap/* & dist/js/bootstrap.bundle.min.* -> dependencies/js/bootstrap/* (from https://github.com/twbs/bootstrap/archive/v4.6.0.zip)
+# Use https://github.com/majodev/google-webfonts-helper (web app linked in repository), with the following settings:
+# Select the "Source Sans Pro" font
+# Select "latin" only
+# Select all font styles (200, 300, 200italic, ...)
+# Select "Best Support" for the CSS
+# Set the folder prefix to "/dependencies/fonts/source-sans-pro/"
+# Then (after downloading the generated ZIP file):
+# Copy the CSS to a new file dependencies/font/source-sans-pro.css (and include the license information of each file as a comment at the top of the file)
+# Copy all the font files (e.g. .svg and .woff) to a new directory dependencies/fonts/source-sans-pro
 
 # All custom (CGVLab-specific) content is located in the "resources", "theme", "_pages", "_bibliography", and "_data" folders.
-# The only other files that are CGVLab-specific are "_config.yml", "README.md", "LICENSE", and "favicon.ico".
+# Other files that are CGVLab-specific are "_config.yml", "README.md", "LICENSE", and "favicon.ico".
 # The only exception to these rules are the files located in the "_includes/_publication" and "_includes/_person" folders.
 
 # Site settings (SEO)
 title: CGVLab
 description: Computer Graphics and Visualization Laboratory at Purdue University
-url: 'https://cgvlab.purdue.edu'
+url: "https://cgvlab.purdue.edu"
+parent_organization: Department of Computer Science at Purdue University
+parent_organization_url: "https://cs.purdue.edu"
 logo: /theme/images/icon.png
 locale: en_US
-baseurl: ''
+baseurl: ""
 
 # Site defaults
 defaults:
@@ -42,6 +53,7 @@ sass:
 dir_theme_css: /theme/css
 dir_theme_js: /theme/js
 dir_theme_images: /theme/images
+dir_theme_icons: /theme/images/icons
 
 dir_resources_files: /resources/files
 dir_resources_images: /resources/images
@@ -51,11 +63,14 @@ dir_resources_publications: /resources/papers
 dir_dependencies_css: /dependencies/css
 dir_dependencies_js: /dependencies/js
 
-file_theme_jquery_js: jquery-3.5.1.min.js
-file_theme_bootstrap_js: bootstrap.bundle.min.js
+file_theme_main_css: main.css
+
+file_theme_jquery_js: jquery/jquery-3.6.0.min.js
+file_theme_pagination_js: jquery/pagination.min.js
+file_theme_bootstrap_js: bootstrap/bootstrap.bundle.min.js
 
 # Settings
-enable_lazy_loading: true
+enable_lazy_loading: false
 
 # Conversion
 markdown: kramdown

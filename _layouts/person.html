@@ -8,9 +8,9 @@ layout: content
         {% else %}
         {% assign photo_link = site.dir_theme_images | append: '/bio-photo.jpg' %}
         {% endif %}
-        <div class="p-2 bg-dark rounded" href="{{ page.person_url }}">
+        <div class="p-2 bg-dark text-light" href="{{ page.person_url }}">
             <div class="embed-responsive embed-responsive-1by1">
-                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
+                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top"
                     style="object-fit: cover;" alt="{{ page.person_name }}">
             </div>
         </div>
@@ -54,39 +54,30 @@ layout: content
         {% else %}
 
         {% if all_pub_count > 1 %}
-        {% assign all_pub_count_text = 'Publications' | append: ' (' | append: all_pub_count | append: ' Total)' %}
+        {% assign all_pub_count_text = 'Publications' | append: ' (' | append: all_pub_count | append: ')' %}
         {% else %}
         {% assign all_pub_count_text = 'Publication' %}
         {% endif %}
 
         <h2>{{ all_pub_count_text }}</h2>
 
-        {% capture pub_count_highlighted %}{% bibliography_count -f references --query @*[author~={{person_query_name}},highlighted=true] %}{% endcapture %}
-        {% assign pub_count_highlighted = pub_count_highlighted | plus: 0 %}
-        {% if pub_count_highlighted > 0 %}
-        <h3>Highlighted</h3>
-        <div class="container-fluid">
-            {% bibliography --query @*[author~={{person_query_name}},highlighted=true] --template reference %}
-        </div>
-        {% endif %}
-        <hr>
         {% for publication_year in (2000..2020) reversed %}
         {% if forloop.last %}
-        {% capture pub_count_previous %}{% bibliography_count -f references --query @*[year<={{publication_year}},author~={{person_query_name}},highlighted!=true] %}{% endcapture %}
+        {% capture pub_count_previous %}{% bibliography_count -f references --query @*[year<={{publication_year}},author~={{person_query_name}}] %}{% endcapture %}
         {% assign pub_count_previous = pub_count_previous | plus: 0 %}
         {% if pub_count_previous > 0 %}
         <h3>Pre-{{ publication_year | plus: 1 }}</h3>
         <div class="container-fluid">
-            {% bibliography --query @*[year<={{publication_year}},author~={{person_query_name}},highlighted!=true] --template reference %}
+            {% bibliography --query @*[year<={{publication_year}},author~={{person_query_name}}] --template reference %}
         </div>
         {% endif %}
         {% else %}
-        {% capture pub_count_recent %}{% bibliography_count -f references --query @*[year={{publication_year}},author~={{person_query_name}},highlighted!=true] %}{% endcapture %}
+        {% capture pub_count_recent %}{% bibliography_count -f references --query @*[year={{publication_year}},author~={{person_query_name}}] %}{% endcapture %}
         {% assign pub_count_recent = pub_count_recent | plus: 0 %}
         {% if pub_count_recent > 0 %}
         <h3>{{ publication_year }}</h3>
         <div class="container-fluid">
-            {% bibliography --query @*[year={{publication_year}},author~={{person_query_name}},highlighted!=true] --template reference %}
+            {% bibliography --query @*[year={{publication_year}},author~={{person_query_name}}] --template reference %}
         </div>
         {% if forloop.last != true or pub_count_previous > 0 %}
         <hr>

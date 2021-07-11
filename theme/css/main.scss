@@ -1,6 +1,5 @@
 ---
 ---
-
 /* Bootstrap color overrides */
 /* Double import to use default Bootstrap values */
 
@@ -18,8 +17,12 @@ $danger:        $red !default;
 $light: #FFFFFF; // White
 $dark: #000000; // Black
 
+/* No rounding */
+$enable-rounded: false;
+
 /* Import Bootstrap */
 @import "dependencies/css/bootstrap/bootstrap";
+@import "dependencies/css/font/source-sans-pro";
 
 /* Global settings */
 
@@ -30,25 +33,28 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Source Sans Pro';
+  overflow-wrap: break-word;
 }
 
-/* Minimum height and no spacing */
-#main {
-  min-height: 90vh;
-  margin: 0;
-  padding: 0;
-}
-
-/* No spacing */
-.no-space {
-  margin: 0;
-  padding: 0;
-}
-
-/* Bold hyperlinks */
+/* Default hyperlinks */
 a {
-  font-weight: 400 !important;
+  @extend .text-dark;
+  font-weight: bold;
+  text-decoration: underline;
 }
+
+/* Reduce small text margins */
+/*
+a,
+p,
+i,
+b,
+u,
+strong {
+  margin: 0;
+}
+*/
 
 /* Changes Jekyll-Scholar list size */
 .bibliography {
@@ -63,20 +69,59 @@ a {
   list-style-type: none !important;
 }
 
+/* Specific ID styles */
+
+/* Minimum height and no spacing */
+#lab-main {
+  min-height: 90vh;
+}
+
 /* Custom classes */
 
-.cgv-img-square {
+/* Navbar/Footer primary color (bottom/top) border */
+.lab-border {
+  border-width: 8px !important;
+}
+
+/* No spacing */
+.lab-no-space {
+  margin: 0;
+  padding: 0;
+}
+
+/* Muted link */
+a.lab-single-link-muted {
+  @extend .text-muted;
+  text-decoration: none;
+}
+
+a.lab-single-link-muted:hover {
+  color: $text-muted !important;
+  text-decoration: underline;
+}
+
+/* Light links */
+.lab-link-light a {
+  @extend .text-light;
+}
+
+.bg-dark .nav-link.lab-nav-link {
+  @extend .text-primary;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.lab-img-square {
   object-fit: cover;
   width: 128px;
   height: 128px;
-  float: left;
 }
 
-.cgv-text-shadow {
+.lab-text-shadow {
   text-shadow: 8px 8px 4px #000;
 }
 
-.cgv-slider-control {
+.lab-slider-control {
   opacity: 0.25;
   padding: 1.5rem;
   border-radius: 0.25rem;

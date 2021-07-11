@@ -8,10 +8,10 @@ layout: content
         {% else %}
         {% assign photo_link = site.dir_theme_images | append: '/default.png' %}
         {% endif %}
-        <div class="p-2 bg-dark rounded">
+        <div class="p-2 bg-dark text-light">
             <div class="embed-responsive embed-responsive-1by1">
-                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top rounded"
-                    style="object-fit: cover;" alt="{{ page.person_name }}">
+                <img src="{{ photo_link }}" class="embed-responsive-item card-img-top" style="object-fit: cover;"
+                    alt="{{ page.person_name }}">
             </div>
         </div>
         <button class="btn btn-dark my-2" onclick="$('#bibtex').toggle()">BibTeX</button>
@@ -51,6 +51,13 @@ layout: content
 
             {% endfor %}
         </span>
+        <br>
+        <p class="text-muted">
+            {{ page.publication_source | append: publication_source_append }}{{ page.publication_year }}
+            {% if page.publication_note.size > 0 %}
+            {{ ' - ' | append: page.publication_note }}
+            {% endif %}
+        </p>
         <br>
         <p class="text-muted">
             {{ page.publication_source | append: publication_source_append }}{{ page.publication_year }}

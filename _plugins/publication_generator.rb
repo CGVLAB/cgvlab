@@ -112,6 +112,7 @@ module Jekyll
       self.data['publication_doi'] = @publication['doi']
       self.data['publication_photo'] = @publication['image']
       self.data['publication_pdf'] = @publication['pdf']
+      self.data['publication_note'] = @publication['note'] || ''
 
       self.data['publication_citation'] = @citation
       self.data['publication_bibtex'] = @publication.to_s
