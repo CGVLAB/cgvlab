@@ -24,7 +24,7 @@ permalink: /publications/
 
 {% if forloop.last %}
 
-<h3 id="previous">Pre-{{ publication_year | plus: 1 }}</h3>
+<h3 id="previous-years">Pre-{{ publication_year | plus: 1 }}</h3>
 <div class="container-fluid">
 {% bibliography --query @*[year<={{publication_year}}] --template reference %}
 </div>
