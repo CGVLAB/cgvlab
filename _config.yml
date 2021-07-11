@@ -53,6 +53,7 @@ sass:
 dir_theme_css: /theme/css
 dir_theme_js: /theme/js
 dir_theme_images: /theme/images
+dir_theme_icons: /theme/images/icons
 
 dir_resources_files: /resources/files
 dir_resources_images: /resources/images
@@ -62,8 +63,11 @@ dir_resources_publications: /resources/papers
 dir_dependencies_css: /dependencies/css
 dir_dependencies_js: /dependencies/js
 
-file_theme_jquery_js: jquery-3.6.0.min.js
-file_theme_bootstrap_js: bootstrap.bundle.min.js
+file_theme_main_css: main.css
+
+file_theme_jquery_js: jquery/jquery-3.6.0.min.js
+file_theme_pagination_js: jquery/pagination.min.js
+file_theme_bootstrap_js: bootstrap/bootstrap.bundle.min.js
 
 # Settings
 enable_lazy_loading: false

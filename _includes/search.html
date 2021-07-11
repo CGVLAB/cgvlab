@@ -28,18 +28,25 @@
         </div>
     </form>
 </div>
+<nav id="searchPagination" class="mt-3"></nav>
 <script>
     // Search constants
     const SEARCH_QUERY_PREFIX = '#search#';
     const SEARCH_EARLIEST_YEAR = 2001;
     const SEARCH_LATEST_YEAR = 2020;
+    const SEARCH_PAGE_SIZE = 25;
     const DEFAULT_SEARCH = {
         field: 'title',
         text: '',
         caseInsensitive: 'true',
         regex: 'false',
-        keyword: 'true'
+        keyword: 'true',
+        page: 1
     };
+
+    // Search variables
+    let currentPage = 1;
+    let matchedIds = [];
 
     // Utility functions
 
@@ -135,7 +142,8 @@
             text: $('#searchText').val() || DEFAULT_SEARCH.text,
             caseInsensitive: $('#searchOptionCaseInsensitive').is(':checked'),
             regex: $('#searchOptionRegex').is(':checked'),
-            keyword: $('#searchOptionKeyword').is(':checked')
+            keyword: $('#searchOptionKeyword').is(':checked'),
+            page: currentPage || DEFAULT_SEARCH.page
         };
 
         // Allow keyword searching only if Regex is not used
@@ -152,51 +160,29 @@
             $('#year-' + i).hide();
         $('#previous').hide();
 
-        // Record matches
-        var matches = 0;
+        // Create search values
+        // Keyword searches split the search query into words (i.e. non-whitespace strings)
+        // so that if any individual word is found the text is treated as a match
+        var matches = [];
+        const searchText = search.regex ? search.text : escapeRegExp(search.text);
+        const searchValue = new RegExp(search.keyword ? searchText.replace(/(^|\s*)(.+?)($|\s+)/gm, '($2)|')
+            .slice(0, -1) : searchText, search.caseInsensitive ? 'gim' :
+            'gm');
 
-        // Search for value
+        // Part 1 - Search and register matches
+        // (Resets each entry and does not modify it after)
         for (var i = 0; i < publications.length; i++) {
             // Reset reference
             resetReference(i);
 
-            // Create search values
-            // Keyword searches split the search query into words (i.e. non-whitespace strings)
-            // so that if any individual word is found the text is treated as a match
+            // Search values
+            var matched = false;
             const pub = publications[i];
-            const searchText = search.regex ? search.text : escapeRegExp(search.text);
-            const searchValue = new RegExp(search.keyword ? searchText.replace(/(^|\s*)(.+?)($|\s+)/gm, '($2)|')
-                .slice(0, -1) : searchText, search.caseInsensitive ? 'gim' :
-                'gm');
-
-            // Search variables
-            var exists = false;
-            var parent = $('#' + pub.key);
 
             // Search by title
             if (search.field === 'title') {
-                var el = $('#' + pub.key + '-title');
-
-                // Get title and author
-                const valTitle = pub.title;
-                const valAuthor = el.html().substring(el.html().indexOf(' ('));
-
-                exists = pub.title.search(searchValue) !== -1;
-
-                // Toggle parent element
-                parent.toggle(exists);
-
-                // Edit page if the item is a match
-                if (exists) {
-                    // Highlight matches in title
-                    const res = valTitle.replace(searchValue, function (match) {
-                        return '<span style="background-color: yellow">' + match + '</span>';
-                    }) + valAuthor;
-                    el.html(res);
-
-                    // Record match
-                    matches++;
-                }
+                // Compare title
+                matched = pub.title.search(searchValue) !== -1;
             }
             // Search by publication source
             else if (search.field === 'source') {
@@ -218,23 +204,37 @@
                         end = pub.bibtex.length;
 
                     // Check if the BibTeX value matches the search value
-                    exists = pub.bibtex.substring(start, end).search(searchValue) !== -1;
+                    matched = pub.bibtex.substring(start, end).search(searchValue) !== -1;
                 } else {
                     // Handle default "Unknown" case
-                    exists = "Unknown".search(searchValue) !== -1;
+                    matched = 'Unknown'.search(searchValue) !== -1;
                 }
             }
             // Search by author
             else if (search.field === 'author') {
                 // Search the author field
-                exists = pub.author.search(searchValue) !== -1;
+                matched = pub.author.search(searchValue) !== -1;
             }
 
+            // Add to matched list
+            if (matched)
+                matches.push(i);
+        }
+
+        // Part 2 - Modify entries
+        for (var i = 0; i < publications.length; i++) {
+            const pub = publications[i];
+
+            // Entry variables
+            var parent = $('#' + pub.key);
+            var title = $('#' + pub.key + '-title');
+            var state = Boolean(matches.find(e => e === i));
+
             // Toggle parent element
-            parent.toggle(exists);
+            parent.toggle(state);
 
             // Enable parent section (by year/old publications)
-            if (exists) {
+            if (state) {
                 // Find which section to show
                 const year = Number(pub.year);
                 if (year > SEARCH_EARLIEST_YEAR)
@@ -242,9 +242,16 @@
                 else if (year <= SEARCH_EARLIEST_YEAR)
                     $('#previous').show();
 
-                // Count match
-                if (exists)
-                    matches++;
+                // Highlight matches in title
+                if (search.field === 'title') {
+                    // Get title and author
+                    const valTitle = pub.title;
+                    const valAuthor = title.html().substring(title.html().indexOf(' ('));
+                    const res = valTitle.replace(searchValue, function (match) {
+                        return '<span style="background-color: yellow">' + match + '</span>';
+                    }) + valAuthor;
+                    title.html(res);
+                }
             }
         }
 
@@ -255,15 +262,38 @@
         if (hidden && $('#previous').is(':hidden'))
             $('#full-empty').show();
 
-        // Set matched text
+        // Update matched text
         var matchedText = '';
-        if (matches <= 0)
+        if (matches.length <= 0)
             matchedText = 'No matches were found'
-        else if (matches < publications.length)
-            matchedText = 'Matched ' + matches + ' out of ' + publications.length + ' publications';
+        else if (matches.length < publications.length)
+            matchedText = 'Matched ' + matches.length + ' out of ' + publications.length + ' publications';
         else
             matchedText = 'Matched all (' + publications.length + ') publications'
         $('#search-matched').html(matchedText);
+
+        // Handle pagination
+        $('#searchPagination').pagination({
+            dataSource: matches,
+            ulClassName: 'pagination justify-content-center border border-dark',
+            pageSize: 25,
+            pageNumber: 1,
+            pageRange: 3,
+            // Update pagination list with Bootstrap styles
+            afterRender: function (isForced) {
+                $('#searchPagination li').addClass('page-item');
+                $('#searchPagination a').addClass('page-link');
+            },
+            // Toggle entries
+            callback: function (data, pagination) {
+                data.forEach(e => $('#' + publications[e].key).toggle(true))
+            },
+            // Update page variable and clear displayed entries
+            beforePaging: function (page) {
+                currentPage = page;
+                publications.forEach(e => $('#' + e.key).toggle(false));
+            }
+        });
     });
 
     // Trigger search on page load
