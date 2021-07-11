@@ -34,19 +34,21 @@
     const SEARCH_QUERY_PREFIX = '#search#';
     const SEARCH_EARLIEST_YEAR = 2001;
     const SEARCH_LATEST_YEAR = 2020;
+    const SEARCH_HIDE_YEARS = true;
     const SEARCH_PAGE_SIZE = 25;
+    const SEARCH_PAGE_RANGE = 3;
+    const SEARCH_PAGE_DEFAULT = 1;
     const DEFAULT_SEARCH = {
         field: 'title',
         text: '',
         caseInsensitive: 'true',
         regex: 'false',
         keyword: 'true',
-        page: 1
+        page: SEARCH_PAGE_DEFAULT
     };
 
     // Search variables
-    let currentPage = 1;
-    let matchedIds = [];
+    let currentPage = SEARCH_PAGE_DEFAULT;
 
     // Utility functions
 
@@ -60,9 +62,9 @@
 
         const queryComponents = str.substring(SEARCH_QUERY_PREFIX.length).split('&') || [];
 
-        var result = DEFAULT_SEARCH;
+        let result = DEFAULT_SEARCH;
 
-        for (var i = 0; i < queryComponents.length; i++) {
+        for (let i = 0; i < queryComponents.length; i++) {
             const componentKeyValue = queryComponents[i].split('=');
             const componentKey = decodeURIComponent(componentKeyValue[0]) || '';
             const componentValue = decodeURIComponent(componentKeyValue[1]) || '';
@@ -78,8 +80,8 @@
 
     // Converts the search query object into its URL string representation
     function encodeHash(obj) {
-        var i = 0;
-        var res = SEARCH_QUERY_PREFIX;
+        let i = 0;
+        let res = SEARCH_QUERY_PREFIX;
         for (const key in obj) {
             if (obj.hasOwnProperty(key)) {
                 const element = String(obj[key]) || DEFAULT_SEARCH['key'] || '';
@@ -137,7 +139,7 @@
     // Handle form update on submit
     $('#searchSubmit').click(function () {
         // Create search object
-        var search = {
+        let search = {
             field: $('#searchField').val() || DEFAULT_SEARCH.field,
             text: $('#searchText').val() || DEFAULT_SEARCH.text,
             caseInsensitive: $('#searchOptionCaseInsensitive').is(':checked'),
@@ -156,14 +158,14 @@
         $('#full-empty').hide();
 
         // Toggle visibility of all sections
-        for (var i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
+        for (let i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
             $('#year-' + i).hide();
         $('#previous').hide();
 
         // Create search values
         // Keyword searches split the search query into words (i.e. non-whitespace strings)
         // so that if any individual word is found the text is treated as a match
-        var matches = [];
+        let matches = [];
         const searchText = search.regex ? search.text : escapeRegExp(search.text);
         const searchValue = new RegExp(search.keyword ? searchText.replace(/(^|\s*)(.+?)($|\s+)/gm, '($2)|')
             .slice(0, -1) : searchText, search.caseInsensitive ? 'gim' :
@@ -171,12 +173,12 @@
 
         // Part 1 - Search and register matches
         // (Resets each entry and does not modify it after)
-        for (var i = 0; i < publications.length; i++) {
+        for (let i = 0; i < publications.length; i++) {
             // Reset reference
             resetReference(i);
 
             // Search values
-            var matched = false;
+            let matched = false;
             const pub = publications[i];
 
             // Search by title
@@ -187,7 +189,7 @@
             // Search by publication source
             else if (search.field === 'source') {
                 // Look for source in BibTeX
-                var source = pub.bibtex.indexOf('booktitle');
+                let source = pub.bibtex.indexOf('booktitle');
                 if (source === -1)
                     source = pub.bibtex.indexOf('journal');
                 else if (source === -1)
@@ -199,7 +201,7 @@
                     const start = pub.bibtex.indexOf('{', source);
                     if (start === -1)
                         continue;
-                    var end = pub.bibtex.indexOf('}', source);
+                    let end = pub.bibtex.indexOf('}', source);
                     if (end === -1)
                         end = pub.bibtex.length;
 
@@ -222,16 +224,13 @@
         }
 
         // Part 2 - Modify entries
-        for (var i = 0; i < publications.length; i++) {
+        for (let i = 0; i < publications.length; i++) {
             const pub = publications[i];
 
             // Entry variables
-            var parent = $('#' + pub.key);
-            var title = $('#' + pub.key + '-title');
-            var state = Boolean(matches.find(e => e === i));
-
-            // Toggle parent element
-            parent.toggle(state);
+            let parent = $('#' + pub.key);
+            let title = $('#' + pub.key + '-title');
+            let state = matches.find(e => e === i) !== undefined;
 
             // Enable parent section (by year/old publications)
             if (state) {
@@ -256,14 +255,20 @@
         }
 
         // Enable "No Publications" message if no matches were found
-        var hidden = true;
-        for (var i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
+        let hidden = true;
+        for (let i = SEARCH_EARLIEST_YEAR; i <= SEARCH_LATEST_YEAR; i++)
             hidden = hidden && $('#year-' + i).is(':hidden');
         if (hidden && $('#previous').is(':hidden'))
             $('#full-empty').show();
 
+        // Hide year headings if enabled
+        if (SEARCH_HIDE_YEARS) {
+            $('[id^=year]').toggle(false);
+            $('#previous-years').toggle(false);
+        }
+
         // Update matched text
-        var matchedText = '';
+        let matchedText = '';
         if (matches.length <= 0)
             matchedText = 'No matches were found'
         else if (matches.length < publications.length)
@@ -275,13 +280,13 @@
         // Handle pagination
         $('#searchPagination').pagination({
             dataSource: matches,
-            ulClassName: 'pagination justify-content-center border border-dark',
-            pageSize: 25,
-            pageNumber: 1,
-            pageRange: 3,
+            ulClassName: 'pagination justify-content-center',
+            pageSize: SEARCH_PAGE_SIZE,
+            pageNumber: SEARCH_PAGE_DEFAULT,
+            pageRange: SEARCH_PAGE_RANGE,
             // Update pagination list with Bootstrap styles
             afterRender: function (isForced) {
-                $('#searchPagination li').addClass('page-item');
+                $('#searchPagination li').addClass('page-item border border-dark');
                 $('#searchPagination a').addClass('page-link');
             },
             // Toggle entries
