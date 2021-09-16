@@ -52,7 +52,7 @@
   linkedin: https://www.linkedin.com/in/ilkedemir/
 
 - name: Zi'ang Ding
-  info: SDE II at Microsoft
+  info: Senior Software Engineer at Microsoft (SDE II) at Microsoft
   photo: ding_ziang.jpg
   linkedin: https://www.linkedin.com/in/ziang-ding-43249120/
 
@@ -104,16 +104,6 @@
   info: Senior Engineer at Qualcomm
   url: https://www.cs.purdue.edu/homes/wu223/
   linkedin: https://www.linkedin.com/in/menglinwu/
-
-- name: Ziang Ding
-  photo: ding_ziang.jpg
-  info: Senior Software Engineer at Microsoft
-  linkedin: https://www.linkedin.com/in/ziang-ding-43249120
-
-- name: Ignacio Garcia
-  photo: garcia_ignacio.jpg
-  info: Research Engineer at Google
-  linkedin: https://www.linkedin.com/in/igarciad/
 
 - name: Haosi Huang
   photo: huang_haosi.jpg

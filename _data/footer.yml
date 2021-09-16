@@ -1,10 +1,10 @@
 site_content: >-
-  <p class="text-light">(<a href="http://wiki.cs.purdue.edu/cgvlab/doku.php">Internal Lab Wiki</a>)</p>
+  (<a href="http://wiki.cs.purdue.edu/cgvlab/doku.php">Internal Lab Wiki</a>)
 
 funding_information: XXX funding info XXX
 funding_content: >-
-  <p class="text-light">We are part of the <a href="https://www.cs.purdue.edu/">Department of Computer Science</a> at 
-  <a href="https://www.purdue.edu/">Purdue University</a>.
+  We are part of the <a href="https://www.cs.purdue.edu/">Department of Computer
+  Science</a> at <a href="https://www.purdue.edu/">Purdue University</a>.
 
 address:
   google_maps_link: "https://goo.gl/maps/kWo74ytXx42Mv5TD8"
@@ -14,4 +14,3 @@ address:
   state: IN
   zip: 47907
 address_content: >-
-  
