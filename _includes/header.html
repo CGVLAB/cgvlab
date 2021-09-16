@@ -1,30 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand m-0 p-2" href="/">
-		<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
+<div class="container-fluid bg-dark border-bottom border-primary lab-border">
+	<nav class="navbar container navbar-expand-lg navbar-dark">
+		<a class="navbar-brand m-0 p-2" href="/">
+			<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
+		</a>
 		<div class="d-inline-flex flex-column justify-content-center align-items-start ml-3">
 			<h1 class="text-primary m-0">{{ site.title }}</h1>
-			<small class="text-muted mr-5 text-wrap">{{ site.description }}</small>
+			<a class="lab-single-link-muted mr-5 text-wrap" href="{{ site.parent_organization_url }}"
+				target="_blank">{{ site.parent_organization }}</a>
 		</div>
-	</a>
-
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div id="navbarSupportedContent" class="collapse navbar-collapse">
-		<div class="mr-auto"></div>
-		<ul class="navbar-nav">
-			{% for item in site.data.navbar %}
-			<li class="nav-item mx-4">
-				{% if item.path == page.url %}
-				{% assign nav_class = "active" %}
-				{% else %}
-				{% assign nav_class = "" %}
-				{% endif %}
-				<a class="h5 nav-link text-primary {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</div>
-</nav>
+	
+		<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div id="navbarSupportedContent" class="collapse navbar-collapse">
+			<div class="mr-auto"></div>
+			<ul class="navbar-nav">
+				{% for item in site.data.navbar %}
+				<li class="nav-item mx-3">
+					{% if item.path == page.url %}
+					{% assign nav_class = "active" %}
+					{% endif %}
+					<a class="h5 nav-link lab-nav-link m-0 {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</nav>
+</div>

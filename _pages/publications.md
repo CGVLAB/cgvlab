@@ -16,38 +16,22 @@ permalink: /publications/
 
 # Publications
 
-## Search
-
 {% include search.html %}
 
 <hr>
 
-## Highlights
+{% for publication_year in (2000..2021) reversed %}
 
-(For a full list see [below](#full-list).)
-
-<div id="highlighted" class="container-fluid">
-{% bibliography --query @*[highlighted=true] --template reference %}
-</div>
-<div id="highlighted-empty" class="container-fluid p-0" style="display: none">
-<h3 class="text-muted">No publications</h3>
-</div>
-
-<hr>
-
-## Full List
-
-{% for publication_year in (2000..2020) reversed %}
 {% if forloop.last %}
 
-<h3 id="previous">Pre-{{ publication_year | plus: 1 }}</h3>
+<h3 id="previous-years">Pre-{{ publication_year | plus: 1 }}</h3>
 <div class="container-fluid">
-{% bibliography --query @*[year<={{publication_year}},highlighted!=true] --template reference %}
+{% bibliography --query @*[year<={{publication_year}}] --template reference %}
 </div>
 {% else %}
 <h3 id="year-{{ publication_year }}">{{ publication_year }}</h3>
 <div class="container-fluid">
-{% bibliography --query @*[year={{publication_year}},highlighted!=true] --template reference %}
+{% bibliography --query @*[year={{publication_year}}] --template reference %}
 </div>
 {% endif %}
 {% endfor %}
