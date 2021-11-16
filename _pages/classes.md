@@ -1,7 +1,7 @@
 ---
 title: "Classes"
 layout: content
-permalink: /classes.html
+permalink: /classes/
 ---
 
 # Classes
