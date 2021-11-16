@@ -39,10 +39,15 @@ def format_string(string):
     string = string.replace('\\', '')
     # Remove &
     string = string.replace('&', '')
+    # Remove {}
+    string = string.replace('{', '')
+    string = string.replace('}', '')
+    # Remove :
+    string = string.replace(':', '')
     # Underscore are doubled
     string = string.replace('_', '__')
-    # Hyphens are doubled
-    string = string.replace('-', '--')
+    # Double hyphens are removed
+    string = string.replace('--', '-')
     # Spaces become underscores
     string = string.replace(' ', '_')
 
