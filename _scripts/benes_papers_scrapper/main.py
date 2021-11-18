@@ -4,7 +4,7 @@ import sys
 from urllib import request, parse, error
 
 # Load the BIBTEX library
-sys.path.append('biblib')
+sys.path.append('../biblib')
 import biblib.bib
 
 # Reference BIB file 
