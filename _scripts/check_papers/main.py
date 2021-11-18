@@ -106,6 +106,9 @@ def check_pdf_correspondence():
     # List of PDF files that are allowed to be in the PDF folder
     allowed_files = list_entries('pdf')
 
+    # Add gitignore
+    allowed_files.append('.gitignore')
+
     for file in listdir(papers_folder):
         file_path = join(papers_folder, file)
         if isfile(file_path):
