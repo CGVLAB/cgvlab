@@ -106,6 +106,7 @@ GEM
       unicode-display_width (~> 1.1, >= 1.1.1)
     tilt (2.0.10)
     unicode-display_width (1.7.0)
+    wdm (0.1.1)
     webrick (1.7.0)
 
 PLATFORMS
@@ -122,6 +123,7 @@ DEPENDENCIES
   jekyll-scholar
   jekyll-seo-tag
   jekyll-sitemap
+  wdm
   webrick (~> 1.7)
 
 BUNDLED WITH

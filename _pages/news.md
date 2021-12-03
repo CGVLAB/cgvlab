@@ -1,7 +1,7 @@
 ---
 title: "News"
 layout: content
-permalink: /news.html
+permalink: /news/
 ---
 
 # News
