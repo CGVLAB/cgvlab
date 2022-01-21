@@ -61,7 +61,7 @@ layout: content
 
         <h2>{{ all_pub_count_text }}</h2>
 
-        {% for publication_year in (2000..2020) reversed %}
+        {% for publication_year in (2000..2022) reversed %}
         {% if forloop.last %}
         {% capture pub_count_previous %}{% bibliography_count -f references --query @*[year<={{publication_year}},author~={{person_query_name}}] %}{% endcapture %}
         {% assign pub_count_previous = pub_count_previous | plus: 0 %}
