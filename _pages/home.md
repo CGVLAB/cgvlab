@@ -6,6 +6,8 @@ permalink: /
 
 # Welcome to the CGVLab
 
+{% comment %}
+<!--
 <h4 class="text-muted">{{ site.description }}</h4>
 
 <div class="container m-0 p-0 justify-content-start">
@@ -58,5 +60,9 @@ permalink: /
   </a>
 </div>
 </div>
+-->
+{% endcomment %}
+
+<img src="{{ site.dir_resources_images }}/slider/purdue_gateway.jpg" alt="Image of the Purdue Lawson building" class="img-fluid rounded mx-auto d-block" />
 
 {% include news.html %}
