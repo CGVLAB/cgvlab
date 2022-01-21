@@ -5,7 +5,7 @@
 
 - name: Christoph M. Hoffmann
   photo: hoffmann.jpg
-  info: Professor
+  info: Professor Emeritus
   url: https://cs.purdue.edu/homes/cmh
 
 - name: Voicu S. Popescu
@@ -25,5 +25,5 @@
 
 - name: Bedrich Benes
   photo: benes.jpg
-  info: George W. McNelly Professor of Technology and Professor of Computer Science
+  info: Professor
   url: http://hpcg.purdue.edu/bbenes
