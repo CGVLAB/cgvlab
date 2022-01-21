@@ -1,29 +1,35 @@
 - name: Daniel G. Aliaga
+  bib_query_name: Aliaga.+Daniel
   photo: aliaga.jpg
   info: Associate Professor
   url: https://cs.purdue.edu/homes/aliaga
 
 - name: Christoph M. Hoffmann
+  bib_query_name: Hoffmann.+Christoph
   photo: hoffmann.jpg
   info: Professor Emeritus
   url: https://cs.purdue.edu/homes/cmh
 
 - name: Voicu S. Popescu
+  bib_query_name: Popescu.+Voicu
   photo: popescu.jpg
   info: Associate Professor
   url: https://cs.purdue.edu/homes/popescu
 
 - name: Elisha P. Sacks
+  bib_query_name: Sacks.+Elisha
   photo: sacks.jpg
   info: Professor
   url: https://cs.purdue.edu/homes/eps
 
 - name: Xavier M. Tricoche
+  bib_query_name: Tricoche.+Xavier
   photo: tricoche.jpg
   info: Associate Professor
   url: https://cs.purdue.edu/homes/xmt
 
 - name: Bedrich Benes
+  bib_query_name: Benes.+Bedrich
   photo: benes.jpg
   info: Professor
   url: http://hpcg.purdue.edu/bbenes

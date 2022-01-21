@@ -60,6 +60,7 @@ module Jekyll
 
       self.data['person_type'] = @person['type']
       self.data['person_name'] = @person['name']
+      self.data['person_bib_query_name'] = @person['bib_query_name']
       self.data['person_photo'] = @person['photo']
       self.data['person_info'] = @person['info']
       self.data['person_url'] = @person['url']

@@ -4,78 +4,96 @@
   linkedin: https://www.linkedin.com/in/andresbejarano87/
 
 - name: DonEliezer Baize
+  bib_query_name: Baize.+DonEliezer
   photo: baize_doneliezer.jpg
   linkedin: https://www.linkedin.com/in/doneliezer-baize-178660162/
 
 - name: Dana Monther
+  bib_query_name: Monther.+Dana
   photo: monther_dana.jpg
   linkedin: https://www.linkedin.com/in/dana-monther-3a51131a9
 
 - name: Liu He
+  bib_query_name: He.+Liu
   photo: he_liu.jpg
   linkedin: https://www.linkedin.com/in/liu-he-1a7239197/
 
 - name: Chengyuan Lin
+  bib_query_name: Lin.+Chengyuan
   photo: lin_chengyuan.jpg
   linkedin: https://www.linkedin.com/in/chengyuan-lin-968464b8/
 
 - name: Tharindu Mathew
+  bib_query_name: Mathew.+Tharindu
   photo: mathew_tharindu.jpg
   linkedin: https://www.linkedin.com/in/tharindu-mathew/
 
 - name: Christopher May
+  bib_query_name: May.+Christopher
   photo: may_christopher.jpg
   linkedin:
 
 - name: Justin Messinger
+  bib_query_name: Messinger.+Justin
   photo: messinger_justin.jpg
   url: https://www.cs.purdue.edu/people/graduate-students/messingj
   linkedin:
 
 - name: Pratiman Patel
+  bib_query_name: Patel.+Pratiman
   photo: patel_pratiman.jpg
   linkedin: https://www.linkedin.com/in/pratiman-patel-77262739/
 
 - name: Dylan Rodriquez
+  bib_query_name: Rodriquez.+Dylan
   photo: rodriquez_dylan.jpg
   linkedin: https://www.linkedin.com/in/dylanmr/
 
 - name: Lu Xing
+  bib_query_name: Xing.+Lu
   photo: xing_lu.jpg
   linkedin: https://www.linkedin.com/in/luluxing
 
 - name: Raine Yeh
+  bib_query_name: Yeh.+Raine
   photo: yeh_raine.jpg
   linkedin: https://www.linkedin.com/in/raineyeh/
 
 - name: Zixun Yu
+  bib_query_name: Yu.+Zixun
   photo: yu_zixun.jpg
   linkedin: https://www.linkedin.com/in/zixun-yu-ba0548171/
 
 - name: Yizhi Song
+  bib_query_name: Song.+Yizhi
   photo: song_yizhi.jpg
   linkedin: https://www.linkedin.com/in/yizhi-song-1781311a9
 
 - name: Xiaowei Zhang
+  bib_query_name: Zhang.+Xiaowei
   photo: zhang_xiaowei.jpg
   linkedin: https://www.linkedin.com/in/xiaowei-zhang-152881b2
 
 - name: Xiaochen Zhou
+  bib_query_name: Zhou.+Xiaochen
   photo: zhou_xiaochen.jpg
   url: https://lewkesy.github.io/
   linkedin: https://www.linkedin.com/in/xiaochen-zhou-26b79b178/
 
 - name: Adnan Firoze
+  bib_query_name: Firoze.+Adnan
   photo: firoze_adnan.jpg
   url: https://scholar.google.com/citations?user=Yatk4KgAAAAJ&hl=en
   linkedin: https://www.linkedin.com/in/adnanfiroze/
 
 - name: Jae Joong Lee
+  bib_query_name: Lee.+Jae +Joong
   photo: jaejoong_lee.jpg
   url: https://www.jaejoonglee.com/
   linkedin: https://www.linkedin.com/in/jaejoong/
 
 - name: Mathieu Gaillard
+  bib_query_name: Gaillard.+Mathieu
   photo: mathieu_gaillard.jpg
   url: https://www.mgaillard.fr/
   linkedin: https://www.linkedin.com/in/mathieu-gaillard-9b6386a8/
