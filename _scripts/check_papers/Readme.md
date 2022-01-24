@@ -23,6 +23,8 @@ Source on GitHub: https://github.com/aclements/biblib
 
 ```bash
 $ git clone https://github.com/aclements/biblib.git
+$ cd biblib
+$ python3 setup.py install
 ```
 
 ### Virtual environment
