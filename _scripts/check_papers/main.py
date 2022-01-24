@@ -5,10 +5,12 @@ import sys
 from urllib import request, parse, error
 # Package for fuzzy matching
 from fuzzywuzzy import fuzz
-
-# Load the BIBTEX library
-sys.path.append('../biblib')
+# The BIBTEX library
 import biblib.bib
+
+# Import common functions for handling papers
+sys.path.append('..')
+from bib_utils.bib_utils import format_pdf_filename, format_image_filename
 
 # Reference BIB file 
 bib_file = '../../_bibliography/references.bib'
@@ -23,6 +25,7 @@ duplicate_threshold = 80
 # Whether to display warnings/errors or not
 errors_activated = True
 warning_activated = False
+info_activated = False
 
 
 def log_err(message):
@@ -33,6 +36,23 @@ def log_err(message):
 def log_warn(message):
     if warning_activated:
         print('Warning: ', message)
+
+
+def log_info(message):
+    if info_activated:
+        print('Info: ', message)
+
+
+def list_files(folder):
+    """ List all files in a directory """
+    list_files = []
+
+    for file in listdir(folder):
+        file_path = join(folder, file)
+        if isfile(file_path):
+            list_files.append(file)
+
+    return list_files
 
 
 def list_entries(entry_name):
@@ -47,6 +67,22 @@ def list_entries(entry_name):
 
             if entry_name in entries:
                 list_entries.append(entries[entry_name])
+
+    return list_entries
+
+
+def list_entries_without_property(entry_name):
+    """ List entries without a certain property (for example: papers without images) """
+    list_entries = []
+
+    with open(bib_file, 'r') as fp:
+        db = biblib.bib.Parser().parse(fp, log_fp=sys.stderr).get_entries()
+
+        for entries in db.values():
+            key = entries.key
+
+            if entry_name not in entries:
+                list_entries.append(entries)
 
     return list_entries
 
@@ -125,8 +161,31 @@ def check_for_duplicates():
     for i in range(len(all_titles)):
         for j in range(i + 1, len(all_titles)):
             ratio = fuzz.ratio(all_titles[i].lower(), all_titles[j].lower())
-            if ratio > 80:
+            if ratio > duplicate_threshold:
                 log_err('Possible duplicates:\n\t{}\n\t{}'.format(all_titles[i], all_titles[j]))
+
+
+def make_image_recommendation():
+    """ For entries without image, make a recommendation for an image """
+    files = list_files(images_folder)
+    entries_without_image = list_entries_without_property('image')
+
+    for entry in entries_without_image:
+        
+        # Remove spaces in title
+        title_no_space = entry['title'].replace(' ', '')
+
+        # Match with files in the list
+        best_match_ratio = 0
+        best_match_index = 0
+        for i in range(len(files)):
+            ratio = fuzz.ratio(title_no_space.lower(), files[i].lower())
+            if ratio > best_match_ratio:
+                best_match_ratio = ratio
+                best_match_index = i
+
+        if best_match_ratio > duplicate_threshold:
+            log_info('Recommended image for paper:\n\t{}\n\t{}'.format(entry['title'], files[best_match_index]))
 
 
 def main():
@@ -134,6 +193,10 @@ def main():
     check_image_correspondence()
     check_pdf_correspondence()
     check_for_duplicates()
+    # make_image_recommendation()
+
+    # TODO: list all papers without PDF
+    # TODO: list all papers without image
 
 
 if __name__ == "__main__":
