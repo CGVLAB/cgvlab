@@ -1,0 +1,27 @@
+---
+title: "Research"
+layout: content
+permalink: /research/
+---
+
+<h1>Research</h1>
+
+<div class="container">
+    {% for research in site.data.research %}
+    <h2>{{ research.title }}</h2>
+    <div class="row mb-4">
+        {% if research.image %}
+        <div class="col-md-3">
+            <img src="{{ site.dir_resources_images }}/{{ research.image }}" alt="Image for project {{ research.title }}" class="img-fluid img-thumbnail rounded mb-2" />
+        </div>
+        <div class="col-md-9">
+            <p>{{ research.description }}</p>
+        </div>
+        {% else %}
+        <div class="col-md-12">
+            <p>{{ research.description }}</p>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
