@@ -60,4 +60,27 @@ permalink: /
   </div>
 </div>
 
-{% include news.html %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 pr-5">
+      <h2>Short description</h2>
+      <p class="text-justify">
+        The <strong>Computer Graphics and Visualization Laboratory (CGVLab)</strong> is an academic research lab that is part of the <a href="https://www.cs.purdue.edu/" title="Go to the CS Department website">Department of Computer Science</a> at <a href="https://www.purdue.edu" title="Go to Purdue University website">Purdue University</a>. The group performs research in graphics, visualization, computational geometry, and related applications.  Focus areas include model acquisition, image generalization, scientific visualization, urban modeling, robust computational geometry, and geometric computations and constraints.
+      </p>
+      <div class="row">
+        <div class="col-sm-9"><img src="{{ site.dir_resources_images }}/slider/purdue.png" alt="Logo of Purdue University" class="img-fluid mt-4 mb-4"/></div>
+        <div class="col-sm-3"><img src="{{ site.dir_resources_images }}/slider/logo.png" alt="Logo of the CGVLab" class="img-fluid"/></div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>News</h2>
+      {% for article in site.data.news limit:3 %}
+      {{ article.date }}
+      <p>{{ article.headline }}</p>
+      {% endfor %}
+
+      <br />
+      <a href="{% link _pages/news.md %}" class="btn btn-primary active" role="button">See more news</a>
+    </div>
+  </div>
+</div>
