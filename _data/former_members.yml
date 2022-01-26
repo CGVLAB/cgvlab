@@ -1,3 +1,39 @@
+- name: Dana Monther
+  bib_query_name: Monther.+Dana
+  photo: monther_dana.jpg
+  linkedin: https://www.linkedin.com/in/dana-monther-3a51131a9
+
+- name: Andres Bejarano
+  photo: bejarano_andres.jpg
+  url: http://andresbejarano.name/
+  linkedin: https://www.linkedin.com/in/andresbejarano87/
+
+- name: Chengyuan Lin
+  bib_query_name: Lin.+Chengyuan
+  photo: lin_chengyuan.jpg
+  linkedin: https://www.linkedin.com/in/chengyuan-lin-968464b8/
+
+- name: Tharindu Mathew
+  bib_query_name: Mathew.+Tharindu
+  photo: mathew_tharindu.jpg
+  linkedin: https://www.linkedin.com/in/tharindu-mathew/
+
+- name: Pratiman Patel
+  bib_query_name: Patel.+Pratiman
+  photo: patel_pratiman.jpg
+  linkedin: https://www.linkedin.com/in/pratiman-patel-77262739/
+
+- name: Justin Messinger
+  bib_query_name: Messinger.+Justin
+  photo: messinger_justin.jpg
+  url: https://www.cs.purdue.edu/people/graduate-students/messingj
+
+- name: Christoph M. Hoffmann
+  bib_query_name: Hoffmann.+Christoph
+  photo: hoffmann.jpg
+  info: Professor Emeritus
+  url: https://cs.purdue.edu/homes/cmh
+
 - name: Daniel Andersen
   bib_query_name: Andersen.+Daniel
   photo: anderson_daniel.jpg

@@ -2,16 +2,16 @@
 
 - title: Deep Vegetation Reconstruction
   photo: slider/slider_trees.jpg
-  caption: Deep Vegetation Reconstruction
+  caption:
 
 - title: Deep Soft Shadow Rendering
   photo: slider/slider_shadows.jpg
-  caption: Deep Soft Shadow Rendering
+  caption:
 
 - title: Phenotyping and Reconstruction
   photo: slider/slider_plants.jpg
-  caption: Phenotyping and Reconstruction
+  caption:
 
-- title: A Title
-  photo: slider/slider1.jpg
-  caption: Caption
+- title: Augmented Reality Surgical Telementoring
+  photo: slider/telementoring.jpg
+  caption:
