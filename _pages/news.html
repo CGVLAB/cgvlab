@@ -1,0 +1,19 @@
+---
+title: "News"
+layout: content
+permalink: /news/
+---
+
+<h1>News</h1>
+<hr />
+
+{% for article in site.data.news %}
+<div class="card mb-3">
+  <div class="card-header">
+    {{ article.date }}
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  </div>
+</div>
+{% endfor %}

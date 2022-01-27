@@ -9,7 +9,7 @@ permalink: /team/
 Jump to [faculty](#faculty), [graduate students](#graduate-students),
 [former members](#former-members).
 
-<br>
+---
 
 ## Faculty
 
