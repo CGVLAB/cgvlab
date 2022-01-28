@@ -17,7 +17,7 @@ permalink: /classes/
 <div class="container">
     {% for course in site.data.courses %}
     <h2>{{ course.class_number }}: {{ course.title }}</h2>
-    <div class="row mb-4">
+    <div class="row mb-5">
         {% if course.image %}
         <div class="col-md-3">
             <img src="{{ site.dir_resources_images }}/{{ course.image }}" alt="Image for course {{ course.title }}" class="img-fluid img-thumbnail rounded mb-2" />
@@ -27,7 +27,12 @@ permalink: /classes/
         </div>
         {% else %}
         <div class="col-md-12">
-            <p>{{ course.description }}</p>
+            <p>
+                {{ course.description }}
+            </p>
+            {% if course.url %}
+                <a href="{{ course.url }}" title="Go to the course website" class="btn btn-primary active">Go to the course website</a>
+            {% endif %}
         </div>
         {% endif %}
     </div>

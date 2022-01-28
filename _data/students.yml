@@ -6,7 +6,6 @@
 - name: Christopher May
   bib_query_name: May.+Christopher
   photo: may_christopher.jpg
-  linkedin:
 
 - name: Lu Xing
   bib_query_name: Xing.+Lu
@@ -61,3 +60,7 @@
   bib_query_name: Liu.+Yunyu
   photo: yunyu_liu.jpg
   url: https://wenwen0319.github.io/
+
+- name: Yuqi Zhou
+  bib_query_name: Zhou.+Yuqi
+  photo: yuki_zhou.jpg

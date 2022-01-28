@@ -1,4 +1,41 @@
+- class_number: CS 334
+  title: Fundamentals of Computer Graphics
+  description: The syllabus has three parts. Linear algebra, computational geometry, and image processing fundamentals are covered in the first part. The basic interactive 3-D computer graphics pipeline is covered in the second part, including rasterization, rasterization parameter interpolation, lighting, shading, texture mapping, projective texture mapping, shadow mapping, and environment mapping. Advanced topics such as advanced rendering effects, character animation, ray tracing, higher-order surfaces, image-based rendering, automated 3-D modeling, GPU programming, and computational photography are covered in the third part.
+  image:
+  url: https://www.cs.purdue.edu/homes/aliaga/_cs334-22spring/index.htm
+
 - class_number: CS 434
   title: Advanced Computer Graphics
   description: CS 434 is a redesigned course of contemporary algorithms in Computer Graphics. The course introduces GPU programming using shaders and CUDA to develop fast and efficient real-time applications. We will closely examine light interaction on surfaces and materials, its formal description by the rendering equation, and its numerical solutions using Monte Carlo path tracing and photon maps. Complex materials that require subsurface scattering will also be discussed. We will follow the latest approaches to shape modeling ranging from subdivision surfaces to procedural models using grammars. The course will show applications of Computer Graphics in additive manufacturing (3D printing). Complex structures used in natural phenomena simulation, particularly L-systems, split grammars, stochastic processes for geometry generation, fractional Brownian surfaces, and other stochastic fractals, will be discussed. Physics-based algorithms will be introduced that couple GPU with numerical solvers for fluid and cloth simulations. The course will also discuss geometric modeling using deep learning applications, particularly generative adversarial networks.
   image:
+  url: https://www.cs.purdue.edu/cgvlab/courses/434/434Spring2022/
+
+- class_number: CS 490/590
+  title: Introduction To VR/AR
+  description: "Background: brief tutorials on linear algebra, geometry, coordinate systems, transformations, cameras, rendering, shaders, C# programming. VR: head mounted displays, tracking, redirected walking, 360 videos, haptics, collaboration, gaze tracking, foveated rendering, applications. AR: optical & video see-through displays, annotation anchoring, diminished reality, apps. VR and AR user studies: design, implementation, analysis, task load and cybersickness."
+  image:
+  url: https://www.cs.purdue.edu/cgvlab/courses/490590VR/
+
+- class_number: CS 530
+  title: Introduction of Scientific Visualization
+  description: The course provides an introduction to the principles and techniques of Scientific Visualization. It covers visualization methods for the most common data types, namely scalar, vector, and tensor fields. It combines a description of visualization algorithms with a presentation of their practical applications. Simple but instructive programming assignments offer a hands-on exposure to the most widely used visualization techniques.
+  image:
+  url:
+
+- class_number: CS 531
+  title: Computational Geometry
+  description: "This course covers several topics in Computational Geometry including: coordinates and simple Calculations, convex hull, segment Intersection and planar subdivisions, Voronoi Diagrams and cyclographic maps, point queries and range search, Delaunay triangulations, implicit algebraic modeling, interpolation basics, Bézier curves, and constraint solving (e.g., triangle solvers, root selection, and variable-radius circle methods)."
+  image:
+  url:
+
+- class_number: CS 535
+  title: Interactive 3D Computer Graphics
+  description: Interested in computer graphics? Does geometric modeling interest you? Do you like rendering photorealistic imagery? Do you like rendering artistic imagery? Have you ever thought of how to render a communication network? What does it mean to display internet traffic? Is doing animations fun to you? All this is part of computer graphics. This course teaches the fundamentals, at a graduate school level, for rendering artistic imagery, abstract concepts, animations, and complex 3D models. Major applications of course material include virtual reality, 3D scanning, video games, film special effects, CAD/CAM, simulation medical imaging, image processing, scientific visualization, information visualization, and large-scale rendering (e.g., of entire cities). 
+  image:
+  url:
+
+- class_number: CS 635
+  title: Capturing, Modeling, and Rendering 3D Scenes
+  description: This course teaches advanced topics in computer graphics and computer vision. It includes creating models of 3D objects (e.g., entire objects, rooms, floors, or buildings). The course material helps to understand the fundamental problems and challenges encountered when capturing, modeling, and rendering 3D structures and objects, as well as state of the art solutions. The course covers several subjects within computer graphics, computer vision, and computer science so as to provide to the student a full understanding of the capture/model/render pipeline. From this understanding and cross-fertilization of ideas, it is expected that students will in the future be able to develop new and improved approaches. 
+  image:
+  url:
