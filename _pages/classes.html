@@ -1,0 +1,35 @@
+---
+title: "Classes"
+layout: content
+permalink: /classes/
+---
+
+<h1>Classes</h1>
+
+
+<p>
+    A summary of courses related to our laboratory, and taught by our faculty, is given below.<br />
+    For the current course schedule, please see the <a href="https://www.cs.purdue.edu/academic-programs/courses/index.html" title="Computer Science Courses webpage">Computer Science Courses webpage</a>
+</p>
+
+<hr />
+
+<div class="container">
+    {% for course in site.data.courses %}
+    <h2>{{ course.class_number }}: {{ course.title }}</h2>
+    <div class="row mb-4">
+        {% if course.image %}
+        <div class="col-md-3">
+            <img src="{{ site.dir_resources_images }}/{{ course.image }}" alt="Image for course {{ course.title }}" class="img-fluid img-thumbnail rounded mb-2" />
+        </div>
+        <div class="col-md-9">
+            <p>{{ course.description }}</p>
+        </div>
+        {% else %}
+        <div class="col-md-12">
+            <p>{{ course.description }}</p>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
