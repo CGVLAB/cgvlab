@@ -14,6 +14,7 @@
   linkedin: https://www.linkedin.com/in/dana-monther-3a51131a9
 
 - name: Andres Bejarano
+  bib_query_name: Bejarano.+Andres
   photo: bejarano_andres.jpg
   url: http://andresbejarano.name/
   linkedin: https://www.linkedin.com/in/andresbejarano87/
@@ -37,12 +38,6 @@
   bib_query_name: Messinger.+Justin
   photo: messinger_justin.jpg
   url: https://www.cs.purdue.edu/people/graduate-students/messingj
-
-- name: Christoph M. Hoffmann
-  bib_query_name: Hoffmann.+Christoph
-  photo: hoffmann.jpg
-  info: Professor Emeritus
-  url: https://cs.purdue.edu/homes/cmh
 
 - name: Daniel Andersen
   bib_query_name: Andersen.+Daniel

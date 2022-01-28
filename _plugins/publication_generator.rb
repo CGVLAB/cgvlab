@@ -64,12 +64,12 @@ module Jekyll
       self.data['publication_source'] = @publication['booktitle'] || @publication['journal'] || @publication['publisher'] || 'Unknown'
 
       # Retrieve all authors
-
       @faculty = site.data['faculty'].map{|s| s.merge!('type' => 'faculty') }
       @students = site.data['students'].map{|s| s.merge!('type' => 'student') }
-      @former_members = site.data['former_members'].map{|s| s.merge!('type' => 'former member') }
+      @former_faculty = site.data['former_faculty'].map{|s| s.merge!('type' => 'former faculty') }
+      @former_persons = site.data['former_members'].map{|s| s.merge!('type' => 'former member') }
 
-      @all_members = @faculty.concat(@students.concat(@former_members))
+      @all_members = @faculty.concat(@students.concat(@former_faculty.concat(@former_persons)))
 
       # Add authors and (if applicable) author links
 

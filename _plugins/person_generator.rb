@@ -20,10 +20,11 @@ module Jekyll
         # Retrieve person types
         faculty = site.data['faculty'].map{|s| s.merge!('type' => 'faculty') }
         students = site.data['students'].map{|s| s.merge!('type' => 'student') }
+        former_faculty = site.data['former_faculty'].map{|s| s.merge!('type' => 'former faculty') }
         former_persons = site.data['former_members'].map{|s| s.merge!('type' => 'former member') }
 
         # Create page for each person
-        for person in faculty.concat(students.concat(former_persons))
+        for person in faculty.concat(students.concat(former_faculty.concat(former_persons)))
           # Create formatted URL
           # https://stackoverflow.com/a/4308399
           formatted_name_url = person['name'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
