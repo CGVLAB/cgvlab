@@ -8,20 +8,10 @@
   photo: may_christopher.jpg
   linkedin:
 
-- name: Dylan Rodriquez
-  bib_query_name: Rodriquez.+Dylan
-  photo: rodriquez_dylan.jpg
-  linkedin: https://www.linkedin.com/in/dylanmr/
-
 - name: Lu Xing
   bib_query_name: Xing.+Lu
   photo: xing_lu.jpg
   linkedin: https://www.linkedin.com/in/luluxing
-
-- name: Raine Yeh
-  bib_query_name: Yeh.+Raine
-  photo: yeh_raine.jpg
-  linkedin: https://www.linkedin.com/in/raineyeh/
 
 - name: Zixun Yu
   bib_query_name: Yu.+Zixun
@@ -31,12 +21,12 @@
 - name: Yizhi Song
   bib_query_name: Song.+Yizhi
   photo: song_yizhi.jpg
-  linkedin: https://www.linkedin.com/in/yizhi-song-1781311a9
+  linkedin: https://www.linkedin.com/in/yizhi-david-song-1781311a9
 
 - name: Xiaowei Zhang
   bib_query_name: Zhang.+Xiaowei
   photo: zhang_xiaowei.jpg
-  linkedin: https://www.linkedin.com/in/xiaowei-zhang-152881b2
+  linkedin: https://www.linkedin.com/in/xiaowei-zhang-072614222
 
 - name: Xiaochen Zhou
   bib_query_name: Zhou.+Xiaochen
@@ -66,3 +56,8 @@
   bib_query_name: Li.+Bosheng
   photo: bosheng_li.jpg
   linkedin: https://www.linkedin.com/in/bosheng-li-54a4b8177/
+
+- name: Yunyu Liu
+  bib_query_name: Liu.+Yunyu
+  photo: yunyu_liu.jpg
+  url: https://wenwen0319.github.io/

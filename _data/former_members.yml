@@ -1,3 +1,13 @@
+- name: Dylan Rodriquez
+  bib_query_name: Rodriquez.+Dylan
+  photo: rodriquez_dylan.jpg
+  linkedin: https://www.linkedin.com/in/dylanmr/
+
+- name: Raine Yeh
+  bib_query_name: Yeh.+Raine
+  photo: yeh_raine.jpg
+  linkedin: https://www.linkedin.com/in/raineyeh/
+
 - name: Dana Monther
   bib_query_name: Monther.+Dana
   photo: monther_dana.jpg
