@@ -3,17 +3,18 @@
 		<div class="row justify-content-center">
 			<div class="col-sm">
 				<h5>{{ site.title }} Website</h5>
-				<p>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Site made with
-					<a href="https://jekyllrb.com">Jekyll</a>.
+				<p>
+					{{ site.data.footer.funding_content }}
 				</p>
-				{{ site.data.footer.site_content }}
+				<p>
+					{{ site.data.footer.site_content }}
+				</p>
+				<p>
+					Copyright &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Site made with <a href="https://jekyllrb.com">Jekyll</a>.
+				</p>
 			</div>
 			<div class="col-sm mt-3 mt-sm-0">
-				<h5>Funding</h5>
-				<p>
-					{{ site.data.footer.funding_information }}
-				</p>
-				{{ site.data.footer.funding_content }}
+				
 			</div>
 			<div class="col-sm mt-3 mt-sm-0">
 				<h5>Address</h5>
