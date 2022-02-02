@@ -41,7 +41,14 @@
                         {% endif %}
 
                         {% if entry.code %}
-                        <a href="{{ site.dir_resources_files }}/supplemental/{{ entry.code }}" target="_blank">
+
+                        {% if entry.code contains "/" %}
+                        {% assign entry_code = entry.code %}
+                        {% else %}
+                        {% assign entry_code = site.dir_resources_files | append: "/supplemental/" | append: entry.code %}
+                        {% endif %}
+
+                        <a href="{{ entry_code }}" target="_blank">
                             <input class="btn btn-outline-dark" type="button" value="Code" />
                         </a>
                         {% endif %}
