@@ -66,10 +66,9 @@ module Jekyll
       # Retrieve all authors
       @faculty = site.data['faculty'].map{|s| s.merge!('type' => 'faculty') }
       @students = site.data['students'].map{|s| s.merge!('type' => 'student') }
-      @former_faculty = site.data['former_faculty'].map{|s| s.merge!('type' => 'former faculty') }
       @former_persons = site.data['former_members'].map{|s| s.merge!('type' => 'former member') }
 
-      @all_members = @faculty.concat(@students.concat(@former_faculty.concat(@former_persons)))
+      @all_members = @faculty.concat(@students.concat(@former_persons))
 
       # Add authors and (if applicable) author links
 
