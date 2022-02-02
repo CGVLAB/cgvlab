@@ -10,6 +10,7 @@
 
 - title: Urban Modeling and Simulation
   description: Our objective is to capture, simulate, and modify models of urban environments. Today, more than half of the world's population of 7 billion people lives in cities - and that number is only expected to grow over the next 30 years. Cities, and urban spaces of all sizes, are however extremely complex and their modeling is still not solved. We pursue multi-disciplinary research focused on visual computing and artificial intelligence (AI) tools for improving the complex urban ecosystem and for "what-if" exploration of sustainable urban designs, including integrating urban 3D modeling, simulation, meteorology, vegetation, and traffic modeling. To date, we have developed several algorithms and large-scale software systems using ground-level imagery, aerial imagery, satellite imagery, GIS data, and forward and inverse procedural modeling to create/modify 3D and 2D urban models, and we have deployed cyberinfrastructure prototypes.
+  image: research/urban_modeling.jpg
   html_id: urban_modeling_simulation
 
 - title: Augmented Reality Surgical Telementoring
@@ -24,6 +25,7 @@
 
 - title: Computational Archaeological
   description: Modeling and understanding the evolution of urbanization over the course of human history constitutes a key aspect of human civilization, and helps stakeholders make better informed decisions for future urban development. In this project, and together with several teams of archaeologists from Europe and the Americas, we provide solutions towards enabling a deep generative modeling process from sparse but structured (historical urban) data. Such sites exhibit anthropogenic features such as right angles, straight edges, parallelism, and symmetries which we exploit with visual computing and deep-learning driven segmentation, classification, and completion, to ultimately recreate the past from the few remnants remaining.
+  image: research/computational_archaeology.jpg
   html_id: computational_archeology
 
 - title: Computer Animation Instructor Avatars for Research on Non-Verbal Communication in Education
@@ -38,4 +40,5 @@
 
 - title: Image Based Vision Correction
   description: Vision plays a central and critical role in our lives. Significant research and technology has been devoted to producing high-quality printed material, to creating compelling digital displays of high resolution and of large color gamut and dynamic range, and to generating and rendering realistic visual imagery. Nonetheless blur is a natural phenomenon that occurs due to human vision aberrations (e.g., presbyopia, myopia) and due to physical phenomena (e.g., motion). In this project, we pursue preemptive image-based solutions to generate computer-displayed imagery that is resistant to the above blur phenomenon, yielding crisper imagery.
+  image: research/image-based_vision_correction.jpg
   html_id: image_based_vision_correction
