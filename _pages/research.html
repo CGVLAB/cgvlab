@@ -7,9 +7,18 @@ permalink: /research/
 <h1>Research</h1>
 <hr />
 
+<h3>List of topics</h3>
+<ul>
+    {% for research in site.data.research %}
+    <li><a href="#{{ research.html_id }}">{{ research.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<hr />
+
 <div class="container">
     {% for research in site.data.research %}
-    <h2>{{ research.title }}</h2>
+    <h2 id="{{ research.html_id }}">{{ research.title }}</h2>
     <div class="row mb-4">
         {% if research.image %}
         <div class="col-md-3">

@@ -1,32 +1,41 @@
-- title: Procedural & Inverse Procedural Modeling
-  description: A procedural model is a model represented by a code - for example, C++, Python, L-system, or a shape grammar. The objective of inverse procedural modeling is to find a code that would represent a given structure. We have presented several results in the generation of inverse procedural models for regular structures that are represented as L-systems, split grammars or shape grammars. For example, 3D models of biological trees were encoded as parameters of a simulation system that generates them. Buildings and large subsets of cities have been successfully subjected to inverse procedural modeling. Also, inverse procedural models have been learned from existing structures in artistic design, such as interactive "brushing" of virtual worlds.
-  image: research/procedural_modeling.jpg
-
-- title: Simulation of Natural Phenomena
-  description: One of the long open problems in Computer Graphics is the visual simulation of Nature. Although the output of those simulations is 3D geometric models, an in-depth understanding of the underlying processes is usually necessary. We have a long history of simulating virtual erosion that generates visually plausible terrains. We have developed several models for river generations and terrain modeling in general. Another exciting area is a simulation of vegetation. Trees and plants are complex systems with a shape defined by competition for resources, among which light is the most important one. By incorporating competition for light into the tree developmental process (growth), we can simulate very complex tree shapes as well as ecosystems of trees competing for resources. We have also presented models of trees growing under the influence of wind.
-  image: research/simulation_nature.jpg
-
 - title: "Superimages: Image Generalization through Camera Model Design"
   description: We propose an image generalization that removes the uniform sampling rate and single viewpoint constraints of conventional images to increase their information bandwidth. The image generalization is implemented through camera model design, a novel computer graphics paradigm that replaces the conventional linear rays with curved rays, which are routed to sample a 3D dataset comprehensively, continuously, and non-redundantly. The image generalization has benefits in a variety of contexts, including in parallel, focus+context, and remote visualization; in virtual, augmented, and diminished reality; and in the acceleration of higher-order rendering effects.
   image: research/super_image_teapot.jpg
+  html_id: superimages
+
+- title: Procedural & Inverse Procedural Modeling
+  description: A procedural model is a model represented by a code - for example, C++, Python, L-system, or a shape grammar. The objective of inverse procedural modeling is to find a code that would represent a given structure. We have presented several results in the generation of inverse procedural models for regular structures that are represented as L-systems, split grammars or shape grammars. For example, 3D models of biological trees were encoded as parameters of a simulation system that generates them. Buildings and large subsets of cities have been successfully subjected to inverse procedural modeling. Also, inverse procedural models have been learned from existing structures in artistic design, such as interactive "brushing" of virtual worlds.
+  image: research/procedural_modeling.jpg
+  html_id: procedural_modeling
+
+- title: Urban Modeling and Simulation
+  description: Our objective is to capture, simulate, and modify models of urban environments. Today, more than half of the world's population of 7 billion people lives in cities - and that number is only expected to grow over the next 30 years. Cities, and urban spaces of all sizes, are however extremely complex and their modeling is still not solved. We pursue multi-disciplinary research focused on visual computing and artificial intelligence (AI) tools for improving the complex urban ecosystem and for "what-if" exploration of sustainable urban designs, including integrating urban 3D modeling, simulation, meteorology, vegetation, and traffic modeling. To date, we have developed several algorithms and large-scale software systems using ground-level imagery, aerial imagery, satellite imagery, GIS data, and forward and inverse procedural modeling to create/modify 3D and 2D urban models, and we have deployed cyberinfrastructure prototypes.
+  html_id: urban_modeling_simulation
 
 - title: Augmented Reality Surgical Telementoring
   description: Current surgical telementoring systems require a trainee surgeon to shift focus frequently between the operating field and a nearby monitor that shows a video fo the operating field annotated by a remote mentor. These focus shifts can lead to surgical care delays and errors. We propose a novel approach to surgical telementoring that avoids focus shifts using an augmented reality (AR) interface that integrates the annotations directly into the trainee's view of the surgical field.
   image: research/surgical_telementoring.jpg
+  html_id: augmented_reality_surgery
+
+- title: Simulation of Natural Phenomena
+  description: One of the long open problems in Computer Graphics is the visual simulation of Nature. Although the output of those simulations is 3D geometric models, an in-depth understanding of the underlying processes is usually necessary. We have a long history of simulating virtual erosion that generates visually plausible terrains. We have developed several models for river generations and terrain modeling in general. Another exciting area is a simulation of vegetation. Trees and plants are complex systems with a shape defined by competition for resources, among which light is the most important one. By incorporating competition for light into the tree developmental process (growth), we can simulate very complex tree shapes as well as ecosystems of trees competing for resources. We have also presented models of trees growing under the influence of wind.
+  image: research/simulation_nature.jpg
+  html_id: simulation_natural_phenomena
+
+- title: Computational Archaeological
+  description: Modeling and understanding the evolution of urbanization over the course of human history constitutes a key aspect of human civilization, and helps stakeholders make better informed decisions for future urban development. In this project, and together with several teams of archaeologists from Europe and the Americas, we provide solutions towards enabling a deep generative modeling process from sparse but structured (historical urban) data. Such sites exhibit anthropogenic features such as right angles, straight edges, parallelism, and symmetries which we exploit with visual computing and deep-learning driven segmentation, classification, and completion, to ultimately recreate the past from the few remnants remaining.
+  html_id: computational_archeology
 
 - title: Computer Animation Instructor Avatars for Research on Non-Verbal Communication in Education
   description: Almost a century ago, Edward Sapir noted that we “respond to gestures with an extreme alertness” according to “an elaborate and secret code that is written nowhere, known to none, and understood by all”. Together with psychology researchers we work to break the code of effective instructor gestures in education. We are developing a system of computer animation instructor avatars to research instructor gesture effectiveness in the context of mathematics learning. We examine both gestures that help convey the mathematical concepts as well as gestures that might convey an appealing and engaging instructor personality.
   image: research/instructor_avatar.jpg
+  html_id: animation_instructor
 
 - title: Neural Rendering
   description: Our neural rendering algorithms render realistic 3D effects for 2D image composition via data-driven methods. In our proposed representation, 3D effects, e.g. reflection and shadows, can be rendered controllably to meet artists' needs. 
   image: research/soft_shadow_networks.jpg
-
-- title: Urban Modeling and Simulation
-  description: Our objective is to capture, simulate, and modify models of urban environments. Today, more than half of the world's population of 7 billion people lives in cities - and that number is only expected to grow over the next 30 years. Cities, and urban spaces of all sizes, are however extremely complex and their modeling is still not solved. We pursue multi-disciplinary research focused on visual computing and artificial intelligence (AI) tools for improving the complex urban ecosystem and for "what-if" exploration of sustainable urban designs, including integrating urban 3D modeling, simulation, meteorology, vegetation, and traffic modeling. To date, we have developed several algorithms and large-scale software systems using ground-level imagery, aerial imagery, satellite imagery, GIS data, and forward and inverse procedural modeling to create/modify 3D and 2D urban models, and we have deployed cyberinfrastructure prototypes.
-
-- title: Computational Archaeological
-  description: Modeling and understanding the evolution of urbanization over the course of human history constitutes a key aspect of human civilization, and helps stakeholders make better informed decisions for future urban development. In this project, and together with several teams of archaeologists from Europe and the Americas, we provide solutions towards enabling a deep generative modeling process from sparse but structured (historical urban) data. Such sites exhibit anthropogenic features such as right angles, straight edges, parallelism, and symmetries which we exploit with visual computing and deep-learning driven segmentation, classification, and completion, to ultimately recreate the past from the few remnants remaining.
+  html_id: neural_rendering
 
 - title: Image Based Vision Correction
   description: Vision plays a central and critical role in our lives. Significant research and technology has been devoted to producing high-quality printed material, to creating compelling digital displays of high resolution and of large color gamut and dynamic range, and to generating and rendering realistic visual imagery. Nonetheless blur is a natural phenomenon that occurs due to human vision aberrations (e.g., presbyopia, myopia) and due to physical phenomena (e.g., motion). In this project, we pursue preemptive image-based solutions to generate computer-displayed imagery that is resistant to the above blur phenomenon, yielding crisper imagery.
+  html_id: image_based_vision_correction
