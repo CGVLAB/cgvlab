@@ -23,6 +23,10 @@ layout: content
         <h3 class="text-muted">{{ page.person_type | capitalize }}</h3>
         {% endif %}
         <hr>
+        {% if page.person_email %}
+        <a class="h3" href="mailto:{{ page.person_email }}" target="_blank">{{ page.person_email }}</a>
+        <br>
+        {% endif %}
         {% if page.person_url %}
         <a class="h3" href="{{ page.person_url }}" target="_blank">Website</a>
         <br>

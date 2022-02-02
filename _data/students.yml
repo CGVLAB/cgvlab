@@ -42,12 +42,14 @@
 - name: Jae Joong Lee
   bib_query_name: Lee.+Jae +Joong
   photo: jaejoong_lee.jpg
+  email: lee2161@purdue.edu
   url: https://www.jaejoonglee.com/
   linkedin: https://www.linkedin.com/in/jaejoong/
 
 - name: Mathieu Gaillard
   bib_query_name: Gaillard.+Mathieu
   photo: mathieu_gaillard.jpg
+  email: mgaillar@purdue.edu
   url: https://www.mgaillard.fr/
   linkedin: https://www.linkedin.com/in/mathieu-gaillard-9b6386a8/
 

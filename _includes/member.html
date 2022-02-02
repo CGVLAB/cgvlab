@@ -15,6 +15,9 @@
                 <p class="card-subtitle mt-2 text-muted">{{ person.info }}</p>
                 <hr>
                 <p class="card-text">
+                    {% if person.email %}
+                    <a href="mailto:{{ person.email }}" target="_blank">{{ person.email }}</a>
+                    {% endif %}
                     {% if person.url %}
                     <a href="{{ person.url }}" target="_blank">Website</a>
                     {% endif %}
