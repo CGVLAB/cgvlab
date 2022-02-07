@@ -7,11 +7,6 @@
   bib_query_name: May.+Christopher
   photo: may_christopher.jpg
 
-- name: Lu Xing
-  bib_query_name: Xing.+Lu
-  photo: xing_lu.jpg
-  linkedin: https://www.linkedin.com/in/luluxing
-
 - name: Zixun Yu
   bib_query_name: Yu.+Zixun
   photo: yu_zixun.jpg
@@ -71,3 +66,31 @@
   bib_query_name: Lodaya.+Tejas
   photo: tejas_lodaya.jpg
   url: https://tejaslodaya.com
+
+- name: Ian Ostermann
+  bib_query_name: Ostermann.+Ian
+  photo: ian_ostermann.jpg
+  email: iosterma@purdue.edu
+  linkedin: https://www.linkedin.com/in/ian-ostermann/
+
+- name: Wufei Ma
+  bib_query_name: Ma.+Wufei
+  photo: wufei_ma.jpg
+
+- name: Shuqi Liao
+  bib_query_name: Liao.+Shuqi
+  photo: shuqi_liao.jpg
+  linkedin: https://www.linkedin.com/in/shuqiliao/
+
+- name: Yichen Sheng
+  bib_query_name: Sheng.+Yichen
+  photo: yichen_sheng.jpg
+  email: sheng30@purdue.edu
+  url: https://shengcn.github.io/
+  linkedin: https://www.linkedin.com/in/sheng-yichen-910064132/
+
+- name: Aocheng Li
+  bib_query_name: Li.+Aocheng
+  photo: aocheng_li.jpg
+  url: https://github.com/sheMnapion
+  linkedin: https://www.linkedin.com/in/aocheng-li-b68a21172/

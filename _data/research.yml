@@ -34,7 +34,7 @@
   html_id: animation_instructor
 
 - title: Neural Rendering
-  description: Our neural rendering algorithms render realistic 3D effects for 2D image composition via data-driven methods. In our proposed representation, 3D effects, e.g. reflection and shadows, can be rendered controllably to meet artists' needs. 
+  description: We explored data-driven methods for novel neural rendering given only 2D information as inputs. Our neural rendering algorithms render realistic 3D effects for 2D image composition, including soft shadows and reflections. An efficient data generation process is proposed to satisfy the deep neural networks. A new 2.5D data representation called height map is proposed to enable hard shadow rendering in our proposed novel space. A controllable soft shadow rendering algorithm is further proposed based on our pipeline. Our method has a huge potential to satisfy artists' and designers' needs.
   image: research/soft_shadow_networks.jpg
   html_id: neural_rendering
 
