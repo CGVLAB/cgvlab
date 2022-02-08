@@ -76,6 +76,7 @@
 - name: Wufei Ma
   bib_query_name: Ma.+Wufei
   photo: wufei_ma.jpg
+  linkedin: https://www.linkedin.com/in/wufei-ma-256352133/
 
 - name: Shuqi Liao
   bib_query_name: Liao.+Shuqi
@@ -94,3 +95,11 @@
   photo: aocheng_li.jpg
   url: https://github.com/sheMnapion
   linkedin: https://www.linkedin.com/in/aocheng-li-b68a21172/
+
+- name: Zhiquan Wang
+  bib_query_name: Wang.+Zhiquan
+  photo: zhiquan_wang.jpg
+
+- name: Sandeep Malatesh Nadig
+  bib_query_name: Nadig.+Sandeep
+  photo: sandeep_nadig.jpg
