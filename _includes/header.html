@@ -1,30 +1,31 @@
 <div class="container-fluid bg-dark border-bottom border-primary lab-border">
-	<nav class="navbar container navbar-expand-lg navbar-dark">
-		<a class="navbar-brand m-0 p-2" href="/">
-			<img src="{{ site.dir_theme_images }}/icon.png" width="64" class="d-inline-block" alt="Icon">
-		</a>
-		<div class="d-inline-flex flex-column justify-content-center align-items-start ml-3">
-			<h1 class="text-primary m-0">{{ site.title }}</h1>
-			<a class="lab-single-link-muted mr-5 text-wrap" href="{{ site.parent_organization_url }}" target="_blank">{{ site.parent_organization }}</a>
-		</div>
-	
-		<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-	
-		<div id="navbarSupportedContent" class="collapse navbar-collapse">
-			<div class="mr-auto"></div>
-			<ul class="navbar-nav">
-				{% for item in site.data.navbar %}
-				<li class="nav-item mx-3">
-					{% if item.path == page.url %}
-					{% assign nav_class = "active" %}
-					{% endif %}
-					<a class="h5 nav-link lab-nav-link m-0 {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</nav>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand p-1" href="https://www.purdue.edu">
+				<img src="{{ site.dir_theme_images }}/purdue_logo_dark_bg.svg" width="512" class="img-fluid" alt="Purdue University logo">
+			</a>
+			
+			<div class="d-inline-flex flex-column lab-header mr-2">
+				<a href="/"><h2 class="text-light m-0 pt-1 pb-1 pl-3">{{ site.title }}</h2></a>
+			</div>
+
+			<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div id="navbarSupportedContent" class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					{% for item in site.data.navbar %}
+					<li class="nav-item mx-3">
+						{% if item.path == page.url %}
+						{% assign nav_class = "active" %}
+						{% endif %}
+						<a class="h5 nav-link lab-nav-link m-0 {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</nav>
+	</div>
 </div>
