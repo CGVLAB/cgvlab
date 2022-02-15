@@ -26,12 +26,13 @@
 # Site settings (SEO)
 title: CGVLab
 description: Computer Graphics and Visualization Laboratory at Purdue University
-url: "https://cgvlab.purdue.edu"
+url: "https://www.cs.purdue.edu"
+purdue_url: "https://www.purdue.edu"
 parent_organization: Department of Computer Science at Purdue University
-parent_organization_url: "https://cs.purdue.edu"
+parent_organization_url: "https://www.cs.purdue.edu"
 logo: /theme/images/icon.png
 locale: en_US
-baseurl: ""
+baseurl: "/cgvlab/www"
 
 # Site defaults
 defaults:

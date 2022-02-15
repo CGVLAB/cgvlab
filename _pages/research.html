@@ -22,7 +22,7 @@ permalink: /research/
     <div class="row mb-4">
         {% if research.image %}
         <div class="col-md-3">
-            <img src="{{ site.dir_resources_images }}/{{ research.image }}" alt="Image for project {{ research.title }}" class="img-fluid img-thumbnail rounded mb-2" />
+            <img src="{{ site.dir_resources_images | relative_url }}/{{ research.image }}" alt="Image for project {{ research.title }}" class="img-fluid img-thumbnail rounded mb-2" />
         </div>
         <div class="col-md-9">
             <p>{{ research.description }}</p>

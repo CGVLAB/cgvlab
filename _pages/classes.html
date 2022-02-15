@@ -21,7 +21,7 @@ permalink: /classes/
     <div class="row mb-5">
         {% if course.image %}
         <div class="col-md-3">
-            <img src="{{ site.dir_resources_images }}/{{ course.image }}" alt="Image for course {{ course.title }}" class="img-fluid img-thumbnail rounded mb-2" />
+            <img src="{{ site.dir_resources_images | relative_url }}/{{ course.image }}" alt="Image for course {{ course.title }}" class="img-fluid img-thumbnail rounded mb-2" />
         </div>
         <div class="col-md-9">
             <p>{{ course.description }}</p>

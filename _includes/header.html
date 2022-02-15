@@ -1,12 +1,12 @@
 <div class="container-fluid bg-dark border-bottom border-primary lab-border">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a class="navbar-brand p-1" href="https://www.purdue.edu">
-				<img src="{{ site.dir_theme_images }}/purdue_logo_dark_bg.svg" width="512" class="img-fluid" alt="Purdue University logo">
+			<a class="navbar-brand p-1" href="{{ site.purdue_url }}">
+				<img src="{{ site.dir_theme_images | relative_url }}/purdue_logo_dark_bg.svg" width="512" class="img-fluid" alt="Purdue University logo">
 			</a>
 			
 			<div class="d-inline-flex flex-column lab-header mr-2">
-				<a href="/"><h2 class="text-light m-0 pt-1 pb-1 pl-3">{{ site.title }}</h2></a>
+				<a href="{% link _pages/home.html %}"><h2 class="text-light m-0 pt-1 pb-1 pl-3">{{ site.title }}</h2></a>
 			</div>
 
 			<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -21,7 +21,7 @@
 						{% if item.path == page.url %}
 						{% assign nav_class = "active" %}
 						{% endif %}
-						<a class="h5 nav-link lab-nav-link m-0 {{ nav_class }}" href="{{ item.path }}">{{ item.title }}</a>
+						<a class="h5 nav-link lab-nav-link m-0 {{ nav_class }}" href="{{ item.path | relative_url }}">{{ item.title }}</a>
 					</li>
 					{% endfor %}
 				</ul>

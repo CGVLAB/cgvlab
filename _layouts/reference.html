@@ -11,14 +11,14 @@
     {% assign info_column_class = "col-md-9" %}
     <div class="card m-1">
         <div class="row no-gutters">
-            <div class="col-xs p-3" href="/publications/{{ entry.key }}">
-                <img src="{{site.dir_resources_images}}/supplemental/{{ highlight_img }}"
+            <div class="col-xs p-3" href="{% link _pages/publications.md %}{{ entry.key }}">
+                <img src="{{site.dir_resources_images | relative_url }}/supplemental/{{ highlight_img }}"
                     class="card-img border border-dark lab-img-square" {% if site.enable_lazy_loading %}loading="lazy"
                     {% endif %}>
             </div>
             <div class="col">
                 <div class="card-body p-3">
-                    <a id="{{ entry.key }}-title" class="h5 card-title" href="/publications/{{ entry.key }}"
+                    <a id="{{ entry.key }}-title" class="h5 card-title" href="{% link _pages/publications.md %}{{ entry.key }}"
                         target="_blank">{{ entry.title }} ({{ entry.author_0_last }}
                         et al. {{ entry.year }})</a>
                     <p class="card-text">
@@ -35,7 +35,7 @@
                         {% endif %}
 
                         {% if entry.pdf %}
-                        <a href="{{ site.dir_resources_publications }}/{{ entry.pdf }}" target="_blank">
+                        <a href="{{ site.dir_resources_publications | relative_url }}/{{ entry.pdf }}" target="_blank">
                             <input class="btn btn-outline-dark" type="button" value="PDF" />
                         </a>
                         {% endif %}
@@ -45,7 +45,7 @@
                         {% if entry.code contains "/" %}
                         {% assign entry_code = entry.code %}
                         {% else %}
-                        {% assign entry_code = site.dir_resources_files | append: "/supplemental/" | append: entry.code %}
+                        {% assign entry_code = site.dir_resources_files | relative_url | append: "/supplemental/" | append: entry.code %}
                         {% endif %}
 
                         <a href="{{ entry_code }}" target="_blank">
@@ -58,7 +58,7 @@
                         {% if entry.video contains "/" %}
                         {% assign entry_video = entry.video %}
                         {% else %}
-                        {% assign entry_video = site.dir_resources_videos | append: "/supplemental/" | append: entry.video %}
+                        {% assign entry_video = site.dir_resources_videos | relative_url | append: "/supplemental/" | append: entry.video %}
                         {% endif %}
 
                         <a href="{{ entry_video }}" target="_blank">

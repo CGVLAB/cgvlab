@@ -3,26 +3,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.dir_theme_icons }}/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.dir_theme_icons }}/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="194x194" href="{{ site.dir_theme_icons }}/favicon-194x194.png?v=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.dir_theme_icons | relative_url }}/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.dir_theme_icons | relative_url }}/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="194x194" href="{{ site.dir_theme_icons | relative_url }}/favicon-194x194.png?v=1">
   <link rel="icon" type="image/png" sizes="192x192"
-    href="{{ site.dir_theme_icons }}/android-chrome-192x192.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.dir_theme_icons }}/favicon-16x16.png?v=1">
-  <link rel="manifest" href="{{ site.dir_theme_icons }}/site.webmanifest?v=1">
-  <link rel="mask-icon" href="{{ site.dir_theme_icons }}/safari-pinned-tab.svg?v=1" color="#000000">
-  <link rel="shortcut icon" href="{{ site.dir_theme_icons }}/favicon.ico?v=1">
+    href="{{ site.dir_theme_icons | relative_url }}/android-chrome-192x192.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.dir_theme_icons | relative_url }}/favicon-16x16.png?v=1">
+  <link rel="manifest" href="{{ site.dir_theme_icons | relative_url }}/site.webmanifest?v=1">
+  <link rel="mask-icon" href="{{ site.dir_theme_icons | relative_url }}/safari-pinned-tab.svg?v=1" color="#000000">
+  <link rel="shortcut icon" href="{{ site.dir_theme_icons | relative_url }}/favicon.ico?v=1">
 
   <meta name="msapplication-TileColor" content="#000000">
-  <meta name="msapplication-TileImage" content="{{ site.dir_theme_icons }}/mstile-144x144.png?v=1">
-  <meta name="msapplication-config" content="{{ site.dir_theme_icons }}/browserconfig.xml?v=1">
+  <meta name="msapplication-TileImage" content="{{ site.dir_theme_icons | relative_url }}/mstile-144x144.png?v=1">
+  <meta name="msapplication-config" content="{{ site.dir_theme_icons | relative_url }}/browserconfig.xml?v=1">
   <meta name="theme-color" content="#000000">
 
-  <link rel="stylesheet" href="{{ site.dir_theme_css}}/{{ site.file_theme_main_css }}">
+  <link rel="stylesheet" href="{{ site.dir_theme_css | relative_url }}/{{ site.file_theme_main_css }}">
 
-  <script src="{{ site.dir_dependencies_js }}/{{ site.file_theme_jquery_js }}"></script>
-  <script src="{{ site.dir_dependencies_js }}/{{ site.file_theme_bootstrap_js }}"></script>
-  <script src="{{ site.dir_dependencies_js }}/{{ site.file_theme_pagination_js }}"></script>
+  <script src="{{ site.dir_dependencies_js | relative_url }}/{{ site.file_theme_jquery_js }}"></script>
+  <script src="{{ site.dir_dependencies_js | relative_url }}/{{ site.file_theme_bootstrap_js }}"></script>
+  <script src="{{ site.dir_dependencies_js | relative_url }}/{{ site.file_theme_pagination_js }}"></script>
 
   {% seo %}
 </head>
