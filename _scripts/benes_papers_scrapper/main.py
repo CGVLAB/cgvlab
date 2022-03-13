@@ -13,8 +13,8 @@ from bib_utils.bib_utils import format_pdf_filename, format_image_filename
 bib_file = 'benes_original_references.bib'
 images_folder = '../../resources/images/supplemental'
 papers_folder = '../../resources/papers'
-url_images = 'http://hpcg.purdue.edu/bbenes/images/pubPic/'
-url_papers = 'http://hpcg.purdue.edu/bbenes/papers/'
+url_images = 'https://www.cs.purdue.edu/homes/bbenes/images/pubPic/'
+url_papers = 'https://www.cs.purdue.edu/homes/bbenes/papers/'
 
 
 def main():
