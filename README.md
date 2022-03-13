@@ -119,5 +119,5 @@ To build for production, run `JEKYLL_ENV="production" bundle exec jekyll build`.
 
 # License
 
-CGVLab Website. Copyright (c) 2021 CGVLab. Code released under the
+CGVLab Website. Copyright (c) 2022 CGVLab. Code released under the
 [MIT License](./LICENSE).
