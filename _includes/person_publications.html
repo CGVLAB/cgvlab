@@ -1,0 +1,40 @@
+{% capture all_pub_count %}{% bibliography_count -f references --query @*[author~={{page.person_bib_query_name}}] %}{% endcapture %}
+{% assign all_pub_count = all_pub_count | plus: 0 %}
+{% if all_pub_count == 0 %}
+<h2>No Publications</h2>
+{% else %}
+
+{% if all_pub_count > 1 %}
+{% assign all_pub_count_text = 'Publications' | append: ' (' | append: all_pub_count | append: ')' %}
+{% else %}
+{% assign all_pub_count_text = 'Publication' %}
+{% endif %}
+
+<h2>{{ all_pub_count_text }}</h2>
+
+{% for publication_year in (2000..2022) reversed %}
+{% if forloop.last %}
+{% capture pub_count_previous %}{% bibliography_count -f references --query @*[year<={{publication_year}},author~={{page.person_bib_query_name}}] %}{% endcapture %}
+{% assign pub_count_previous = pub_count_previous | plus: 0 %}
+{% if pub_count_previous > 0 %}
+<h3>Pre-{{ publication_year | plus: 1 }}</h3>
+<div class="container-fluid">
+    {% bibliography --query @*[year<={{publication_year}},author~={{page.person_bib_query_name}}] --template reference %}
+</div>
+{% endif %}
+{% else %}
+{% capture pub_count_recent %}{% bibliography_count -f references --query @*[year={{publication_year}},author~={{page.person_bib_query_name}}] %}{% endcapture %}
+{% assign pub_count_recent = pub_count_recent | plus: 0 %}
+{% if pub_count_recent > 0 %}
+<h3>{{ publication_year }}</h3>
+<div class="container-fluid">
+    {% bibliography --query @*[year={{publication_year}},author~={{page.person_bib_query_name}}] --template reference %}
+</div>
+{% if forloop.last != true or pub_count_previous > 0 %}
+<hr>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% endif %}

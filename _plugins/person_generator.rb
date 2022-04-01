@@ -27,8 +27,10 @@ module Jekyll
           # Create formatted URL
           # https://stackoverflow.com/a/4308399
           formatted_name_url = person['name'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-          # Save page
-          site.pages << PersonPage.new(site, site.source, File.join(dir, formatted_name_url), person, formatted_name_url)
+          # Save page with layout
+          site.pages << PersonPage.new(site, site.source, File.join(dir, formatted_name_url), person, formatted_name_url, 'person.html')
+          # Save page without layout for the member to include on his personal website
+          site.pages << PersonPage.new(site, site.source, File.join(dir, formatted_name_url, 'publications'), person, formatted_name_url, 'person_publications_only.html')
         end
       end
     end
@@ -36,12 +38,13 @@ module Jekyll
 
   # A Page subclass used in the `PersonPageGenerator`
   class PersonPage < Page
-    def initialize(site, base, dir, person, slug)
+    def initialize(site, base, dir, person, slug, layout)
       # Initialize internal variables
       @site = site
       @base = base
       @dir = dir
       @slug = slug
+      @layout = layout
       @name = 'index.html'
 
       # Initialize other variables
@@ -49,7 +52,7 @@ module Jekyll
       @person = person
       @description = @person['type'].capitalize + (@person['info'].to_s.length > 0 ? ' - ' + @person['info'].to_s : '') 
       @customize_dir = File.join(base, '_pages', '_person', @fname);
-      @person_dir = File.join(base, '_layouts', 'person.html')
+      @person_dir = File.join(base, '_layouts', @layout)
 
       # Create file and load layout file
       self.process(@name)
