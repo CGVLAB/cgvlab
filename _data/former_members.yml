@@ -1,3 +1,9 @@
+- name: Xiaowei Zhang
+  bib_query_name: Zhang.+Xiaowei
+  photo: zhang_xiaowei.jpg
+  info: Research Engineer at Uber
+  linkedin: https://www.linkedin.com/in/xiaowei-zhang-072614222
+
 - name: Dylan Rodriquez
   bib_query_name: Rodriquez.+Dylan
   photo: rodriquez_dylan.jpg
@@ -253,7 +259,7 @@
 - name: Paul Rosen
   bib_query_name: Rosen.+Paul
   photo: rosen_paul.jpg
-  info: Assistant Professor at University of South Florida, Department of Computer Science and Engineering
+  info: Associate Professor at University of South Florida, Department of Computer Science and Engineering
   linkedin: https://www.linkedin.com/in/rosenpaul
 
 - name: Wayne Schlei
