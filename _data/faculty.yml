@@ -28,6 +28,18 @@
   info: Professor
   url: https://www.cs.purdue.edu/homes/bbenes/
 
+- name: Aniket Bera
+  bib_query_name: Aniket.+Bera
+  photo: bera.jpg
+  info: Associate Professor
+  url: https://www.cs.purdue.edu/homes/ab/
+
+- name: Raymond A. Yeh
+  bib_query_name: Raymond.+Yeh
+  photo: yeh.jpg
+  info: Assistant Professor
+  url: https://www.cs.purdue.edu/homes/rayyeh/
+
 - name: Christoph M. Hoffmann
   bib_query_name: Hoffmann.+Christoph
   photo: hoffmann.jpg
