@@ -20,7 +20,7 @@ permalink: /publications/
 
 <hr>
 
-{% for publication_year in (2000..2022) reversed %}
+{% for publication_year in (2000..2023) reversed %}
 
 {% if forloop.last %}
 
