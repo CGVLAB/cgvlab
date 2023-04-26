@@ -112,6 +112,7 @@ To add a paper to the repository, follow these steps:
    and other file(s) to
    [resources/files/supplemental](./resources/files/supplemental)
 5. Finally, add the files, commit, and push to the remote repository
+6. Change the year in the file [publications.md](publications.md) Line#23 2023 to 20xx
 
 # Building
 
