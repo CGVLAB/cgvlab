@@ -1,3 +1,21 @@
+- name: Dante Basile
+  bib_query_name: Basile.+Dante
+  photo: dante_basile.jpg
+  email: dbasile@purdue.edu
+  linkedin: https://www.linkedin.com/in/dante-basile/
+
+- name: Lu Ling
+  bib_query_name: Ling.+Lu
+  photo: lu_ling.jpg
+  url: https://luling06.github.io/
+  email: ling58@purdue.edu
+  linkedin: https://www.linkedin.com/in/lu-ling-a528b5172/
+
+- name: Yiran Zhang
+  bib_query_name: Zhang.+Yiran
+  url: https://zhangpp0802.github.io/
+  email: zhan5058@purdue.edu
+
 - name: Zhanyu Yang
   bib_query_name: Zhanyu.+Yang
   photo: zhanyu_yang.jpg

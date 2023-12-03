@@ -2,7 +2,7 @@
   title: Fundamentals of Computer Graphics
   description: The syllabus has three parts. Linear algebra, computational geometry, and image processing fundamentals are covered in the first part. The basic interactive 3-D computer graphics pipeline is covered in the second part, including rasterization, rasterization parameter interpolation, lighting, shading, texture mapping, projective texture mapping, shadow mapping, and environment mapping. Advanced topics such as advanced rendering effects, character animation, ray tracing, higher-order surfaces, image-based rendering, automated 3-D modeling, GPU programming, and computational photography are covered in the third part.
   image:
-  url: https://www.cs.purdue.edu/homes/aliaga/_cs334-22spring/index.htm
+  url: https://www.cs.purdue.edu/homes/aliaga/cs334-23fall/index.htm
 
 - class_number: CS 434
   title: Advanced Computer Graphics
