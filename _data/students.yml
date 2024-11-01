@@ -31,15 +31,6 @@
   photo: he_liu.jpg
   linkedin: https://www.linkedin.com/in/liu-he-1a7239197/
 
-- name: Christopher May
-  bib_query_name: May.+Christopher
-  photo: may_christopher.jpg
-
-- name: Zixun Yu
-  bib_query_name: Yu.+Zixun
-  photo: yu_zixun.jpg
-  linkedin: https://www.linkedin.com/in/zixun-yu-ba0548171/
-
 - name: Yizhi Song
   bib_query_name: Song.+Yizhi
   photo: song_yizhi.jpg
@@ -63,13 +54,6 @@
   email: lee2161@purdue.edu
   url: https://www.jaejoonglee.com/
   linkedin: https://www.linkedin.com/in/jaejoong/
-
-- name: Mathieu Gaillard
-  bib_query_name: Gaillard.+Mathieu
-  photo: mathieu_gaillard.jpg
-  email: mgaillar@purdue.edu
-  url: https://www.mgaillard.fr/
-  linkedin: https://www.linkedin.com/in/mathieu-gaillard-9b6386a8/
 
 - name: Bosheng Li
   bib_query_name: Li.+Bosheng
@@ -106,13 +90,6 @@
   photo: shuqi_liao.jpg
   linkedin: https://www.linkedin.com/in/shuqiliao/
 
-- name: Yichen Sheng
-  bib_query_name: Sheng.+Yichen
-  photo: yichen_sheng.jpg
-  email: sheng30@purdue.edu
-  url: https://shengcn.github.io/
-  linkedin: https://www.linkedin.com/in/sheng-yichen-910064132/
-
 - name: Aocheng Li
   bib_query_name: Li.+Aocheng
   photo: aocheng_li.jpg
@@ -122,10 +99,6 @@
 - name: Zhiquan Wang
   bib_query_name: Wang.+Zhiquan
   photo: zhiquan_wang.jpg
-
-- name: Sandeep Malatesh Nadig
-  bib_query_name: Nadig.+Sandeep
-  photo: sandeep_nadig.jpg
 
 - name: Nikhil Makkar
   bib_query_name: Nikhil.+Makkar

@@ -1,3 +1,30 @@
+- name: Sandeep Malatesh Nadig
+  bib_query_name: Nadig.+Sandeep
+  photo: sandeep_nadig.jpg
+
+- name: Yichen Sheng
+  bib_query_name: Sheng.+Yichen
+  photo: yichen_sheng.jpg
+  email: sheng30@purdue.edu
+  url: https://shengcn.github.io/
+  linkedin: https://www.linkedin.com/in/sheng-yichen-910064132/
+
+- name: Mathieu Gaillard
+  bib_query_name: Gaillard.+Mathieu
+  photo: mathieu_gaillard.jpg
+  email: mgaillar@purdue.edu
+  url: https://www.mgaillard.fr/
+  linkedin: https://www.linkedin.com/in/mathieu-gaillard-9b6386a8/
+
+- name: Christopher May
+  bib_query_name: May.+Christopher
+  photo: may_christopher.jpg
+
+- name: Zixun Yu
+  bib_query_name: Yu.+Zixun
+  photo: yu_zixun.jpg
+  linkedin: https://www.linkedin.com/in/zixun-yu-ba0548171/
+
 - name: Xiaowei Zhang
   bib_query_name: Zhang.+Xiaowei
   photo: zhang_xiaowei.jpg
