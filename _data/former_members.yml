@@ -1,3 +1,14 @@
+- name: Bosheng Li
+  bib_query_name: Li.+Bosheng
+  photo: bosheng_li.jpg
+  linkedin: https://www.linkedin.com/in/bosheng-li-54a4b8177/
+  
+- name: Xiaochen Zhou
+  bib_query_name: Zhou.+Xiaochen
+  photo: zhou_xiaochen.jpg
+  url: https://lewkesy.github.io/
+  linkedin: https://www.linkedin.com/in/xiaochen-zhou-26b79b178/
+
 - name: Sandeep Malatesh Nadig
   bib_query_name: Nadig.+Sandeep
   photo: sandeep_nadig.jpg

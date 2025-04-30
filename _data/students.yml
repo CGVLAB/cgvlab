@@ -1,3 +1,9 @@
+- name: Yulong Dai
+  bib_query_name: Dai.+Yulong
+  photo: yulong_dai.jpg
+  email: dai341@purdue.edu
+  linkedin: https://www.linkedin.com/in/yulong-dai-804003292/
+
 - name: Dante Basile
   bib_query_name: Basile.+Dante
   photo: dante_basile.jpg
@@ -36,12 +42,6 @@
   photo: song_yizhi.jpg
   linkedin: https://www.linkedin.com/in/yizhi-david-song-1781311a9
 
-- name: Xiaochen Zhou
-  bib_query_name: Zhou.+Xiaochen
-  photo: zhou_xiaochen.jpg
-  url: https://lewkesy.github.io/
-  linkedin: https://www.linkedin.com/in/xiaochen-zhou-26b79b178/
-
 - name: Adnan Firoze
   bib_query_name: Firoze.+Adnan
   photo: firoze_adnan.jpg
@@ -54,11 +54,6 @@
   email: lee2161@purdue.edu
   url: https://www.jaejoonglee.com/
   linkedin: https://www.linkedin.com/in/jaejoong/
-
-- name: Bosheng Li
-  bib_query_name: Li.+Bosheng
-  photo: bosheng_li.jpg
-  linkedin: https://www.linkedin.com/in/bosheng-li-54a4b8177/
 
 - name: Yunyu Liu
   bib_query_name: Liu.+Yunyu

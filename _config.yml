@@ -33,6 +33,7 @@ parent_organization_url: "https://www.cs.purdue.edu"
 logo: /theme/images/icon.png
 locale: en_US
 baseurl: "/cgvlab/www"
+xr_lab_url: "https://www.cs.purdue.edu/xrlab/"
 
 # Site defaults
 defaults:
